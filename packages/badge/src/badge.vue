@@ -12,7 +12,7 @@
  * mt-badge
  * @module components/badge
  * @desc 徽章
- * @param {string} [type=primary] 组件样式，可选 primary, error, success, warning
+ * @param {string} [type=primary] 组件样式，可选 primary, error, success, warning 666
  * @param {string} [color] - 传入颜色值
  * @param {string} [size=normal] - 尺寸，接受 normal, small, large
  *
