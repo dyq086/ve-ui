@@ -1,10 +1,10 @@
 {
   "name": "mint-badge",
   "description": "",
-  "version": "4.0.5",
+  "version": "4.0.6",
   "main": "lib/index.js",
   "author": "elemefe",
-  "homepage": "https://github.com/ElemeFE/mint-ui",
+  "homepage": "https://github.com/dyq086/vue-etc-ui",
   "license": "MIT",
-  "repository": "https://github.com/ElemeFE/mint-ui/tree/master/components/mint-badge"
+  "repository": "https://github.com/dyq086/vue-etc-ui/tree/master/components/mint-badge"
 }
