@@ -8,14 +8,14 @@ var path = require('path')
 var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
-var webpackConfig = require('./webpack.prod.conf')
+var webpackConfig = require('./webpack.dist.conf')
 
-var spinner = ora('building for production...')
+var spinner = ora('正在构建组件...')
 spinner.start()
 
-rm(path.join(config.build.assetsRoot), err => {
+rm(path.join(config.build.distRoot), err => {
   if (err) throw err
-  webpack(webpackConfig, function (err, stats) {
+  webpack(webpackConfig, function(err, stats) {
     spinner.stop()
     if (err) throw err
     process.stdout.write(stats.toString({
@@ -31,7 +31,7 @@ rm(path.join(config.build.assetsRoot), err => {
       process.exit(1)
     }
 
-    console.log(chalk.cyan('  Build complete.\n'))
+    console.log(chalk.cyan('  构建完成.\n'))
     console.log(chalk.yellow(
       '  Tip: built files are meant to be served over an HTTP server.\n' +
       '  Opening index.html over file:// won\'t work.\n'

@@ -1,6 +1,6 @@
 # vue-etc-ui
 
-> www.etcchao.com
+> Vue-Etc-Ui For Mobile
 
 ## Build Setup
 
