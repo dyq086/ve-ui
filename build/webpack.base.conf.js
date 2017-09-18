@@ -22,7 +22,7 @@ module.exports = {
     alias: {
       'etc-ui': path.resolve(__dirname, '../src'),
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
+      'src': resolve('src'),
     }
   },
   resolveLoader: {

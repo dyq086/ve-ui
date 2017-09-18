@@ -1,5 +1,5 @@
 <template>
-  <button class="abc">我是按钮被引入</button>
+  <button class="abc">我是按钮被引入啦</button>
 </template>
 
 <script type="text/babel">
@@ -11,5 +11,5 @@
 </script>
 
 <style lang="scss">
-     @import '../../../style/button.scss';
+     @import './button.scss';
 </style>
