@@ -1,6 +1,6 @@
 # vue-etc-ui
 
-> Vue-Etc-Ui For Mobile
+> Vue-Etc-Ui For Mobile（开发中·······）
 
 ## Build Setup
 
