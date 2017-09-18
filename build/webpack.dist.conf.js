@@ -16,7 +16,7 @@ var env = process.env.NODE_ENV === 'testing' ?
 
 var banner =
   '/*!\n' +
-  ' * ETC UI v' + packageJson.version + ' (https://github.com/dyq086/vue-etc-ui)\n' +
+  ' * VUE ETC UI v' + packageJson.version + ' (https://github.com/dyq086/vue-etc-ui)\n' +
   ' * (c) ' + new Date().getFullYear() + ' 粤通卡ETC车宝前端团队\n' +
   ' * Released under the MIT License.\n' +
   ' */';

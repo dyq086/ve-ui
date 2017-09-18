@@ -2,12 +2,35 @@
 * @Author: yongqing
 * @Date:   2017-09-18 17:18:01
 * @Last Modified by:   yongqing
-* @Last Modified time: 2017-09-18 17:18:10
+* @Last Modified time: 2017-09-18 19:51:16
 */
-.abc{
-	display: flex;
-	text-align: center;
-}
-.mbc{
-	color:#f40;
+
+.etc-button {
+  display: block;
+  height: 2.2rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border: 0;
+  &.btn-defult {
+    border: 1px solid $btn-primary-bg;
+    color: $btn-defult-color;
+    background: none;
+  }
+  &.btn-primary {
+    color: $btn-primary-color;
+    @include tap-color($btn-primary-bg)
+  }
+  &.btn-disable {
+    background: $gray-color;
+    color: $white-color;
+  }
+  &.size-sm {
+    height: 1.65rem;
+    line-height: 1.65rem;
+    border-radius: 0.2rem;
+    text-align: center;
+    width: 5.75rem;
+  }
 }

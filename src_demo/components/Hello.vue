@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="button-group">
     <etc-button></etc-button>
   </div>
 </template>
