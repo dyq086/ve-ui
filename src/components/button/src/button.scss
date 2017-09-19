@@ -17,18 +17,23 @@
     border: 1px solid $btn-primary-bg;
     color: $btn-defult-color;
     background: none;
+    @include tap-color($white-color)
   }
   &.btn-primary {
     color: $btn-primary-color;
     @include tap-color($btn-primary-bg)
+  }
+
+  &.btn-danger {
+    color: $white-color;
+    @include tap-color($btn-danger-bg)
   }
   &.btn-disable {
     background: $gray-color;
     color: $white-color;
   }
   &.size-sm {
-    height: 1.65rem;
-    line-height: 1.65rem;
+    height: 1.7rem;
     border-radius: 0.2rem;
     text-align: center;
     width: 5.75rem;
