@@ -35,6 +35,12 @@
         <span slot="title">我的地址</span>
         <span slot="inner">修改地址</span>
       </etc-cell-item>
+
+       <etc-cell-item arrow type="a">
+         <img slot="icon" class="icon" src="../assets/logo.png" />
+        <span slot="title">我的图标</span>
+        <span slot="inner">可自定义图标</span>
+      </etc-cell-item>
     </etc-cell-block>
   </div>
 </template>
