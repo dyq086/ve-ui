@@ -2,10 +2,10 @@
   <div class="block">
     <etc-cell-block>
       <etc-cell-item>
-        <span slot="title">输入卡号:</span>
-        <input slot="inner" type="number" placeholder="请输入卡号" />
+        <span slot="title">卡号:</span>
+        <input slot="inner" type="number" placeholder="请输入粤通卡卡号" />
       </etc-cell-item>
-        <etc-cell-item arrow>
+      <etc-cell-item arrow>
         <span slot="title">项目资料</span>
       </etc-cell-item>
       <etc-cell-item>
@@ -16,7 +16,18 @@
     <etc-cell-block>
       <etc-cell-item>
         <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-phone"></use></svg>
-        <span slot="title">我的电话</span> 
+        <input slot="title" type="number" placeholder="请输入手机号码" />
+      </etc-cell-item>
+      <etc-cell-item>
+        <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-code"></use></svg>
+        <input slot="title" type="number" placeholder="输入验证码" />
+        <div slot="inner" class="btn-box">
+          <etc-button type="primary" size="md">发送验证码</etc-button>
+        </div>
+      </etc-cell-item>
+      <etc-cell-item>
+        <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-tel"></use></svg>
+        <span slot="title">我的电话</span>
         <span slot="inner">13719477521</span>
       </etc-cell-item>
       <etc-cell-item arrow>
@@ -30,8 +41,8 @@
 
 <script>
   export default {
-    methods:{
-      test(){
+    methods: {
+      test() {
         alert("666")
       }
     }
@@ -39,5 +50,7 @@
 </script>
 
 <style lang="scss">
-
+  .btn-box {
+    width: 6rem;
+  }
 </style>

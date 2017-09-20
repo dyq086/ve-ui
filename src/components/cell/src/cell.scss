@@ -13,7 +13,7 @@
     }
     .item {
         position: relative;
-        @include fj();
+        @include fj(flex-end);
         align-items: center;
         padding: 0.85rem 0rem;
         &:not(:last-child):after {
@@ -21,21 +21,29 @@
         }
         &-title {
             @include sc(0.75rem, $defult-color);
+            @include fj();
             .icon {
                 @include icon($cell-icon-color, 1rem, 1rem);
                 vertical-align: -0.25rem;
-                margin-right: .3rem;
+                margin-right: .6rem;
+            }
+            input {
+                border: none;
+                width: 100%;
+                text-align: left;
             }
         }
         &-inner {
             @include sc(0.75rem, $defult-color);
-            padding-left: 0.575rem;
+            @include fj(flex-end);
+            align-items: center;
             flex: 1;
             text-align: right;
             input {
                 border: none;
                 width: 100%;
                 text-align: left;
+                margin-left: 0.4rem;
             }
             span {
                 font-size: 0.7rem;
