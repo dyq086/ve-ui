@@ -1,9 +1,10 @@
 import rem from "./plug-in/rem";
 import { Button } from "./components/button";
-import { Cell } from "./components/cell";
+import { CellBlock,CellItem } from "./components/cell";
 const install = function(Vue) {
   Vue.component(Button.name, Button);
-  Vue.component(Cell.name, Cell);
+  Vue.component(CellItem.name, CellItem);
+  Vue.component(CellBlock.name, CellBlock);
 };
 
 if (typeof window !== "undefined" && window.Vue) {

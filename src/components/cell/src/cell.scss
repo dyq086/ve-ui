@@ -8,6 +8,9 @@
 .item-block {
     padding: 0rem 0.75rem;
     background: $white-color;
+    &:not(:first-child) {
+        margin-top: .5rem;
+    }
     .item {
         position: relative;
         @include fj();
@@ -17,9 +20,9 @@
             @include bottom-line($line-color);
         }
         &-title {
-            @include sc(0.75rem, $cell-inner-color);
+            @include sc(0.75rem, $defult-color);
             .icon {
-                @include icon(#a6a5a5, 1rem, 1rem);
+                @include icon($cell-icon-color, 1rem, 1rem);
                 vertical-align: -0.25rem;
                 margin-right: .3rem;
             }
@@ -29,7 +32,7 @@
             padding-left: 0.575rem;
             flex: 1;
             text-align: right;
-            .inner-input {
+            input {
                 border: none;
                 width: 100%;
                 text-align: left;
@@ -38,7 +41,7 @@
                 font-size: 0.7rem;
             }
             .icon {
-                @include icon(#a6a5a5, .7rem, .7rem);
+                @include icon($cell-icon-color, .7rem, .7rem);
                 vertical-align: -0.15rem;
             }
         }

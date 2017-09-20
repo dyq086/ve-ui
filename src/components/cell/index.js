@@ -5,8 +5,8 @@
 * @Last Modified time: 2017-09-16 23:48:18
 */
 
-'use strict';
+"use strict";
 
-import Cell from './src/cell.vue';
-
-export {Cell};
+import CellItem from "./src/cell-item.vue";
+import CellBlock from "./src/cell-block.vue";
+export { CellItem, CellBlock };
