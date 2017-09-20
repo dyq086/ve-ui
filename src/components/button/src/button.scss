@@ -6,36 +6,42 @@
 */
 
 .etc-button {
-  display: block;
-  height: 2.2rem;
-  border-radius: 0.2rem;
-  text-align: center;
-  width: 100%;
-  box-sizing: border-box;
-  border: 0;
-  &.btn-defult {
-    border: 1px solid $btn-primary-bg;
-    color: $btn-defult-color;
-    background: none;
-    @include tap-color($white-color)
-  }
-  &.btn-primary {
-    color: $btn-primary-color;
-    @include tap-color($btn-primary-bg)
-  }
-
-  &.btn-danger {
-    color: $white-color;
-    @include tap-color($btn-danger-bg)
-  }
-  &.btn-disable {
-    background: $gray-color;
-    color: $white-color;
-  }
-  &.size-sm {
-    height: 1.7rem;
+    display: block;
+    height: 2.2rem;
     border-radius: 0.2rem;
     text-align: center;
-    width: 5.75rem;
-  }
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 0.8rem;
+    &.btn-default {
+        border: 1px solid $btn-primary-bg;
+        color: $btn-defult-color;
+        background: none;
+        @include tap-color($white-color)
+    }
+    &.btn-primary {
+        color: $btn-primary-color;
+        @include tap-color($btn-primary-bg)
+    }
+    &.btn-danger {
+        color: $white-color;
+        @include tap-color($btn-danger-bg)
+    }
+    &.btn-disable {
+        background: $gray-color;
+        color: $white-color;
+    }
+    &.size-md {
+        border-radius: 0.2rem;
+        text-align: center;
+        height: 1.75rem;
+    }
+    &.size-sm {
+        height: 1.5rem;
+        border-radius: 0.2rem;
+        text-align: center;
+        width: 3rem;
+        font-size: 0.65rem;
+    }
 }

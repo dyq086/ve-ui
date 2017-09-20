@@ -1,0 +1,46 @@
+/*
+* @Author: yongqing
+* @Date:   2017-09-18 17:18:01
+* @Last Modified by:   yongqing
+* @Last Modified time: 2017-09-18 19:51:16
+*/
+
+.item-block {
+    padding: 0rem 0.75rem;
+    background: $white-color;
+    .item {
+        position: relative;
+        @include fj();
+        align-items: center;
+        padding: 0.85rem 0rem;
+        &:not(:last-child):after {
+            @include bottom-line($line-color);
+        }
+        &-title {
+            @include sc(0.75rem, $cell-inner-color);
+            .icon {
+                @include icon(#a6a5a5, 1rem, 1rem);
+                vertical-align: -0.25rem;
+                margin-right: .3rem;
+            }
+        }
+        &-inner {
+            @include sc(0.75rem, $defult-color);
+            padding-left: 0.575rem;
+            flex: 1;
+            text-align: right;
+            .inner-input {
+                border: none;
+                width: 100%;
+                text-align: left;
+            }
+            span {
+                font-size: 0.7rem;
+            }
+            .icon {
+                @include icon(#a6a5a5, .7rem, .7rem);
+                vertical-align: -0.15rem;
+            }
+        }
+    }
+}

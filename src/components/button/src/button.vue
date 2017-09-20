@@ -11,13 +11,13 @@
       disabled: Boolean,
       type: {
         validator(value) {
-          return ['primary', 'danger', , 'disabled'].indexOf(value) > -1;
+          return ['default','primary', 'danger', , 'disabled'].indexOf(value) > -1;
         },
-        default: 'defult'
+        default: 'default'
       },
       size: {
         validator(value) {
-          return ['sm', 'lg'].indexOf(value) > -1;
+          return ['sm', 'md'].indexOf(value) > -1;
         }
       },
       // bgcolor: {
