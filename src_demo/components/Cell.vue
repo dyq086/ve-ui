@@ -16,7 +16,7 @@
     <etc-cell-block>
       <etc-cell-item>
         <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-phone"></use></svg>
-        <span slot="title">我的电话</span>
+        <span slot="title">我的电话</span> 
         <span slot="inner">13719477521</span>
       </etc-cell-item>
       <etc-cell-item arrow>
