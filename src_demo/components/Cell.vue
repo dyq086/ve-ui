@@ -25,12 +25,12 @@
           <etc-button type="primary" size="md">发送验证码</etc-button>
         </div>
       </etc-cell-item>
-      <etc-cell-item>
+      <etc-cell-item arrow type="a" href="tel:13719477521">
         <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-tel"></use></svg>
         <span slot="title">我的电话</span>
         <span slot="inner">13719477521</span>
       </etc-cell-item>
-      <etc-cell-item arrow>
+      <etc-cell-item arrow type="link" href="#">
         <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-location"></use></svg>
         <span slot="title">我的地址</span>
         <span slot="inner">修改地址</span>

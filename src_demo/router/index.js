@@ -1,3 +1,9 @@
+/*
+ * @Author: yongqing.deng 
+ * @Date: 2017-09-20 19:14:17 
+ * @Last Modified by:   yongqing.deng 
+ * @Last Modified time: 2017-09-20 19:14:17 
+ */
 import Vue from "vue";
 import Router from "vue-router";
 import Button from "../components/Button";

@@ -1,5 +1,5 @@
 <template>
-  <div class="item-block">
+  <div class="etc-item-block">
     <slot></slot>
   </div>
 </template>

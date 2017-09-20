@@ -1,57 +1,60 @@
 /*
 * @Author: yongqing
 * @Date:   2017-09-18 17:18:01
-* @Last Modified by:   yongqing
-* @Last Modified time: 2017-09-18 19:51:16
+ * @Last Modified by: yongqing.deng
+ * @Last Modified time: 2017-09-20 19:57:04
 */
 
-.item-block {
-    padding: 0rem 0.75rem;
-    background: $white-color;
-    &:not(:first-child) {
-        margin-top: .5rem;
+.#{$css-prefix}-item-block {
+  background: $white-color;
+  &:not(:first-child) {
+    margin-top: 0.5rem;
+  }
+  a.item,
+  lable.item {
+    @include tap-color($white-color, .96);
+  }
+  .item {
+    position: relative;
+    @include fj(flex-end);
+    align-items: center;
+    padding: 0.85rem 0.75rem;
+    &:not(:last-child):after {
+      @include bottom-line($line-color);
     }
-    .item {
-        position: relative;
-        @include fj(flex-end);
-        align-items: center;
-        padding: 0.85rem 0rem;
-        &:not(:last-child):after {
-            @include bottom-line($line-color);
-        }
-        &-title {
-            @include sc(0.75rem, $defult-color);
-            @include fj();
-            .icon {
-                @include icon($cell-icon-color, 1rem, 1rem);
-                vertical-align: -0.25rem;
-                margin-right: .6rem;
-            }
-            input {
-                border: none;
-                width: 100%;
-                text-align: left;
-            }
-        }
-        &-inner {
-            @include sc(0.75rem, $defult-color);
-            @include fj(flex-end);
-            align-items: center;
-            flex: 1;
-            text-align: right;
-            input {
-                border: none;
-                width: 100%;
-                text-align: left;
-                margin-left: 0.4rem;
-            }
-            span {
-                font-size: 0.7rem;
-            }
-            .icon {
-                @include icon($cell-icon-color, .7rem, .7rem);
-                vertical-align: -0.15rem;
-            }
-        }
+    &-title {
+      @include sc(0.75rem, $defult-color);
+      @include fj();
+      .icon {
+        @include icon($cell-icon-color, 1rem, 1rem);
+        vertical-align: -0.25rem;
+        margin-right: 0.6rem;
+      }
+      input {
+        border: none;
+        width: 100%;
+        text-align: left;
+      }
     }
+    &-inner {
+      @include sc(0.75rem, $defult-color);
+      @include fj(flex-end);
+      align-items: center;
+      flex: 1;
+      text-align: right;
+      input {
+        border: none;
+        width: 100%;
+        text-align: left;
+        margin-left: 0.4rem;
+      }
+      span {
+        font-size: 0.7rem;
+      }
+      .icon {
+        @include icon($cell-icon-color, .7rem, .7rem);
+        vertical-align: -0.15rem;
+      }
+    }
+  }
 }
