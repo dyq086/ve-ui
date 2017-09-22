@@ -6,56 +6,59 @@
 */
 
 .#{$css-prefix}-item-block {
-  background: $white-color;
-  &:not(:first-child) {
-    margin-top: 0.5rem;
-  }
-  a.item,
-  lable.item {
-    @include tap-color($white-color, .96);
-  }
-  .item {
-    position: relative;
-    @include fj(flex-end);
-    align-items: center;
-    height: 2.5rem;
-    padding: 0.85rem 0.75rem;
-    &:not(:last-child):after {
-      @include bottom-line($line-color);
+    background: $white-color;
+    &:not(:first-child) {
+        margin-top: 0.5rem;
     }
-    &-title {
-      @include sc(0.75rem, $defult-color);
-      @include fj();
-      .icon {
-        @include icon($cell-icon-color, 1rem, 1rem);
-        vertical-align: -0.25rem;
-        margin-right: 0.6rem;
-      }
-      input {
-        border: none;
-        width: 100%;
-        text-align: left;
-      }
+    a.item,
+    lable.item {
+        @include tap-color($white-color, .96);
     }
-    &-inner {
-      @include sc(0.75rem, $defult-color);
-      @include fj(flex-end);
-      align-items: center;
-      flex: 1;
-      text-align: right;
-      input {
-        border: none;
-        width: 100%;
-        text-align: left;
-        margin-left: 0.4rem;
-      }
-      span {
-        font-size: 0.7rem;
-      }
-      .icon {
-        @include icon($cell-icon-color, .7rem, .7rem);
-        vertical-align: -0.15rem;
-      }
+    .item {
+        position: relative;
+        @include fj();
+        align-items: center;
+        height: 2.5rem;
+        padding: 0.85rem 0.75rem;
+        &:not(:last-child):after {
+            @include bottom-line($line-color);
+        }
+        &-title {
+            @include sc(0.75rem, $defult-color);
+            @include fj(flex-start);
+            .icon {
+                @include icon($cell-icon-color, 1rem, 1rem);
+                vertical-align: -0.25rem;
+                margin-right: 0.6rem;
+            }
+            input {
+                border: none;
+                width: 100%;
+                text-align: left;
+            }
+            &.item-flex {
+                flex: 1;
+            }
+        }
+        &-inner {
+            @include sc(0.75rem, $defult-color);
+            @include fj(flex-end);
+            align-items: center;
+            flex: 1;
+            text-align: right;
+            input {
+                border: none;
+                width: 100%;
+                text-align: left;
+                margin-left: 0.4rem;
+            }
+            span {
+                font-size: 0.7rem;
+            }
+            .icon {
+                @include icon($cell-icon-color, .7rem, .7rem);
+                vertical-align: -0.15rem;
+            }
+        }
     }
-  }
 }

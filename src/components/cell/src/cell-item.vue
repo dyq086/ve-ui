@@ -4,7 +4,7 @@
       <slot name="icon"></slot>
       <slot name="title"></slot>
     </div>
-    <div class="item-inner">
+    <div class="item-inner" v-if="is_inner">
       <slot name="inner"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
@@ -14,7 +14,7 @@
       <slot name="icon"></slot>
       <slot name="title"></slot>
     </div>
-    <div class="item-inner">
+    <div class="item-inner" v-if="is_inner">
       <slot name="inner"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
@@ -24,17 +24,17 @@
       <slot name="icon"></slot>
       <slot name="title"></slot>
     </div>
-    <div class="item-inner">
+    <div class="item-inner" v-if="is_inner">
       <slot name="inner"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
   </router-link>
   <div class="item" v-else>
-    <div class="item-title">
+    <div class="item-title" :class="[is_inner?'':'item-flex']">
       <slot name="icon"></slot>
       <slot name="title"></slot>
     </div>
-    <div class="item-inner">
+    <div class="item-inner" v-if="is_inner">
       <slot name="inner"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
@@ -60,11 +60,16 @@
         type: [String, Object]
       }
     },
-    computed: {}
+    computed: {
+      is_inner() {
+        return !!this.$slots.inner;
+      }
+    }
   }
 </script>
 
 <style lang="scss">
   @import '../../../style/base.scss';
   @import './cell.scss';
+
 </style>
