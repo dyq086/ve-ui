@@ -1,0 +1,84 @@
+/*
+* @Author: yongqing
+* @Date:   2017-09-18 17:18:01
+* @Last Modified by:   yongqing
+* @Last Modified time: 2017-09-18 19:51:16
+*/
+
+//switch 等比缩放 标准尺寸为
+//width:2.5rem;
+//height:1.5rem;
+
+@mixin switch-size($multiple:1) {
+    $width: 2.6rem * $multiple;
+    $height: 1.6rem * $multiple;
+    $translateX: 1rem * $multiple;
+    width: $width;
+    height: $height;
+    &:before,
+    &:after {
+        height: $height - 0.1rem;
+        content: "";
+    }
+    &:before {
+        width: $width - 0.1rem;
+        content: "";
+    }
+    &:after {
+        width: $height - 0.1rem;
+    }
+    &:checked {
+        &:before {
+            transform: scale(0);
+        }
+        &:after {
+            transform: translateX($translateX);
+        }
+    }
+}
+
+.#{$css-prefix} {
+    &-switch {
+        position: relative;
+        z-index: 10;
+        display: block;
+        left: 0;
+        border: 1px solid $switch-bg;
+        border-radius: 100rem;
+        background-color: $switch-bg;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 100rem;
+            transition: transform 0.3s;
+        }
+        &:before {
+            background-color: $white-color;
+        }
+        &:after {
+            background-color: $white-color;
+            box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, 0.4);
+        }
+        &:checked {
+            border-color: currentColor;
+            background-color: currentColor;
+        }
+        &[disabled] {
+            opacity: 0.5;
+        }
+        &-size-md {
+            @include switch-size();
+        }
+        &-size-sm {
+            @include switch-size(0.7);
+        }
+        &-size-lg {
+            @include switch-size(1.2);
+        }
+    }
+}

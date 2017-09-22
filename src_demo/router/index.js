@@ -6,10 +6,11 @@
  */
 import Vue from "vue";
 import Router from "vue-router";
+import Index from "../components/Index";
 import Button from "../components/Button";
 import Cell from "../components/Cell";
+import Switch from "../components/Switch";
 
-import Index from "../components/Index";
 Vue.use(Router);
 
 export default new Router({
@@ -28,6 +29,11 @@ export default new Router({
       path: "/cell",
       name: "cell",
       component: Cell
+    },
+    {
+      path: "/switch",
+      name: "switch",
+      component: Switch
     }
   ]
 });
