@@ -27,7 +27,7 @@
         &:checked {
             border-color: currentColor;
             background-color: currentColor;
-            animation: reveal 200ms cubic-bezier(0.4, 0, 0.5, 1);
+            animation: leave 200ms cubic-bezier(0.4, 0, 0.5, 1);
             &:after {
                 content: "";
                 margin: auto;
@@ -76,7 +76,7 @@
     }
 }
 
-@keyframes reveal {
+@keyframes leave {
     0% {
         transform: scale(1);
     }
