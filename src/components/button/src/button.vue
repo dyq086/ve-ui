@@ -49,6 +49,10 @@
         }
         return a + ' ' + b + ' ' + c;
       }
+    },
+    mounted(){
+      //移动端ios:active伪类失效的兼容解决：
+      document.body.addEventListener('touchstart', function () { });  //空函数即可
     }
   }
 </script>
