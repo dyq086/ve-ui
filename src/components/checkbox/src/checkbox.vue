@@ -50,8 +50,8 @@
         type: [Boolean, String, Number]
       },
       shape: {
-        default: false,
-        type: Boolean
+        default: '',
+        type: String
       },
       color: {
         validator(value) {

@@ -1,5 +1,5 @@
 <template>
-  <div class="etc-checkbox-group">
+  <div class="etc-radio-group">
     <slot></slot>
   </div>
 </template>
@@ -9,22 +9,17 @@
     isColor
   } from '../../../plug-in/utils'
   export default {
-    name: 'etc-checkbox-group',
-    data() {
-      return {
-        group: true
-      }
-    },
+    name: 'etc-radio-group',
     props: {
       disabled: {
         default: false,
         type: Boolean
       },
       value: {
-        default: [],
-        type: Array,
+        default: '',
+        type: String,
       },
-      shape: {
+      type: {
         default: '',
         type: String
       },
@@ -60,7 +55,7 @@
     },
     computed: {
       childrens() {
-        return this.$children.filter(item => item.$options.name === 'etc-checkbox');
+        return this.$children.filter(item => item.$options.name === 'etc-radio');
       }
     },
     watch: {
@@ -73,5 +68,5 @@
 
 <style lang="scss">
   @import '../../../style/base.scss';
-  @import './checkbox.scss';
+  @import './radio.scss';
 </style>

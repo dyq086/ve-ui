@@ -3,6 +3,7 @@ import { Button } from "./components/button";
 import { CellBlock, CellItem } from "./components/cell";
 import { Switch } from "./components/switch";
 import { Checkbox,CheckboxGroup } from "./components/checkbox";
+import { Radio,RadioGroup } from "./components/radio";
 const install = function(Vue) {
   Vue.component(Button.name, Button);
   Vue.component(CellItem.name, CellItem);
@@ -10,6 +11,8 @@ const install = function(Vue) {
   Vue.component(Switch.name, Switch);
   Vue.component(Checkbox.name, Checkbox);
   Vue.component(CheckboxGroup.name, CheckboxGroup);
+  Vue.component(Radio.name, Radio);
+  Vue.component(RadioGroup.name, RadioGroup);
 };
 
 if (typeof window !== "undefined" && window.Vue) {

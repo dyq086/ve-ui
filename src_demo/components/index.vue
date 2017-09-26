@@ -44,6 +44,11 @@ export default {
           icon: '#icon-xingxi',
           name: 'Checkbox',
           link: '/checkbox'
+        },
+         {
+          icon: '#icon-xingxi',
+          name: 'Radio',
+          link: '/radio'
         }
       ]
     }

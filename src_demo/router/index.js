@@ -11,6 +11,7 @@ import Button from "../components/Button";
 import Cell from "../components/Cell";
 import Switch from "../components/Switch";
 import Checkbox from "../components/Checkbox";
+import Radio from "../components/Radio";
 Vue.use(Router);
 
 export default new Router({
@@ -39,6 +40,11 @@ export default new Router({
       path: "/checkbox",
       name: "checkbox",
       component: Checkbox
+    },
+    {
+      path: "/radio",
+      name: "radio",
+      component: Radio
     }
   ]
 });
