@@ -19,5 +19,5 @@ then
    # publish
     git push origin refs/tags/v$VERSION
     git push origin master
-    # npm publish
+    npm publish
 fi

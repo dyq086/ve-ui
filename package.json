@@ -76,7 +76,12 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "main": "index.js",
+  "main": "dist/vue-etc-ui.js",
+  "style": "dist/vue-etc-ui.css",
+  "files": [
+    "dist",
+    "src"
+  ],
   "repository": "https://github.com/dyq086/vue-etc-ui.git",
   "license": "MIT"
 }
