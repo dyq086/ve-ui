@@ -7,8 +7,8 @@
     "dev": "npm run bootstrap && node build/dev-server.js",
     "bootstrap": "yarn || npm i",
     "build": "node build/build.js",
-    "pub": "sh ./build/release.sh",
-    "dist": "node build/build.dist.js",
+    "dist": "node build/build.dist.js",    
+    "pub": "sh build/release.sh",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs"
