@@ -2,7 +2,7 @@
   "button": "./src/components/button/index.js",
   "cell": "./src/components/cell/index.js",
   "switch": "./src/components/switch/index.js",
-  "checkbox": "./src/components/checkbox/index.js",
+  "checkbox-aa": "./src/components/checkbox/index.js",
   "radio": "./src/components/radio/index.js",
   "grids": "./src/components/grids/index.js"
 }
