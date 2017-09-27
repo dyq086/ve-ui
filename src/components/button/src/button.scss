@@ -17,7 +17,7 @@
     &.btn-default {
         border: 1px solid $btn-primary-bg;
         color: $btn-defult-color;
-        background: none;
+        background: none; 
         @include tap-color($white-color)
     }
     &.btn-primary {
