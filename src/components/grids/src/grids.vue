@@ -1,5 +1,5 @@
 <template>
-  <div class="etc-grid-4">
+  <div class="" :class="classObject">
     <div class="etc-grid-icon">
       <slot name="icon"></slot>
     </div>
@@ -21,7 +21,16 @@
         type: Boolean
       },
     },
-    computed: {},
+    computed: {
+      classObject(){
+        let a='etc-grid-'+this.$parent.row;
+        let b;
+        if(this.$parent.border){
+          b='etc-grid-border-'+this.$parent.row;
+        }
+        return a+" "+b
+      }
+    },
     methods: {},
     watch: {}
   }

@@ -116,7 +116,7 @@
 
 // 单行文本溢出显示省略号
 // -----------------------------------------------------------------------------
-@mixin text-overflow($align: justify) {
+@mixin text-overflow($align: center) {
     word-wrap: normal;
     text-overflow: ellipsis;
     white-space: nowrap;

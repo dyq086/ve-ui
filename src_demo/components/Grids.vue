@@ -1,13 +1,27 @@
 <template>
   <div class="box">
-    <etc-grids-group row="4" title="粤通卡服务">
-      <etc-grids-item v-for="(item,index) in list" :key="index">
+    <etc-grids-group row="2" title="粤通卡服务【二栏】">
+      <etc-grids-item v-for="(item,index) in list" :key="index" v-if="index<2">
         <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
-        <span slot="text">{{item.name}}</span>
+        <span slot="text">etc-grid-2</span>
       </etc-grids-item>
       </etc-grids-item>
     </etc-grids-group>
-    <etc-grids-group row="4" title="汽车服务">
+    <etc-grids-group row="3" title="粤通卡服务【三栏】">
+      <etc-grids-item v-for="(item,index) in list" :key="index" v-if="index<3">
+        <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
+        <span slot="text">etc-grid-3</span>
+      </etc-grids-item>
+      </etc-grids-item>
+    </etc-grids-group>
+    <etc-grids-group row="4" title="粤通卡服务【四栏】border" border>
+      <etc-grids-item v-for="(item,index) in list" :key="index">
+        <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
+        <span slot="text">etc-grid-4</span>
+      </etc-grids-item>
+      </etc-grids-item>
+    </etc-grids-group>
+    <etc-grids-group row="5" title="汽车服务【五栏】">
       <etc-grids-item v-for="(item,index) in list1" :key="index">
         <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
         <span slot="text">{{item.name}}</span>
@@ -66,15 +80,15 @@
             icon: '#icon-sanqiu',
             name: '车主卡',
             link: '/grids'
-          },{
+          }, {
             icon: '#icon-taikong',
             name: '加油充值',
             link: '/grids'
-          },{
+          }, {
             icon: '#icon-raohang',
             name: '车险',
             link: '/grids'
-          },{
+          }, {
             icon: '#icon-waixingren',
             name: '违章',
             link: '/grids'

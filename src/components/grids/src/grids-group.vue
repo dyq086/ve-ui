@@ -14,12 +14,18 @@
     name: 'etc-grids-group',
     props: {
       row: {
-        default: 4,
-        type: [String, Number]
+        validator(value) {
+          return [2,3,4,5].indexOf(value) > -1;
+        },
+        default: 4
       },
       title: {
         default: "",
         type: String
+      },
+      border: {
+        default: false,
+        type: Boolean
       }
     },
     mounted() {},
