@@ -7,6 +7,6 @@
 
 "use strict";
 
-import CellItem from "./src/cell-item.vue";
-import CellBlock from "./src/cell-block.vue";
-export { CellItem, CellBlock };
+import Cell from "./src/cell.vue";
+import CellGroup from "./src/cell-group.vue";
+export { Cell, CellGroup };

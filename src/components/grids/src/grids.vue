@@ -1,34 +1,29 @@
 <template>
-  
+  <div class="etc-grid-4">
+    <div class="etc-grid-icon">
+      <slot name="icon"></slot>
+    </div>
+    <div class="etc-grid-text">
+      <slot name="text"></slot>
+    </div>
+  </div>
 </template>
 
 <script type="text/babel">
-  import {
-    isColor
-  } from '../../../plug-in/utils'
   export default {
-    name: 'etc-grids',
+    name: 'etc-grids-item',
     data() {
-      return {
-       
-      }
+      return {}
     },
     props: {
       disabled: {
         default: false,
         type: Boolean
       },
-
     },
-    computed: {
-
-    },
-    methods: {
-     
-    },
-    watch: {
-     
-    }
+    computed: {},
+    methods: {},
+    watch: {}
   }
 </script>
 

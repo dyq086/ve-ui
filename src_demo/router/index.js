@@ -12,6 +12,7 @@ import Cell from "../components/Cell";
 import Switch from "../components/Switch";
 import Checkbox from "../components/Checkbox";
 import Radio from "../components/Radio";
+import Grids from "../components/Grids";
 Vue.use(Router);
 
 export default new Router({
@@ -45,6 +46,11 @@ export default new Router({
       path: "/radio",
       name: "radio",
       component: Radio
+    },
+    {
+      path: "/grids",
+      name: "grids",
+      component: Grids
     }
   ]
 });

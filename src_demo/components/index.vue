@@ -49,6 +49,11 @@ export default {
           icon: '#icon-xingxi',
           name: 'Radio',
           link: '/radio'
+        },
+         {
+          icon: '#icon-xingxi',
+          name: 'Grids',
+          link: '/grids'
         }
       ]
     }

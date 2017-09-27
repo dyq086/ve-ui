@@ -5,6 +5,64 @@
 * @Last Modified time: 2017-09-25 11:29:32
 */
 
+%ts {
+    float: left;
+    text-align: center;
+}
 .#{$css-prefix} {
-  
+    &-grid-item-block {
+        padding: 0.55rem 0.87rem 0 0.87rem;
+    }
+    &-grids-group-title {
+        @include sc(0.7rem, $black-color);
+        margin-bottom: 1rem;
+    }
+    &-grid-box {
+        position: relative;
+        padding: 0rem 0 1rem 0rem;
+        @include clear();
+        &:before {
+            @include bottom-line($line-color);
+        }
+    }
+    &-grid-2 {
+        @extend %ts;
+        width: 50%;
+        &:nth-child(n+3) {
+            margin-top: 1rem;
+        }
+    }
+    &-grid-3 {
+        @extend %ts;
+        width: 33.3333333%;
+        &:nth-child(n+4) {
+            margin-top: 1rem;
+        }
+    }
+    &-grid-4 {
+        @extend %ts;
+        width: 25%;
+        &:nth-child(n+5) {
+            margin-top: 1rem;
+        }
+    }
+    &-grid-5 {
+        @extend %ts;
+        width: 20%;
+        &:nth-child(n+6) {
+            margin-top: 1rem;
+        }
+    }
+    &-grid-icon {
+        .icon {
+            width: 1.1rem;
+            height: 1.1rem;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.75rem;
+        }
+    }
+    &-grid-text {
+        @include sc(0.65rem, $defult-color);
+    }
 }

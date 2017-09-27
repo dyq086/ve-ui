@@ -60,6 +60,14 @@
     justify-content: $type;
 }
 
+@mixin clear() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
 // 按下去背景颜色
 // -----------------------------------------------------------------------------
 @mixin tap-color($color, $opacity: .9) {
@@ -67,7 +75,6 @@
     &:active {
         background-color: $color * $opacity;
     }
-    
 }
 
 // 遮罩层
