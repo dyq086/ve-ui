@@ -9,15 +9,15 @@ then
   echo "Releasing $VERSION ..."
 
   # build
-  VERSION=$VERSION npm run dev
+  VERSION=$VERSION #npm run dev
 
   # commit
   git add -A
   git commit -m "[build] $VERSION"
   npm version $VERSION --message "[release] $VERSION"
 
-#   # publish
-#   git push eleme refs/tags/v$VERSION
-#   git push eleme master
-#   npm publish
+   # publish
+    git push origin refs/tags/v$VERSION
+    git push origin master
+    # npm publish
 fi
