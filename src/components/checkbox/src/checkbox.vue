@@ -70,7 +70,7 @@
         return this.$parent.color ? this.$parent.color : this.color;
       },
       groupShapge(){
-         return this.$parent.shape ? this.$parent.shape : this.shape;
+         return this.$parent.shape=='circled' ? this.$parent.shape : this.shape;
       },
       checkedValue(){
           return this.id ? this.id : this.text;

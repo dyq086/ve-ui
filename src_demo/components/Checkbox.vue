@@ -16,13 +16,13 @@
     <etc-checkbox v-model="checkboxTest" text="选项一" shape></etc-checkbox>
     <div>当前状态为:{{checkboxTest}}</div>
     <br/>
-    <etc-checkbox v-model="checkboxTest1" shape></etc-checkbox>
+    <etc-checkbox v-model="checkboxTest1" shape="circled"></etc-checkbox>
     <div>当前状态为:{{checkboxTest1}}</div>
     <br/>
-    <etc-checkbox v-model="checkboxTest2" disabled shape></etc-checkbox>
+    <etc-checkbox v-model="checkboxTest2" disabled shape="circled"></etc-checkbox>
     <div>当前状态为:{{checkboxTest2}}--不可点击状态</div>
     <br/>
-    <etc-checkbox v-model="checkboxTest1" color="#26a2ff" shape text="自定义颜色"></etc-checkbox>
+    <etc-checkbox v-model="checkboxTest1" color="#26a2ff" shape="circled" text="自定义颜色"></etc-checkbox>
     <div>当前状态为:{{checkboxTest1}}</div>
     <br/>
     <h5>=========groupp【慌形】=========</h5>
@@ -36,7 +36,7 @@
     <div>当前状态为:{{checkboxGroupTest}}</div>
     <br/>
     <h5>=========group【圆形】===========</h5>
-    <etc-checkbox-group v-model="checkboxGroupTestCel" shape>
+    <etc-checkbox-group v-model="checkboxGroupTestCel" shape="circled">
       <etc-checkbox text="选项一"></etc-checkbox>
       <br/>
       <etc-checkbox text="选项二"></etc-checkbox>
