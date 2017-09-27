@@ -7,15 +7,15 @@
     "dev": "npm run bootstrap && node build/dev-server.js",
     "bootstrap": "yarn || npm i",
     "build": "node build/build.js",
-    "dist": "node build/build.dist.js",    
+    "dist": "node build/build.dist.js",
     "pub": "sh build/release.sh",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",
     "lint": "eslint --ext .js,.vue src test/e2e/specs"
   },
-  "dependencies": {
-    "vue": "^2.4.2",
-    "vue-router": "^2.7.0"
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^2.3.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -59,6 +59,7 @@
     "uppercamelcase": "^3.0.0",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.0.4",
+    "vue-router": "^2.7.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.4.2",
     "webpack": "^2.6.1",
@@ -71,17 +72,10 @@
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
   },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "main": "dist/vue-etc-ui.js",
   "style": "dist/vue-etc-ui.css",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist", "src"],
   "repository": "https://github.com/dyq086/vue-etc-ui.git",
   "license": "MIT"
 }
