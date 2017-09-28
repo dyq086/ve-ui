@@ -13,6 +13,7 @@ import Switch from "../components/Switch";
 import Checkbox from "../components/Checkbox";
 import Radio from "../components/Radio";
 import Grids from "../components/Grids";
+import Toast from "../components/Toast";
 Vue.use(Router);
 
 export default new Router({
@@ -37,7 +38,7 @@ export default new Router({
       name: "switch",
       component: Switch
     },
-       {
+    {
       path: "/checkbox",
       name: "checkbox",
       component: Checkbox
@@ -51,6 +52,11 @@ export default new Router({
       path: "/grids",
       name: "grids",
       component: Grids
+    },
+    {
+      path: "/toast",
+      name: "toast",
+      component: Toast
     }
   ]
 });

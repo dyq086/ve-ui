@@ -4,6 +4,8 @@ import { Switch } from './components/switch';
 import { Checkbox,CheckboxGroup } from './components/checkbox';
 import { Radio,RadioGroup } from './components/radio';
 import { Grids,GridsGroup } from './components/grids';
+import { Toast } from './components/toast';
+
 import rem from "./plug-in/rem";
 
 const version = '1.0.9';
@@ -20,7 +22,7 @@ const install = function(Vue, config = {}) {
   Vue.component(RadioGroup.name, RadioGroup);
   Vue.component(Grids.name, Grids);
   Vue.component(GridsGroup.name, GridsGroup);
-
+  Vue.component(Toast.name, Toast);
 };
 
 // auto install

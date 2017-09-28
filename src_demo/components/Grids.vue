@@ -1,30 +1,37 @@
 <template>
-  <div class="box">
-    <etc-grids-group row="2" title="粤通卡服务【二栏】">
+  <div>
+    <etc-grids-group row="2" title="粤通卡服务【二栏】设置title可隐藏">
       <etc-grids-item v-for="(item,index) in list" :key="index" v-if="index<2">
         <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
         <span slot="text">etc-grid-2</span>
       </etc-grids-item>
       </etc-grids-item>
     </etc-grids-group>
-    <etc-grids-group row="3" title="粤通卡服务【三栏】">
+    <etc-grids-group row="3" title="粤通卡服务【三栏】rows可设置2,3,4,5">
       <etc-grids-item v-for="(item,index) in list" :key="index" v-if="index<3">
         <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
         <span slot="text">etc-grid-3</span>
       </etc-grids-item>
       </etc-grids-item>
     </etc-grids-group>
-    <etc-grids-group row="4" title="粤通卡服务【四栏】border" border>
+    <etc-grids-group row="4" title="粤通卡服务【四栏】可以设置border" border>
       <etc-grids-item v-for="(item,index) in list" :key="index">
         <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
         <span slot="text">etc-grid-4</span>
       </etc-grids-item>
       </etc-grids-item>
     </etc-grids-group>
-    <etc-grids-group row="5" title="汽车服务【五栏】">
+    <etc-grids-group row="5" title="汽车服务【五栏】Duang~">
       <etc-grids-item v-for="(item,index) in list1" :key="index">
         <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg>
         <span slot="text">{{item.name}}</span>
+      </etc-grids-item>
+    </etc-grids-group>
+        <etc-grids-group row="4" title="不想要图标也行 （图标尺寸1:1）" border>
+      <etc-grids-item v-for="(item,index) in list1" :key="index">
+        <!-- <svg slot="icon" class="icon" aria-hidden="true"><use :xlink:href="item.icon"></use></svg> -->
+        <span slot="text">图标呢</span>
+      </etc-grids-item>
       </etc-grids-item>
     </etc-grids-group>
   </div>
