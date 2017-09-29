@@ -1,34 +1,58 @@
 <template>
-  <div class="button-group">
-    <etc-toast></etc-toast>
-  </div>  
+  <div class="group">
+    <a @click="success">success</a>
+    <br>
+    <a @click="error">error</a>
+    <br>
+    <a @click="info">info</a>
+    <br>
+    <a @click="warning">warning</a>
+    <br>
+  </div>
 </template>
 
 <script>
-  export default {}
+  export default {
+    methods: {
+      success() {
+        this.$dialog.toast({
+          type: "success",
+          mes: '提交成功',
+          timeout: 1000,
+        }).then(() => {
+          this.$dialog.toast({
+            mes: 'Duang',
+            timeout: 2000,
+          })
+        })
+      },
+      error() {
+        this.$dialog.toast({
+          type: "error",
+          mes: '提交失败',
+          timeout: 2000,
+        })
+      },
+      info() {
+        this.$dialog.toast({
+          type: "info",
+          mes: 'info',
+          timeout: 2000,
+        })
+      },
+      warning() {
+        this.$dialog.toast({
+          type: "warning",
+          mes: 'warning',
+          timeout: 2000,
+        })
+      }
+    }
+  }
 </script>
 
 <style lang="scss">
-  .button-group {
-    .lg {
-      padding: .5rem;
-      button {
-        margin-top: .5rem;
-      }
-    }
-    .md {
-      margin-top: 2rem;
-      padding: 0 4rem;
-      button {
-        margin: .5rem auto;
-      }
-    }
-    .sm {
-      padding: 0 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 2rem;
-      margin-left: .5rem;
-    }
+  a {
+    display: block;
   }
 </style>

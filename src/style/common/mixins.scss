@@ -207,3 +207,31 @@
     fill: $color;
     overflow: hidden;
 }
+
+@mixin show-alert {
+    @keyframes showAlert {
+        0% {
+            transform: scale(0.7);
+        }
+        45% {
+            transform: scale(1.05);
+        }
+        80% {
+            transform: scale(0.95);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+}
+
+@mixin hide-alert {
+    @keyframes hideAlert {
+        0% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0.5);
+        }
+    }
+}

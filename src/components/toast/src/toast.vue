@@ -1,33 +1,46 @@
 <template>
-  <div class="etc-toast showAlert">
-    <div class="icon success animate"> <span class="line tip animateSuccessTip"></span> <span class="line long animateSuccessLong"></span>
-      <div class="placeholder"></div>
-      <div class="fix"></div>
+  <div class="etc-dialog-box">
+    <div class="etc-toast showAlert">
+      <div class="icon success animate" v-if="type=='success'">
+        <span class="line tip animateSuccessTip"></span>
+        <span class="line long animateSuccessLong"></span>
+        <div class="placeholder"></div>
+        <div class="fix"></div>
+      </div>
+      <div v-if="type!==''&&type!=='success'" class="icon animate" :class="this.type">
+        <span class="icon-text">{{icon}}</span>
+      </div>
+      <div class="title">{{mes}}</div>
     </div>
-    <div class="title">支付成功</div>
+    <div class="etc-toast-mask"></div>
   </div>
 </template>
 
 <script type="text/babel">
   export default {
-    name: 'etc-toast',
     props: {
-      // disabled: Boolean,
-      // type: {
-      //   validator(value) {
-      //     return ['default', 'primary', 'danger', , 'disabled'].indexOf(value) > -1;
-      //   },
-      //   default: 'default'
-      // },
-      // size: {
-      //   validator(value) {
-      //     return ['sm', 'md'].indexOf(value) > -1;
-      //   }
-      // },
+      type: String,
+      mes: String,
+      timeout: Number
     },
     computed: {
-    },
-    mounted() {
+      icon() {
+        let icon;
+        switch (this.type) {
+          case 'info':
+            icon = "i";
+            break;
+          case 'error':
+            icon = "x";
+            break;
+          case 'warning':
+            icon = "!";
+            break;
+          default:
+            break;
+        }
+        return icon;
+      }
     }
   }
 </script>
