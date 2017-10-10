@@ -6,13 +6,10 @@ import { Checkbox, CheckboxGroup } from "./components/checkbox";
 import { Radio, RadioGroup } from "./components/radio";
 import { Grids, GridsGroup } from "./components/grids";
 import  Toast  from "./components/toast";
-
-
-
+import  Indicator  from "./components/indicator";
 const version = "1.0.9";
 const install = function(Vue, config = {}) {
   if (install.installed) return;
-
   Vue.component(Button.name, Button);
   Vue.component(Cell.name, Cell);
   Vue.component(CellGroup.name, CellGroup);
@@ -24,7 +21,8 @@ const install = function(Vue, config = {}) {
   Vue.component(Grids.name, Grids);
   Vue.component(GridsGroup.name, GridsGroup);
   Vue.prototype.$dialog = {
-    toast: Toast
+    toast: Toast,
+    indicator:Indicator
   };
 };
 //移动端ios:active伪类失效的兼容解决：

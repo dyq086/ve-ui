@@ -2,7 +2,7 @@
  * @Author: yongqing.deng 
  * @Date: 2017-09-20 19:14:17 
  * @Last Modified by:   yongqing
- * @Last Modified time: 2017-09-25 09:59:49
+ * @Last Modified time: 2017-10-10 10:18:29
  */
 import Vue from "vue";
 import Router from "vue-router";
@@ -14,11 +14,11 @@ import Checkbox from "../components/Checkbox";
 import Radio from "../components/Radio";
 import Grids from "../components/Grids";
 import Toast from "../components/Toast";
+import Indicator from "../components/Indicator";
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: "/",
       name: "index",
       component: Index
@@ -57,6 +57,11 @@ export default new Router({
       path: "/toast",
       name: "toast",
       component: Toast
+    },
+    {
+      path: "/indicator",
+      name: "indicator",
+      component: Indicator
     }
   ]
 });

@@ -1,13 +1,9 @@
 <template>
   <div class="group">
-    <a @click="success">success</a>
-    <br>
-    <a @click="error">error</a>
-    <br>
-    <a @click="info">info</a>
-    <br>
-    <a @click="warning">warning</a>
-    <br>
+    <etc-button type="default" @click.native="success" class="mt">success</etc-button>
+    <etc-button type="danger" @click.native="error" class="mt">error</etc-button>
+    <etc-button type="primary" @click.native="info" class="mt">info</etc-button>
+    <etc-button type="danger" @click.native="warning" class="mt">warning</etc-button>
   </div>
 </template>
 
@@ -54,5 +50,11 @@
 <style lang="scss">
   a {
     display: block;
+  }
+  .group{
+    padding: 1rem;
+  }
+  .mt{
+    margin-top: .5rem;
   }
 </style>
