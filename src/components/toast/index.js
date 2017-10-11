@@ -21,10 +21,13 @@ ToastConstructor.prototype.closeToast = function() {
   pageScroll.unlock();
 };
 
-const Toast = (options = {}) => {
-  instance.type = options.type || "";
+const Toast = (options = {} || "") => {
   instance.mes = options.mes || "";
+  instance.type = options.type || "";
   instance.timeout = ~~options.timeout || 2000;
+  if (typeof options === "string") {
+    instance.mes = options || "";
+  }
   document.body.appendChild(instance.$el);
   pageScroll.lock();
   return new Promise((resolve, reject) => {

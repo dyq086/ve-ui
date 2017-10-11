@@ -139,7 +139,6 @@
     border-style: solid;
     border-color: $color;
     border-width: $border-width $border-width 0 0;
-    -webkit-transform: rotate($deg);
     transform: rotate($deg);
 }
 
@@ -153,9 +152,7 @@
     left: 0;
     width: 100%;
     border-top: 1px solid $color;
-    -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
-    -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
 
@@ -167,9 +164,7 @@
     left: 0;
     width: 100%;
     border-bottom: 1px solid $color;
-    -webkit-transform: scaleY(.5);
     transform: scaleY(.5);
-    -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
 
@@ -181,9 +176,7 @@
     left: 0;
     height: 100%;
     border-left: 1px solid $color;
-    -webkit-transform: scaleX(.5);
     transform: scaleX(.5);
-    -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
 
@@ -195,9 +188,7 @@
     right: 0;
     height: 100%;
     border-right: 1px solid $color;
-    -webkit-transform: scaleX(.5);
     transform: scaleX(.5);
-    -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
 }
 

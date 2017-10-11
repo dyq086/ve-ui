@@ -14,11 +14,13 @@ import Checkbox from "../components/Checkbox";
 import Radio from "../components/Radio";
 import Grids from "../components/Grids";
 import Toast from "../components/Toast";
+import Alert from "../components/Alert";
 import Indicator from "../components/Indicator";
 Vue.use(Router);
 
 export default new Router({
-  routes: [{
+  routes: [
+    {
       path: "/",
       name: "index",
       component: Index
@@ -62,6 +64,11 @@ export default new Router({
       path: "/indicator",
       name: "indicator",
       component: Indicator
+    },
+    {
+      path: "/alert",
+      name: "alert",
+      component: Alert
     }
   ]
 });

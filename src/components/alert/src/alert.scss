@@ -1,0 +1,70 @@
+/*
+* @Author: yongqing
+* @Date:   2017-09-18 17:18:01
+* @Last Modified by:   yongqing
+* @Last Modified time: 2017-09-18 19:51:16
+*/
+
+.etc-alert {
+    background-color: white;
+    width: 15rem;
+    border-radius: 4px;
+    text-align: center;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: -7.5rem;
+    margin-top: -6.25rem;
+    overflow: hidden;
+    z-index: $base-index*2;
+    &-mask {
+        @include mask(rgba(0, 0, 0, .6), 1 * $base-index);
+    }
+    &-title {
+        @include sc(0.8rem, $defult-color);
+        padding-top: .5rem;
+    }
+    &-content {
+        @include sc(0.75rem, $black-color);
+        padding: 1.5rem 0.6rem;
+    }
+    .alert-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        line-height: 2.2rem;
+        &:after {
+            @include top-line($line-color)
+        }
+        div {
+            flex: 1;
+            position: relative;
+            &:first-child {
+                &:after {
+                    @include right-line($line-color)
+                }
+            }
+        }
+        &-left {
+            color: $black-color;
+        }
+        &-right {
+            color: $btn-defult-color;
+        }
+    }
+}
+
+
+/*
+* Animations
+*/
+
+.showAlert {
+    @include show-alert();
+    animation: showAlert 0.3s;
+}
+
+.hideAlert {
+    @include hide-alert();
+    animation: hideAlert 0.2s;
+}

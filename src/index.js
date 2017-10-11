@@ -5,8 +5,9 @@ import { Switch } from "./components/switch";
 import { Checkbox, CheckboxGroup } from "./components/checkbox";
 import { Radio, RadioGroup } from "./components/radio";
 import { Grids, GridsGroup } from "./components/grids";
-import  Toast  from "./components/toast";
-import  Indicator  from "./components/indicator";
+import Toast from "./components/toast";
+import Alert from "./components/alert";
+import Indicator from "./components/indicator";
 const version = "1.0.9";
 const install = function(Vue, config = {}) {
   if (install.installed) return;
@@ -22,7 +23,8 @@ const install = function(Vue, config = {}) {
   Vue.component(GridsGroup.name, GridsGroup);
   Vue.prototype.$dialog = {
     toast: Toast,
-    indicator:Indicator
+    indicator: Indicator,
+    alert:Alert
   };
 };
 //移动端ios:active伪类失效的兼容解决：
