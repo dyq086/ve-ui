@@ -1,8 +1,8 @@
 /*
  * @Author: yongqing.deng 
  * @Date: 2017-09-20 19:14:17 
- * @Last Modified by:   yongqing
- * @Last Modified time: 2017-10-10 10:18:29
+ * @Last Modified by: yongqing.deng
+ * @Last Modified time: 2017-10-12 09:54:37
  */
 import Vue from "vue";
 import Router from "vue-router";
@@ -16,6 +16,7 @@ import Grids from "../components/Grids";
 import Toast from "../components/Toast";
 import Alert from "../components/Alert";
 import Indicator from "../components/Indicator";
+import Tab from "../components/Tab";
 Vue.use(Router);
 
 export default new Router({
@@ -69,6 +70,11 @@ export default new Router({
       path: "/alert",
       name: "alert",
       component: Alert
+    },
+    {
+      path: "/tab",
+      name: "tab",
+      component: Tab
     }
   ]
 });

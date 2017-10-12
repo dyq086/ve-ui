@@ -61,6 +61,11 @@
             icon: '#icon-xingxi',
             name: 'Alert',
             link: '/alert'
+          },
+            {
+            icon: '#icon-xingxi',
+            name: 'Tab',
+            link: '/tab'
           }
         ]
       }

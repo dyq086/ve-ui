@@ -1,0 +1,74 @@
+/*
+ * @Author: yongqing.deng 
+ * @Date: 2017-10-12 09:44:39 
+ * @Last Modified by: yongqing.deng
+ * @Last Modified time: 2017-10-12 10:09:21
+ */
+
+.#{$css-prefix} {
+    &-tab {
+        &-nav {
+            display: flex;
+            position: relative;
+            z-index: 0;
+            background: white;
+            &:after {
+                @include bottom-line($line-color, 3);
+            }
+            &-item {
+                width: 1%;
+                flex: 1;
+                position: relative;
+                text-align: center;
+                display: block;
+                line-height: 2rem;
+                a {
+                    display: inherit;
+                    color: inherit;
+                }
+                &:not(:last-child):after {
+                    position: absolute;
+                    top: 35%;
+                    right: 0;
+                    content: "";
+                    width: 1px;
+                    height: 30%;
+                    transform: scaleX(0.5);
+                    border-right: 1px solid $line-color;
+                }
+            }
+            .#{$css-prefix}-tab-active {
+                &:before {
+                    content: "";
+                    width: 70%;
+                    height: 2px;
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    margin-left: -35%;
+                    z-index: 4;
+                    background-color: currentColor;
+                }
+            }
+        }
+        &-panel {
+            position: relative;
+            overflow: hidden;
+            background-color: #fff;
+            &-item {
+                width: 100%;
+                position: absolute;
+                top: 0;
+                transform: translateX(-100%);
+                &.#{$css-prefix}-tab-active {
+                    position: relative;
+                    transition: transform 0.15s;
+                    transform: translateX(0);
+                    &~.#{$css-prefix}-tab-panel-item {
+                        transform: translateX(100%);
+                    }
+                }
+            }
+        }
+    }
+}
