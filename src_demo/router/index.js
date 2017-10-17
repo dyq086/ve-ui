@@ -2,7 +2,7 @@
  * @Author: yongqing.deng 
  * @Date: 2017-09-20 19:14:17 
  * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-10-12 09:54:37
+ * @Last Modified time: 2017-10-13 10:10:50
  */
 import Vue from "vue";
 import Router from "vue-router";
@@ -17,8 +17,8 @@ import Toast from "../components/Toast";
 import Alert from "../components/Alert";
 import Indicator from "../components/Indicator";
 import Tab from "../components/Tab";
+import Picker from "../components/Picker";
 Vue.use(Router);
-
 export default new Router({
   routes: [
     {
@@ -75,6 +75,11 @@ export default new Router({
       path: "/tab",
       name: "tab",
       component: Tab
+    },
+    {
+      path: "/picker",
+      name: "picker",
+      component: Picker
     }
   ]
 });

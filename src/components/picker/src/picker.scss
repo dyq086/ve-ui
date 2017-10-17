@@ -1,0 +1,93 @@
+/*
+ * @Author: yongqing.deng 
+ * @Date: 2017-10-13 10:08:00 
+ * @Last Modified by:   yongqing.deng 
+ * @Last Modified time: 2017-10-13 10:08:00 
+ */
+
+.#{$css-prefix} {
+    &-picker {
+        &-panle {
+            width: 100%;
+            background: #fff;
+            position: fixed;
+            bottom: 0;
+            z-index: 2 * $base-index;
+            transition-duration: 350ms;
+            transform: translate3d(0, 100%, 0);
+            &.fade-in {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &-wrapper {
+            display: flex;
+            overflow: hidden;
+            height: 14rem;
+            text-align: center;
+            position: relative;
+            li {
+                height: 2rem;
+                line-height: 2rem;
+                @include sc(.75rem, $picker-scroller-text-color);
+            }
+        }
+        &-scroller {
+            position: relative;
+            flex: 1;
+        }
+        &-header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &:after {
+                @include bottom-line($line-color);
+            }
+            padding: .6rem .5rem;
+            .title {
+                text-align: center;
+                @include sc(.75rem, $black-color)
+            }
+            .btn {
+                &-left {
+                    @include sc(.7rem, $black-color)
+                }
+                &-right {
+                    @include sc(.7rem, $btn-defult-color)
+                }
+            }
+        }
+        &-mask {
+            @include mask(rgba(0, 0, 0, 0.5), 1 * $base-index);
+        }
+        .picker-cover {
+            position: absolute;
+            width: 100%;
+            pointer-events: none;
+            height: 6rem;
+            left: 0;
+            &.cover-top {
+                top: 0;
+                background: linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                &:after {
+                    @include bottom-line($line-color);
+                }
+            }
+            &.cover-bottom {
+                bottom: 0;
+                background: linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                &:after {
+                    @include top-line($line-color);
+                }
+            }
+        }
+    }
+}
