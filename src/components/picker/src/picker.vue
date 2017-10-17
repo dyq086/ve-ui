@@ -2,9 +2,9 @@
   <div class="etc-picker">
     <div class="etc-picker-panle" :class="[is_show ? 'fade-in':'']">
       <div class="etc-picker-header">
-        <div class="btn-left" @click.stop="cancel()">取消</div>
-        <header class="title">请选择省市区</header>
-        <div class="btn-right" @click.stop="ok()">确定</div>
+        <div class="btn-left" @click.stop="cancel()">{{cancelTxt}}</div>
+        <header class="title">{{pickerTitle}}</header>
+        <div class="btn-right" @click.stop="ok()">{{comfirmTxt}}</div>
       </div>
       <div class="etc-picker-wrapper">
         <div class="etc-picker-scroller" v-for="n in types" ref="scroller">
@@ -12,9 +12,9 @@
             <li></li>
             <li></li>
             <li></li>
-            <li v-if="n==1" v-for="(item,index) in get_frist">{{item.Name}}</li>
-            <li v-if="n==2" v-for="(item,index) in get_second">{{item.Name}}</li>
-            <li v-if="n==3" v-for="(item,index) in get_third">{{item.Name}}</li>
+            <li v-if="n==1" v-for="(item,index) in getFristItem" :data-code="item.code">{{item.name}}</li>
+            <li v-if="n==2" v-for="(item,index) in getSecondItem" :data-code="item.code">{{item.name}}</li>
+            <li v-if="n==3" v-for="(item,index) in getThirdItem" :data-code="item.code">{{item.name}}</li>
             <li></li>
             <li></li>
             <li></li>
@@ -33,13 +33,11 @@
     pageScroll
   } from "../../../plug-in/utils";
   import Scroll from "../../../plug-in/scroll";
-  import cityData from "../../../plug-in/city";
   export default {
     name: 'etc-picker',
     data() {
       return {
         is_show: this.value,
-        cityData: [],
         currentItem0: 0,
         currentItem1: 0,
         currentItem2: 0,
@@ -53,12 +51,26 @@
       },
       types: {
         type: Number,
-        default: 3
+        default: 1
+      },
+      values: {
+        type: Array,
+        default: []
+      },
+      cancelTxt: {
+        type: String,
+        default: "取消"
+      },
+      comfirmTxt: {
+        type: String,
+        default: "确定"
+      },
+      pickerTitle: {
+        type: String,
+        default: "请选择"
       }
     },
     mounted() {
-      this.cityData = cityData;
-      //闭包
       for (let i = 0; i < this.types; i++) {
         this.scroll[i] = new Scroll(this.$refs.scroller[i], {
           defaultPlace: 0,
@@ -75,9 +87,6 @@
               setTimeout(() => {
                 !!this.scroll[2] && this.scroll[2].refresh();
               }, 100)
-            }
-            if (i == 2) {
-              this.currentItem2 = obj.index;
             }
           }
         });
@@ -108,16 +117,16 @@
       }
     },
     computed: {
-      get_frist() {
-        return cityData;
+      getFristItem() {
+        return this.values;
       },
-      get_second() {
-        let second = this.get_frist[this.currentItem0].level;
+      getSecondItem() {
+        let second = this.getFristItem[this.currentItem0].child;
         return typeof second === 'object' && second;
       },
-      get_third() {
-        if (!!this.get_second[this.currentItem1]) {
-          let third = this.get_second[this.currentItem1].level;
+      getThirdItem() {
+        if (!!this.getSecondItem[this.currentItem1]) {
+          let third = this.getSecondItem[this.currentItem1].child;
           return typeof third === 'object' && third;
         }
       }
