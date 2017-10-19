@@ -7,6 +7,7 @@ import { Radio, RadioGroup } from "./components/radio";
 import { Grids, GridsGroup } from "./components/grids";
 import { Tab, TabPanel } from "./components/tab";
 import { Picker } from "./components/picker";
+import { ActionSheet } from "./components/actionsheet";
 
 import Toast from "./components/toast";
 import Alert from "./components/alert";
@@ -27,6 +28,7 @@ const install = function(Vue, config = {}) {
   Vue.component(Tab.name, Tab);
   Vue.component(TabPanel.name, TabPanel);
   Vue.component(Picker.name, Picker);
+  Vue.component(ActionSheet.name, ActionSheet);
   Vue.prototype.$dialog = {
     toast: Toast,
     indicator: Indicator,

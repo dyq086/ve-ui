@@ -2,7 +2,7 @@
  * @Author: yongqing.deng 
  * @Date: 2017-09-20 19:14:17 
  * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-10-13 10:10:50
+ * @Last Modified time: 2017-10-19 11:04:04
  */
 import Vue from "vue";
 import Router from "vue-router";
@@ -18,6 +18,7 @@ import Alert from "../components/Alert";
 import Indicator from "../components/Indicator";
 import Tab from "../components/Tab";
 import Picker from "../components/Picker";
+import ActionSheet from "../components/ActionSheet";
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -80,6 +81,11 @@ export default new Router({
       path: "/picker",
       name: "picker",
       component: Picker
+    },
+    {
+      path: "/actionsheet",
+      name: "actionsheet",
+      component: ActionSheet
     }
   ]
 });

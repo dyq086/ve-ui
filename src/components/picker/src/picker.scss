@@ -28,6 +28,7 @@
             li {
                 height: 2rem;
                 line-height: 2rem;
+                @include text-overflow();
                 @include sc(.75rem, $picker-scroller-text-color);
             }
         }

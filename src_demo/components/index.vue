@@ -71,6 +71,11 @@
             icon: '#icon-xingxi',
             name: 'Picker',
             link: '/picker'
+          },
+            {
+            icon: '#icon-xingxi',
+            name: 'ActionSheet',
+            link: '/actionsheet'
           }
         ]
       }

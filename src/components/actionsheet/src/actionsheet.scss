@@ -1,0 +1,41 @@
+/*
+ * @Author: yongqing.deng 
+ * @Date: 2017-10-19 10:57:59 
+ * @Last Modified by: yongqing.deng
+ * @Last Modified time: 2017-10-19 11:32:54
+ */
+
+.#{$css-prefix} {
+    &-actionsheet {
+        &-panle {
+            width: 100%;
+            background: $defult-bg-color;
+            position: fixed;
+            bottom: 0;
+            z-index: 2 * $base-index;
+            transition-duration: 350ms;
+            transform: translate3d(0, 100%, 0);
+            &.fade-in {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        &-item {
+            background: $white-color;
+            position: relative;
+            line-height: 2.5rem;
+            text-align: center;
+            @include sc(.8rem, $defult-color);
+            @include tap-color($white-color);
+            &:after {
+                @include bottom-line($line-color);
+            }
+            &.item-bottom {
+                margin-top: .5rem;
+                color:$btn-danger-bg;
+            }
+        }
+        &-mask {
+            @include mask(rgba(0, 0, 0, 0.5), 1 * $base-index);
+        }
+    }
+}
