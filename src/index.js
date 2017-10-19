@@ -8,7 +8,7 @@ import { Grids, GridsGroup } from "./components/grids";
 import { Tab, TabPanel } from "./components/tab";
 import { Picker } from "./components/picker";
 import { ActionSheet } from "./components/actionsheet";
-
+import { Vscroll } from "./components/vscroll";
 import Toast from "./components/toast";
 import Alert from "./components/alert";
 import Indicator from "./components/indicator";
@@ -29,6 +29,7 @@ const install = function(Vue, config = {}) {
   Vue.component(TabPanel.name, TabPanel);
   Vue.component(Picker.name, Picker);
   Vue.component(ActionSheet.name, ActionSheet);
+  Vue.component(Vscroll.name, Vscroll);
   Vue.prototype.$dialog = {
     toast: Toast,
     indicator: Indicator,

@@ -60,6 +60,8 @@
         type: [String, Object]
       }
     },
+    mounted(){
+    },
     computed: {
       is_inner() {
         return !!this.$slots.inner;
