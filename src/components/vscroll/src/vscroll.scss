@@ -1,228 +1,227 @@
-/*
- * @Author: yongqing.deng 
- * @Date: 2017-10-11 15:44:28 
- * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-10-11 15:58:56
- */
-
 /*下拉刷新和上拉加载的滑动区域*/
 
 .mescroll {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
+
 
 /*启用硬件加速:动画渲染流畅,解决IOS下拉刷新因隐藏进度条致使的闪屏问题,在下拉刷新和上拉加载触发时启用,结束后移除,避免滥用导致其他兼容性问题*/
 
 .mescroll-hardware {
-  transform: translateZ(0);
+    transform: translateZ(0);
 }
+
 
 /*下拉刷新区域*/
 
 .mescroll-downwarp {
-  position: relative;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  text-align: center;
+    position: relative;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
 }
+
 
 /*下拉刷新--高度重置的过渡动画*/
 
 .mescroll-downwarp-reset {
-  -webkit-transition: height 300ms;
-  transition: height 300ms;
+    -webkit-transition: height 300ms;
+    transition: height 300ms;
 }
+
 
 /*下拉刷新--内容区,定位于区域底部*/
 
 .mescroll-downwarp .downwarp-content {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  min-height: 30px;
-  padding: 10px 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 1.5rem;
+    padding: 0.5rem 0;
 }
+
 
 /*上拉加载区域*/
 
 .mescroll-upwarp {
-  min-height: 30px;
-  padding: 15px 0;
-  text-align: center;
-  visibility: hidden;
-  /*代替display: none,列表快速滑动到底部能及时显示上拉加载的区域*/
+    min-height: 1.5rem;
+    padding: 0.75rem 0;
+    text-align: center;
+    visibility: hidden;
+    /*代替display: none,列表快速滑动到底部能及时显示上拉加载的区域*/
 }
+
 
 /*下拉刷新,上拉加载--提示文本*/
 
 .mescroll-downwarp .downwarp-tip,
 .mescroll-upwarp .upwarp-tip,
 .mescroll-upwarp .upwarp-nodata {
-  display: inline-block;
-  font-size: 12px;
-  color: gray;
-  vertical-align: middle;
+    display: inline-block;
+    font-size: 0.6rem;
+    color: gray;
+    vertical-align: middle;
 }
+
 
 /*下拉刷新,上拉加载--旋转进度条*/
 
 .mescroll-downwarp .downwarp-progress,
 .mescroll-upwarp .upwarp-progress {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid gray;
-  margin-right: 8px;
-  border-bottom-color: transparent;
-  vertical-align: middle;
+    display: inline-block;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 1px solid gray;
+    margin-right: 0.4rem;
+    border-bottom-color: transparent;
+    vertical-align: middle;
 }
+
 
 /*旋转动画*/
 
 .mescroll-rotate {
-  -webkit-animation: mescrollRotate 0.6s linear infinite;
-  animation: mescrollRotate 0.6s linear infinite;
+    -webkit-animation: mescrollRotate 0.6s linear infinite;
+    animation: mescrollRotate 0.6s linear infinite;
 }
 
 @-webkit-keyframes mescrollRotate {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes mescrollRotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 
 /*无任何数据的空布局*/
 
-.mescroll-empty {
-  width: 100%;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.mescroll-empty .empty-icon {
-  width: 45%;
-}
-
-.mescroll-empty .empty-tip {
-  margin-top: 6px;
-  font-size: 14px;
-  color: gray;
-}
-
-.mescroll-empty .empty-btn {
-  max-width: 50%;
-  margin: 20px auto;
-  padding: 10px;
-  border: 1px solid #65aadd;
-  border-radius: 6px;
-  background-color: white;
-  color: #65aadd;
+.etc-list-empty {
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+    .empty-icon {
+        display: block;
+        width: 45%;
+        margin: 0 auto;
+    }
+    .empty-tip {
+        margin-top: 1rem;
+        font-size: 0.7rem;
+        color: gray;
+    }
 }
 
 .mescroll-empty .empty-btn:active {
-  opacity: 0.75;
+    opacity: 0.75;
 }
+
 
 /*回到顶部的按钮*/
 
 .mescroll-totop {
-  z-index: 9990;
-  position: fixed;
-  right: 10px;
-  bottom: 30px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  opacity: 0;
+    z-index: 9990;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    opacity: 0;
 }
+
 
 /*显示动画--淡入*/
 
 .mescroll-fade-in {
-  animation: mescrollFadeIn 0.5s linear forwards;
+    animation: mescrollFadeIn 0.5s linear forwards;
 }
 
 @-webkit-keyframes mescrollFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes mescrollFadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 
 /*隐藏动画--淡出*/
 
 .mescroll-fade-out {
-  pointer-events: none;
-  animation: mescrollFadeOut 0.5s linear forwards;
+    pointer-events: none;
+    animation: mescrollFadeOut 0.5s linear forwards;
 }
 
 @-webkit-keyframes mescrollFadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes mescrollFadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
+
 
 /*滚动条轨道背景(默认在PC端设置)*/
 
 .mescroll-bar::-webkit-scrollbar-track {
-  background-color: transparent;
+    background-color: transparent;
 }
+
 
 /*滚动条轨道宽度 (默认在PC端设置)*/
 
 .mescroll-bar::-webkit-scrollbar {
-  width: 6px;
+    width: 0.3rem;
 }
+
 
 /*滚动条游标 (默认在PC端设置)*/
 
 .mescroll-bar::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background-color: #ccc;
+    border-radius: 6px;
+    background-color: #ccc;
 }
+
 
 /*滚动条游标鼠标经过的颜色变化 (默认在PC端设置)*/
 
 .mescroll-bar::-webkit-scrollbar-thumb:hover {
-  background-color: #aaa;
+    background-color: #aaa;
 }

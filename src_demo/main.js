@@ -5,9 +5,10 @@ import App from './App'
 import router from './router'
 import EtcUI from 'etc-ui'
 import FastClick from 'fastclick'
+import VueResource from 'vue-resource';
 Vue.config.productionTip = false
-
 Vue.use(EtcUI)
+Vue.use(VueResource)
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', function() {
       FastClick.attach(document.body);

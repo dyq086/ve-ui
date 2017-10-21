@@ -130,14 +130,14 @@ extendUpScroll (optUp) {
       use: false, //列表数据过少,不足以滑动触发上拉加载,是否自动加载下一页,直到满屏或者无更多数据为止;默认false,因为可通过调高page.size避免这个情况
       delay: 500 //延时执行的毫秒数; 延时是为了保证列表数据或占位的图片都已初始化完成,且下拉刷新上拉加载中区域动画已执行完毕;
     },
-    empty: {
-      //列表第一页无任何数据时,显示的空提示布局; 需配置warpId或clearEmptyId才生效;
-      warpId: null, //父布局的id; 如果此项有值,将不使用clearEmptyId的值;
-      icon: null, //图标路径
-      tip: "暂无相关数据~", //提示
-      btntext: "", //按钮
-      btnClick: null //点击按钮的回调
-    },
+    // empty: {
+    //   //列表第一页无任何数据时,显示的空提示布局; 需配置warpId或clearEmptyId才生效;
+    //   warpId: null, //父布局的id; 如果此项有值,将不使用clearEmptyId的值;
+    //   icon: null, //图标路径
+    //   tip: "暂无相关数据~", //提示
+    //   btntext: "", //按钮
+    //   btnClick: null //点击按钮的回调
+    // },
     clearId: null, //加载第一页时需清空数据的列表id; 如果此项有值,将不使用clearEmptyId的值;
     clearEmptyId: null, //相当于同时设置了clearId和empty.warpId; 简化写法;
     hardwareClass: "mescroll-hardware", //硬件加速样式,动画更流畅,参见mescroll.css
@@ -498,7 +498,7 @@ endSuccess(dataSize, systime) {
         if (dataSize == 0 && pageNum == 1) {
           //如果第一页无任何数据且配置了空布局
           isShowNoMore = false;
-          this.showEmpty();
+          // this.showEmpty();
         } else {
           //总列表数少于配置的数量,则不显示无更多数据
           let allDataSize = (pageNum - 1) * pageSize + dataSize;
@@ -507,13 +507,13 @@ endSuccess(dataSize, systime) {
           } else {
             isShowNoMore = true;
           }
-          this.removeEmpty(); //移除空布局
+          //this.removeEmpty(); //移除空布局
         }
       } else {
         //还有下一页
         isShowNoMore = false;
         this.optUp.isLock = false;
-        this.removeEmpty(); //移除空布局
+       // this.removeEmpty(); //移除空布局
       }
     }
 
@@ -569,41 +569,41 @@ lockUpScroll(isLock) {
 };
 
 /*--------无任何数据的空布局--------*/
-showEmpty () {
-  let optEmpty = this.optUp.empty; //空布局的配置
-  let warpId = optEmpty.warpId || this.optUp.clearEmptyId; //优先使用warpId
-  if (warpId == null) return;
-  let emptyWarp = document.getElementById(warpId); //要显示空布局的位置
-  if (emptyWarp) {
-    this.removeEmpty(); //先移除,避免重复加入
-    //初始化无任何数据的空布局
-    let str = "";
-    if (optEmpty.icon)
-      str += '<img class="empty-icon" src="' + optEmpty.icon + '"/>'; //图标
-    if (optEmpty.tip) str += '<p class="empty-tip">' + optEmpty.tip + "</p>"; //提示
-    if (optEmpty.btntext)
-      str += '<p class="empty-btn">' + optEmpty.btntext + "</p>"; //按钮
-    this.emptyDom = document.createElement("div");
-    this.emptyDom.className = "mescroll-empty";
-    this.emptyDom.innerHTML = str;
-    emptyWarp.appendChild(this.emptyDom);
-    if (optEmpty.btnClick) {
-      //点击按钮的回调
-      let emptyBtn = this.emptyDom.getElementsByClassName("empty-btn")[0];
-      emptyBtn.onclick = function() {
-        optEmpty.btnClick();
-      };
-    }
-  }
-};
+// showEmpty () {
+//   let optEmpty = this.optUp.empty; //空布局的配置
+//   let warpId = optEmpty.warpId || this.optUp.clearEmptyId; //优先使用warpId
+//   if (warpId == null) return;
+//   let emptyWarp = document.getElementById(warpId); //要显示空布局的位置
+//   if (emptyWarp) {
+//     this.removeEmpty(); //先移除,避免重复加入
+//     //初始化无任何数据的空布局
+//     let str = "";
+//     if (optEmpty.icon)
+//       str += '<img class="empty-icon" src="' + optEmpty.icon + '"/>'; //图标
+//     if (optEmpty.tip) str += '<p class="empty-tip">' + optEmpty.tip + "</p>"; //提示
+//     if (optEmpty.btntext)
+//       str += '<p class="empty-btn">' + optEmpty.btntext + "</p>"; //按钮
+//     this.emptyDom = document.createElement("div");
+//     this.emptyDom.className = "mescroll-empty";
+//     this.emptyDom.innerHTML = str;
+//     emptyWarp.appendChild(this.emptyDom);
+//     if (optEmpty.btnClick) {
+//       //点击按钮的回调
+//       let emptyBtn = this.emptyDom.getElementsByClassName("empty-btn")[0];
+//       emptyBtn.onclick = function() {
+//         optEmpty.btnClick();
+//       };
+//     }
+//   }
+// };
 /*移除空布局*/
-removeEmpty() {
-  if (this.emptyDom) {
-    let parentDom = this.emptyDom.parentNode;
-    if (parentDom) parentDom.removeChild(this.emptyDom);
-    this.emptyDom = null;
-  }
-};
+// removeEmpty() {
+//   if (this.emptyDom) {
+//     let parentDom = this.emptyDom.parentNode;
+//     if (parentDom) parentDom.removeChild(this.emptyDom);
+//     this.emptyDom = null;
+//   }
+// };
 
 /*--------回到顶部的按钮--------*/
 showTopBtn() {
@@ -617,7 +617,7 @@ showTopBtn() {
       this.toTopBtn.src = optTop.src;
       this.toTopBtn.onclick = function() {
         this.scrollTo(0, this.optUp.toTop.duration); //置顶
-      };
+      }.bind(this);
       document.body.appendChild(this.toTopBtn); //加在body上,避免加在me.scrollDom在使用硬件加速样式时会使fixed失效
     }
     //显示--淡入动画
