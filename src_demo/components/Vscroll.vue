@@ -4,10 +4,10 @@
       <div slot="list">
         <ul class="data-list" @click="refresh">
           <li v-for="pd in products_list">
-            <img :src="pd.img" class="pd-img">
+            <img :src="pd.icon" class="pd-img">
             <p class="pd-name">{{pd.title}}</p>
-            <p class="pd-price">{{pd.marketprice}} 元</p>
-            <p class="pd-sold">原价{{pd.productprice}}元</p>
+            <p class="pd-price">{{pd.price}} 元</p>
+            <p class="pd-sold">月销量{{pd.month_sales}}元</p>
           </li>
         </ul>
       </div>
@@ -32,20 +32,22 @@
     },
     methods: {
       infinite(pageNum, pageSize, successCallback, errorCallback) {
-        const url = 'http://list.ydui.org/getdata.php?type=backposition';
+        const url = 'https://api-mall.etcchebao.com/goods/list?cateidOne=2&cateidTwo=0&price=0&sales=2';
         this.$http.jsonp(url, {
           params: {
             page: pageNum,
-            pagesize: pageSize
+            size: pageSize
           }
         }).then((response) => {
           setTimeout(() => {
-            let _list = response.body;
+            
+            let _list = response.body.data.list;
+            console.log(_list)
             //如果是第一页需手动制空列表
             if (pageNum == 1) {
               this.products_list = [];
             }
-            this.products_list = [..._list, ...this.products_list];
+            this.products_list = [...this.products_list,..._list];
             successCallback && successCallback(_list); //成功回调
           }, 1000)
         }).catch(() => {
