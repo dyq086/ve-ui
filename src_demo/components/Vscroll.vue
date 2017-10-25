@@ -40,14 +40,16 @@
           }
         }).then((response) => {
           let _list = response.body.data.list;
-          //如果是第一页需手动制空列表
-          if (pageNum == 1) {
-            this.products_list = [];
-          }
-          //TODO 相当于concat、
-          this.products_list = [...this.products_list, ..._list];
-          // 成功回调
-          successCallback && successCallback(_list);
+          setTimeout(() => {
+            //如果是第一页需手动制空列表
+            if (pageNum == 1) {
+              this.products_list = [];
+            }
+            //TODO 相当于concat、
+            this.products_list = [...this.products_list, ..._list];
+            // 成功回调
+            successCallback && successCallback(_list);
+          }, 1000)
         }).catch(() => {
           //失败回调
           errorCallback && errorCallback();
