@@ -1,27 +1,8 @@
-# vue-etc-ui
+# vue-etc-ui 
 
-> Vue-Etc-Ui For Mobile（开发中·······）
+> Vue-ETC-UI for mobile 基于VUE 移动端UI框架，由粤通卡ETC车宝前端团队出品打造
 
-## Build Setup
+#### demo 体验地址：https://dyq086.github.io/vue-etc-ui/demo/#/
+ 
+ (注意：功能更新迭代快，请谨慎使用，电脑端浏览器请切换到移动端模式使用)
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
