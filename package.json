@@ -1,13 +1,14 @@
 {
   "name": "vue-etc-ui",
-  "version": "1.0.9",
-  "description": "VUE-ETC-UI FOR MOBILE",
+  "version": "1.1.1",
+  "description": "vue-etc-ui for mobile",
   "author": "yongqing <490844594@qq.com>",
   "scripts": {
     "dev": "npm run bootstrap && node build/dev-server.js",
     "bootstrap": "yarn || npm i",
     "build": "node build/build.js",
     "dist": "node build/build.dist.js",
+    "dist:c": "node build/build.dist.js",
     "pub": "sh build/release.sh",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",

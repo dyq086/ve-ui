@@ -1,8 +1,13 @@
 {
-  "button": "./src/components/button/index.js",
-  "cell,cell-group": "./src/components/cell/index.js",
-  "switch": "./src/components/switch/index.js",
-  "checkbox,checkbox-group": "./src/components/checkbox/index.js",
-  "radio,radio-group": "./src/components/radio/index.js",
-  "grids,grids-group": "./src/components/grids/index.js"
+  "/lib/button/index": "./src/components/button/index.js",
+  "/lib/alert/index": "./src/components/alert/index.js",
+  "/lib/cell/index": "./src/components/cell/index.js",
+  "/lib/checkbox/index": "./src/components/checkbox/index.js",
+  "/lib/radio/index": "./src/components/radio/index.js",
+  "/lib/grids/index": "./src/components/grids/index.js",
+  "/lib/tab/index": "./src/components/tab/index.js",
+  "/lib/picker/index": "./src/components/picker/index.js",
+  "/lib/actionsheet/index": "./src/components/actionsheet/index.js",
+  "/lib/vscroll/index": "./src/components/vscroll/index.js",
+  "/lib/toast/index": "./src/components/toast/index.js"
 }

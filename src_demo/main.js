@@ -3,10 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import EtcUI from 'etc-ui'
+import EtcUI from 'vue-etc-ui'
 import FastClick from 'fastclick'
 import VueResource from 'vue-resource';
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(EtcUI)
 Vue.use(VueResource)
 if ('addEventListener' in document) {
