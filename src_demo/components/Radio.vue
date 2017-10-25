@@ -61,10 +61,8 @@
 </script>
 
 <style lang="scss">
-  #app {
-    background: #ffffff;
-  }
   .box {
     padding: 1rem;
+    background: #fff;
   }
 </style>
