@@ -110,9 +110,7 @@
 <style lang="scss">
   .bg {
     background: #fff;
-  } // .box {
-  //   padding: 1rem;
-  // }
+  }
   .mt {
     margin-top: 1.5rem;
   }

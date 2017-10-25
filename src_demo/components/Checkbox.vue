@@ -55,7 +55,7 @@
         checkboxTest1: true,
         checkboxTest2: true,
         checkboxGroupTest: [],
-        checkboxGroupTestCel:[]
+        checkboxGroupTestCel: []
       }
     },
     mounted() {}
@@ -63,10 +63,8 @@
 </script>
 
 <style lang="scss">
-  #app {
-    background: #ffffff;
-  }
   .box {
     padding: 1rem;
+    background: #ffffff;
   }
 </style>
