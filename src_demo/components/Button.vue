@@ -1,24 +1,27 @@
 <template>
   <div class="button-group">
     <div class="lg">
-      <etc-button>空心 [btn-defult]</etc-button>
-      <etc-button type="primary">基本 [btn-primary]</etc-button>
-      <etc-button type="danger">删除 [btn-danger]</etc-button>
-      <etc-button disabled>禁止 [btn-disable]</etc-button>
+      <etc-button>default</etc-button>
+      <etc-button type="primary">primary</etc-button>
+      <etc-button type="danger">danger</etc-button>
+      <etc-button disabled>disable</etc-button>
     </div>
     <div class="md">
-      <etc-button size="md">空心</etc-button>
-      <etc-button type="primary" size="md">基本</etc-button>
-      <etc-button type="danger" size="md">删除</etc-button>
-      <etc-button disabled size="md">禁止</etc-button>
+      <etc-button size="md">default</etc-button>
+      <etc-button type="primary" size="md">primary</etc-button>
+      <etc-button type="danger" size="md">danger</etc-button>
+      <etc-button disabled size="md">disable</etc-button>
     </div>
     <div class="sm">
-      <etc-button size="sm">空心</etc-button>
-      <etc-button type="primary" size="sm">基本</etc-button>
-      <etc-button type="danger" size="sm">删除</etc-button>
-      <etc-button disabled size="sm">禁止</etc-button>
+      <etc-button size="sm">default</etc-button>
+      <etc-button type="primary" size="sm">primary</etc-button>
+      <etc-button type="danger" size="sm">danger</etc-button>
+      <etc-button disabled size="sm">disable</etc-button>
     </div>
-  </div>  
+    <div class="lg">
+      <etc-button  bgcolor="#44b549" color="#fff" >自定义颜色</etc-button>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -27,10 +30,12 @@
 
 <style lang="scss">
   .button-group {
+    background: #fff;
+    height: 100%;
     .lg {
-      padding: .5rem;
+      padding: .5rem 1.2rem;
       button {
-        margin-top: .5rem;
+        margin-top: .8rem;
       }
     }
     .md {

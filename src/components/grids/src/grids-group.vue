@@ -15,7 +15,7 @@
     props: {
       row: {
         validator(value) {
-          return [2,3,4,5].indexOf(value) > -1;
+          return [2, 3, 4, 5].indexOf(value) > -1;
         },
         default: 4
       },

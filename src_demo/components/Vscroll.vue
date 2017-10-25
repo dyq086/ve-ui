@@ -27,7 +27,7 @@
     data() {
       return {
         products_list: [],
-        pageSize:10
+        pageSize: 10
       }
     },
     methods: {
@@ -39,23 +39,23 @@
             size: pageSize
           }
         }).then((response) => {
-          setTimeout(() => {
-            
-            let _list = response.body.data.list;
-            console.log(_list)
-            //如果是第一页需手动制空列表
-            if (pageNum == 1) {
-              this.products_list = [];
-            }
-            this.products_list = [...this.products_list,..._list];
-            successCallback && successCallback(_list); //成功回调
-          }, 1000)
+          let _list = response.body.data.list;
+          //如果是第一页需手动制空列表
+          if (pageNum == 1) {
+            this.products_list = [];
+          }
+          //TODO 相当于concat、
+          this.products_list = [...this.products_list, ..._list];
+          // 成功回调
+          successCallback && successCallback(_list);
         }).catch(() => {
-          errorCallback && errorCallback(); //失败回调
+          //失败回调
+          errorCallback && errorCallback();
         });
       },
       refresh() {
-        this.$refs.vscroll.refresh('products_list'); //this.products_list 属性名称
+        //刷新 this.products_list 属性名称
+        this.$refs.vscroll.refresh('products_list');
       }
     }
   }
@@ -70,38 +70,36 @@
     height: auto;
     background: #fff;
   }
-  /*展示上拉加载的数据列表*/
-  // .data-list {
-  //   display: none;
-  // }
-  .data-list li {
-    position: relative;
-    padding: 10px 8px 10px 120px;
-    border-bottom: 1px solid #eee;
+  .data-list {
+    li {
+      position: relative;
+      padding: 0.5rem 0.4rem 0.5rem 6rem;
+      border-bottom: 1px solid #eee;
+    }
+    .pd-img {
+      position: absolute;
+      left: 0.9rem;
+      top: 0.9rem;
+      width: 4rem;
+      height: 4rem;
+    }
+    .pd-name {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      height: 2rem;
+      overflow: hidden;
+    }
+    .pd-price {
+      margin-top: 0.4rem;
+      color: red;
+    }
+    .pd-sold {
+      font-size: 0.6rem;
+      margin-top: 0.4rem;
+      color: gray;
+    }
   }
-  .data-list .pd-img {
-    position: absolute;
-    left: 18px;
-    top: 18px;
-    width: 80px;
-    height: 80px;
-  }
-  .data-list .pd-name {
-    font-size: 16px;
-    line-height: 20px;
-    height: 40px;
-    overflow: hidden;
-  }
-  .data-list .pd-price {
-    margin-top: 8px;
-    color: red;
-  }
-  .data-list .pd-sold {
-    font-size: 12px;
-    margin-top: 8px;
-    color: gray;
-  }
-  .btn-empty{
+  .btn-empty {
     margin-top: 1rem;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="block">
-    <etc-cell-block>
+    <etc-cell-group>
       <etc-cell-item>
         <span slot="title">卡号:</span>
         <input slot="inner" type="number" placeholder="请输入粤通卡卡号" />
@@ -12,8 +12,8 @@
         <span slot="title">支付方式</span>
         <span slot="inner">微信</span>
       </etc-cell-item>
-    </etc-cell-block>
-    <etc-cell-block>
+    </etc-cell-group>
+    <etc-cell-group>
       <etc-cell-item>
         <svg slot="icon" class="icon" aria-hidden="true"><use xlink:href="#icon-phone"></use></svg>
         <input slot="title" type="number" placeholder="请输入手机号码" />
@@ -41,7 +41,7 @@
         <span slot="title">我的图标</span>
         <span slot="inner">可自定义图标</span>
       </etc-cell-item>
-    </etc-cell-block>
+    </etc-cell-group>
   </div>
 </template>
 

@@ -1,16 +1,18 @@
 <template>
   <label class="etc-radio-box">
-              <template>
-                  <input type="radio" 
-                        v-model="modelValue" 
-                        :class="classObject" 
-                        :value="checkedValue" class="etc-radio" 
-                        :disabled="disabled" 
-                        :style="{color: this.$parent.color}"
-                        @change="changeHandler" 
-                        />
+    <template>
+        <input type="radio" 
+        v-model="modelValue" 
+        :class="classObject" 
+        :value="checkedValue" class="etc-radio" 
+        :disabled="disabled" 
+        :style="{color: $parent.color}"
+        @change="changeHandler" 
+        />
 </template>
-             <span class="etc-radio-label">{{text}}</span>
+    <div class="etc-radio-label">
+      <slot>{{$slots.default}}</slot> 
+    </div>
     </label>
 </template>
 
@@ -52,7 +54,9 @@
     },
     computed: {
       checkedValue() {
-        return this.id ? this.id : this.text;
+        if (this.$slots.default) {
+          return this.id ? this.id : this.$slots.default[0].text;
+        }
       },
       classObject() {
         return this.$parent.type === 'checkbox' ? 'type-checkbox' : 'circled';

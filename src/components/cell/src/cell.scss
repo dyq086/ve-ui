@@ -5,14 +5,14 @@
  * @Last Modified time: 2017-09-20 20:20:11
 */
 
-.#{$css-prefix}-item-block {
+.#{$css-prefix}-item-group {
     background: $white-color;
     &:not(:first-child) {
         margin-top: 0.5rem;
     }
     a.item,
     lable.item {
-        @include tap-color($white-color, .96);
+        @include tap-color($white-color, 0.96);
     }
     .item {
         position: relative;
@@ -31,7 +31,9 @@
                 vertical-align: -0.25rem;
                 margin-right: 0.6rem;
             }
-            input {
+            input[type="text"],
+            input[type="number"],
+            input[type="password"] {
                 border: none;
                 width: 100%;
                 text-align: left;
@@ -46,7 +48,9 @@
             align-items: center;
             flex: 1;
             text-align: right;
-            input {
+            input[type="text"],
+            input[type="number"],
+            input[type="password"] {
                 border: none;
                 width: 100%;
                 text-align: left;
@@ -56,7 +60,7 @@
                 font-size: 0.7rem;
             }
             .icon {
-                @include icon($cell-icon-color, .7rem, .7rem);
+                @include icon($cell-icon-color, 0.7rem, 0.7rem);
                 vertical-align: -0.15rem;
             }
         }

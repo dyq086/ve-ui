@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div style="padding:1rem">
+  <div style="height:100%">
+    <div class="actionsheet-box">
       <etc-button @click.native.stop="open" type="primary">操作列表</etc-button>
     </div>
     <etc-actionsheet v-model="show" :actions="actionsList" @callback="actionSheetCallback" cancelTxt="取消"></etc-actionsheet>
@@ -56,3 +56,11 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+  .actionsheet-box {
+    padding: 1rem;
+    height: 100%;
+    background: #fff;
+  }
+</style>

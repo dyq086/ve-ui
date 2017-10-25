@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="picker">
-      <etc-cell-block>
+      <etc-cell-group>
         <etc-cell-item arrow @click.native="openArea">
           <span slot="title">地址:</span>
           <span slot="inner">{{area}}</span>
@@ -14,7 +14,7 @@
           <span slot="title">证件类型:</span>
           <span slot="inner">{{certificates}}</span>
         </etc-cell-item>
-      </etc-cell-block>
+      </etc-cell-group>
     </div>
     <etc-picker v-model="show" :defaultValue="area" :datas="city_data" :types="3" @callback="getArea" pickerTitle="请选择省市区"></etc-picker>
     <etc-picker v-model="show1" :defaultValue="plate" :datas="plate_number" :types="2" @callback="getPlate" pickerTitle="请选择车牌号"></etc-picker>

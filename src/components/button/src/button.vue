@@ -1,17 +1,18 @@
 <template>
-  <button :disabled="disabled" :class="classObject">
-          <slot></slot>
-        </button>
+  <button :disabled="disabled" :class="classObject" :style="{background:bgcolor,color:color,border:borders}"><slot></slot></button>
 </template>
 
 <script type="text/babel">
+  import {
+    isColor
+  } from '../../../plug-in/utils'
   export default {
     name: 'etc-button',
     props: {
       disabled: Boolean,
       type: {
         validator(value) {
-          return ['default','primary', 'danger', , 'disabled'].indexOf(value) > -1;
+          return ['default', 'primary', 'danger', , 'disabled'].indexOf(value) > -1;
         },
         default: 'default'
       },
@@ -20,24 +21,24 @@
           return ['sm', 'md'].indexOf(value) > -1;
         }
       },
-      // bgcolor: {
-      //   validator(value) {
-      //     if (!value) return true;
-      //     return isColor(value);
-      //   }
-      // },
-      // color: {
-      //   validator(value) {
-      //     if (!value) return true;
-      //     return isColor(value);
-      //   }
-      // },
-      // shape: {
-      //   validator(value) {
-      //     return ['square', 'circle'].indexOf(value) > -1;
-      //   },
-      //   default: 'square'
-      // }
+      bgcolor: {
+        validator(value) {
+          if (!value) return true;
+          return isColor(value);
+        }
+      },
+      color: {
+        validator(value) {
+          if (!value) return true;
+          return isColor(value);
+        }
+      },
+      borderColor: {
+        validator(value) {
+          if (!value) return true;
+          return isColor(value);
+        }
+      }
     },
     computed: {
       classObject() {
@@ -48,11 +49,14 @@
           b = 'btn-disable'
         }
         return a + ' ' + b + ' ' + c;
+      },
+      borders() {
+        if (this.bgcolor && this.color) {
+          return this.borderColor ? ("1px solid " + this.borderColor) : "none"
+        }
       }
     },
-    mounted(){
- 
-    }
+    mounted() {}
   }
 </script>
 

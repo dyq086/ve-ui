@@ -1,5 +1,5 @@
 <template>
-  <div class="group">
+  <div class="alert-box">
     <etc-button type="default" @click.native="showLoading" class="mt">indicator不带文字</etc-button>
     <etc-button type="default" @click.native="showLoading1" class="mt">indicator带文字</etc-button>
   </div>
@@ -25,13 +25,12 @@
 </script>
 
 <style lang="scss">
-  a {
-    display: block;
-  }
-  .group {
+  .alert-box {
     padding: 1rem;
+    height: 100%;
+    background: #fff;
   }
   .mt {
-    margin-top: .5rem;
+    margin-top: 1rem;
   }
 </style>

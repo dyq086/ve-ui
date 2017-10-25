@@ -1,9 +1,9 @@
 <template>
-  <div class="group">
-    <etc-button type="default" @click.native="success" class="mt">success</etc-button>
-    <etc-button type="danger" @click.native="error" class="mt">error</etc-button>
-    <etc-button type="primary" @click.native="info" class="mt">info</etc-button>
-    <etc-button type="danger" @click.native="warning" class="mt">warning</etc-button>
+  <div class="toast-box">
+     <etc-button  bgcolor="#44b549" color="#fff" @click.native="success" class="mt">成功</etc-button>
+    <etc-button type="danger" @click.native="error" class="mt">失败</etc-button>
+    <etc-button type="primary" @click.native="info" class="mt">提示</etc-button>
+    <etc-button type="default" @click.native="warning" class="mt">警告</etc-button>
   </div>
 </template>
 
@@ -48,13 +48,13 @@
 </script>
 
 <style lang="scss">
-  a {
-    display: block;
-  }
-  .group{
-    padding: 1rem;
+
+  .toast-box{
+    padding: 1rem 2rem;
+    background: #fff;
+    height: 100%;
   }
   .mt{
-    margin-top: .5rem;
+    margin-top: 1rem;
   }
 </style>

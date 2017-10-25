@@ -1,5 +1,5 @@
 <template>
-  <div class="group">
+  <div class="alert-box">
     <etc-button type="default" @click.native="comfirmClick" class="mt">comfirm</etc-button>
     <etc-button type="default" @click.native="AlertClick" class="mt">alert</etc-button>
   </div>
@@ -33,13 +33,13 @@
 </script>
 
 <style lang="scss">
-  a {
-    display: block;
-  }
-  .group {
+
+  .alert-box {
     padding: 1rem;
+    height: 100%;
+    background: #fff;
   }
   .mt {
-    margin-top: .5rem;
+    margin-top: 1rem;
   }
 </style>

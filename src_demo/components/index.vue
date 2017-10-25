@@ -1,14 +1,14 @@
 <template>
   <div class="index">
-    <div class="commpent-name">CSS 组件</div>
-    <etc-cell-block>
+    <div class="commpent-name">vue-etc-ui 组件</div>
+    <etc-cell-group>
       <etc-cell-item arrow v-for="(item,index) in list" :key="index" type="link" :href="item.link">
         <svg slot="icon" class="icon" aria-hidden="true">
           <use :xlink:href="item.icon"></use>
         </svg>
         <span slot="title">{{item.name}}</span>
       </etc-cell-item>
-    </etc-cell-block>
+    </etc-cell-group>
   </div>
 </template>
 
