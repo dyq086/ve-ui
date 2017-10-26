@@ -3,16 +3,16 @@
     <div class="picker">
       <etc-cell-group>
         <etc-cell-item arrow @click.native="openArea">
-          <span slot="title">地址:</span>
-          <span slot="inner">{{area}}</span>
+          <span slot="left">地址:</span>
+          <span slot="right">{{area}}</span>
         </etc-cell-item>
         <etc-cell-item arrow @click.native="openPlate">
-          <span slot="title">车牌号:</span>
-          <span slot="inner">{{plate}}</span>
+          <span slot="left">车牌号:</span>
+          <span slot="right">{{plate}}</span>
         </etc-cell-item>
         <etc-cell-item arrow @click.native="openCertificate">
-          <span slot="title">证件类型:</span>
-          <span slot="inner">{{certificates}}</span>
+          <span slot="left">证件类型:</span>
+          <span slot="right">{{certificates}}</span>
         </etc-cell-item>
       </etc-cell-group>
     </div>

@@ -1,0 +1,79 @@
+/*
+* @Author: yongqing
+* @Date:   2017-09-18 17:18:01
+ * @Last Modified by: yongqing.deng
+ * @Last Modified time: 2017-10-26 18:20:30
+*/
+
+.#{$css-prefix} {
+    &-swiper-wrap {
+        display: flex;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    &-swiper-content {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &-swiper-item {
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &-swiper-item-free {
+        flex-shrink: 0;
+    }
+    &-swiper-indicator {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        bottom: 0.25rem;
+        left: 0;
+        span {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            margin: 0 5px;
+            border-radius: 100%;
+            background: black;
+            opacity: 0.2;
+            transition: all 300ms ease-in-out;
+            &.current {
+                opacity: 1;
+                background: white;
+            }
+        }
+    }
+    &-swiper-indicator-vertical {
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        right: 0.3rem;
+        span {
+            display: block;
+            width: 8px;
+            height: 8px;
+            margin: 4px 0;
+            border-radius: 100%;
+            background: black;
+            opacity: 0.2;
+            transition: all 300ms ease-in-out;
+            &.current {
+                opacity: 1;
+                background: white;
+            }
+        }
+    }
+}
+
+.vertical {
+    box-orient: vertical;
+    box-direction: normal;
+    flex-direction: column;
+}

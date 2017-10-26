@@ -2,13 +2,13 @@
   <div>
     <etc-cell-group>
       <etc-cell-item>
-        <div slot="title">
+        <div slot="left">
           <etc-checkbox v-model="checkboxTest" text="样式一"></etc-checkbox>
         </div>
         <div slot="inner">{{checkboxTest}}</div>
       </etc-cell-item>
       <etc-cell-item>
-        <div slot="title">
+        <div slot="left">
           <etc-checkbox v-model="checkboxTest1" text="样式二" shape="circled"></etc-checkbox>
         </div>
         <div slot="inner">{{checkboxTest1}}</div>
@@ -16,13 +16,13 @@
     </etc-cell-group>
     <etc-cell-group>
       <etc-cell-item>
-        <div slot="title">
+        <div slot="left">
           <etc-checkbox v-model="checkboxTest2" color="#26a2ff" text="自定义颜色"></etc-checkbox>
         </div>
         <div slot="inner"></div>
       </etc-cell-item>
       <etc-cell-item>
-        <div slot="title">
+        <div slot="left">
           <etc-checkbox v-model="checkboxTest3" disabled text="不可点击状态"></etc-checkbox>
         </div>
         <div slot="inner">{{checkboxTest3}}</div>

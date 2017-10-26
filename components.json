@@ -10,4 +10,5 @@
   "/lib/actionsheet/index": "./src/components/actionsheet/index.js",
   "/lib/vscroll/index": "./src/components/vscroll/index.js",
   "/lib/toast/index": "./src/components/toast/index.js"
+  
 }

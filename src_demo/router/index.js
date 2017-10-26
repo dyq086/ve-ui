@@ -2,7 +2,7 @@
  * @Author: yongqing.deng 
  * @Date: 2017-09-20 19:14:17 
  * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-10-19 14:59:34
+ * @Last Modified time: 2017-10-26 15:38:02
  */
 import Vue from "vue";
 import Router from "vue-router";
@@ -20,6 +20,7 @@ import Tab from "../components/Tab";
 import Picker from "../components/Picker";
 import ActionSheet from "../components/ActionSheet";
 import Vscroll from "../components/Vscroll";
+import Swiper from "../components/Swiper";
 Vue.use(Router);
 export default new Router({
   routes: [
@@ -93,6 +94,12 @@ export default new Router({
       name: "vscroll",
       component: Vscroll
     },
+    {
+      path: "/swiper",
+      name: "swiper",
+      component: Swiper
+    },
+    
     
   ]
 });

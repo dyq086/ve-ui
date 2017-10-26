@@ -1,41 +1,41 @@
 <template>
   <lable class="item" v-if="type=='label' || type=='checkbox' || type=='radio'">
-    <div class="item-title">
+    <div class="item-left">
       <slot name="icon"></slot>
-      <slot name="title"></slot>
+      <slot name="left"></slot>
     </div>
-    <div class="item-inner" v-if="is_inner">
-      <slot name="inner"></slot>
+    <div class="item-right" v-if="is_right">
+      <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
   </lable>
   <a class="item" :href="href" v-else-if="type=='a'">
-    <div class="item-title">
+    <div class="item-left">
       <slot name="icon"></slot>
-      <slot name="title"></slot>
+      <slot name="left"></slot>
     </div>
-    <div class="item-inner" v-if="is_inner">
-      <slot name="inner"></slot>
+    <div class="item-right" v-if="is_right">
+      <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
   </a>
   <router-link class="item" :to="href" v-else-if="type=='link'">
-    <div class="item-title">
+    <div class="item-left">
       <slot name="icon"></slot>
-      <slot name="title"></slot>
+      <slot name="left"></slot>
     </div>
-    <div class="item-inner" v-if="is_inner">
-      <slot name="inner"></slot>
+    <div class="item-right" v-if="is_right">
+      <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
   </router-link>
   <div class="item" v-else>
-    <div class="item-title" :class="[is_inner?'':'item-flex']">
+    <div class="item-left" :class="[is_right?'':'item-flex']">
       <slot name="icon"></slot>
-      <slot name="title"></slot>
+      <slot name="left"></slot>
     </div>
-    <div class="item-inner" v-if="is_inner">
-      <slot name="inner"></slot>
+    <div class="item-right" v-if="is_right">
+      <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
   </div>
@@ -63,8 +63,8 @@
     mounted(){
     },
     computed: {
-      is_inner() {
-        return !!this.$slots.inner;
+      is_right() {
+        return !!this.$slots.right;
       }
     }
   }

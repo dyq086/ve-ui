@@ -2,68 +2,70 @@
 * @Author: yongqing
 * @Date:   2017-09-18 17:18:01
  * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-09-20 20:20:11
+ * @Last Modified time: 2017-10-26 18:32:42
 */
 
-.#{$css-prefix}-item-group {
-    background: $white-color;
-    &:not(:first-child) {
-        margin-top: 0.5rem;
-    }
-    a.item,
-    lable.item {
-        @include tap-color($white-color, 0.96);
-    }
-    .item {
-        position: relative;
-        @include fj();
-        align-items: center;
-        height: 2.5rem;
-        padding: 0.85rem 0.75rem;
-        &:not(:last-child):after {
-            @include bottom-line($line-color);
+.#{$css-prefix} {
+    &-item-group {
+        background: $white-color;
+        &:not(:first-child) {
+            margin-top: 0.5rem;
         }
-        &-title {
-            @include sc(0.75rem, $defult-color);
-            @include fj(flex-start);
-            .icon {
-                @include icon($cell-icon-color, 1rem, 1rem);
-                vertical-align: -0.25rem;
-                margin-right: 0.6rem;
-            }
-            input[type="text"],
-            input[type="number"],
-            input[type="password"] {
-                border: none;
-                width: 100%;
-                text-align: left;
-                font-size: .75rem;
-            }
-            &.item-flex {
-                flex: 1;
-            }
+        a.item,
+        lable.item {
+            @include tap-color($white-color, 0.96);
         }
-        &-inner {
-            @include sc(0.75rem, $defult-color);
-            @include fj(flex-end);
+        .item {
+            position: relative;
+            @include fj();
             align-items: center;
-            flex: 1;
-            text-align: right;
-            input[type="text"],
-            input[type="number"],
-            input[type="password"] {
-                border: none;
-                width: 100%;
-                text-align: left;
-                margin-left: 0.4rem;
-                font-size: .75rem;
+            height: 2.5rem;
+            padding: 0.85rem 0.75rem;
+            &:not(:last-child):after {
+                @include bottom-line($line-color);
             }
-            span {
-                font-size: 0.7rem;
+            &-left {
+                @include sc(0.75rem, $defult-color);
+                @include fj(flex-start);
+                .icon {
+                    @include icon($cell-icon-color, 1rem, 1rem);
+                    vertical-align: -0.25rem;
+                    margin-right: 0.6rem;
+                }
+                input[type="text"],
+                input[type="number"],
+                input[type="password"] {
+                    border: none;
+                    width: 100%;
+                    text-align: left;
+                    font-size: .75rem;
+                }
+                &.item-flex {
+                    flex: 1;
+                }
             }
-            .icon {
-                @include icon($cell-icon-color, 0.7rem, 0.7rem);
-                vertical-align: -0.15rem;
+            &-right {
+                @include sc(0.75rem, $defult-color);
+                @include fj(flex-end);
+                align-items: center;
+                flex: 1;
+                text-align: right;
+                input[type="text"],
+                input[type="number"],
+                input[type="password"] {
+                    border: none;
+                    width: 100%;
+                    text-align: left;
+                    margin-left: 0.4rem;
+                    font-size: .75rem;
+                }
+                span {
+                    font-size: 0.7rem;
+                }
+                .icon {
+                    @include icon($cell-icon-color, 0.7rem, 0.7rem);
+                    vertical-align: -0.15rem;
+                }
             }
         }
     }

@@ -9,6 +9,7 @@ import { Tab, TabPanel } from "./components/tab";
 import { Picker } from "./components/picker";
 import { ActionSheet } from "./components/actionsheet";
 import { Vscroll } from "./components/vscroll";
+import { Swiper, SwiperItem } from "./components/swiper";
 import Toast from "./components/toast";
 import Alert from "./components/alert";
 import Indicator from "./components/indicator";
@@ -30,6 +31,8 @@ const install = function(Vue, config = {}) {
   Vue.component(Picker.name, Picker);
   Vue.component(ActionSheet.name, ActionSheet);
   Vue.component(Vscroll.name, Vscroll);
+  Vue.component(Swiper.name, Swiper);
+  Vue.component(SwiperItem.name, SwiperItem);
   Vue.prototype.$dialog = {
     toast: Toast,
     indicator: Indicator,

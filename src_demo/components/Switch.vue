@@ -2,26 +2,26 @@
   <div>
     <etc-cell-group>
       <etc-cell-item>
-        <div slot="title">默认({{switchTest}})</div>
-        <div slot="inner">
+        <div slot="left">默认({{switchTest}})</div>
+        <div slot="right">
           <etc-switch v-model="switchTest"></etc-switch>
         </div>
       </etc-cell-item>
       <etc-cell-item>
-        <div slot="title">禁止点击</div>
-        <div slot="inner">
+        <div slot="left">禁止点击</div>
+        <div slot="right">
           <etc-switch v-model="switchTest1" disabled></etc-switch>
         </div>
       </etc-cell-item>
       <etc-cell-item>
-        <div slot="title">自定义颜色</div>
-        <div slot="inner">
+        <div slot="left">自定义颜色</div>
+        <div slot="right">
           <etc-switch v-model="switchTest2" color="#26a2ff"></etc-switch>
         </div>
       </etc-cell-item>
       <etc-cell-item>
-        <div slot="title">自定义尺寸</div>
-        <div slot="inner">
+        <div slot="left">自定义尺寸</div>
+        <div slot="right">
           <etc-switch v-model="switchTest3" size="sm"></etc-switch>
         </div>
       </etc-cell-item>

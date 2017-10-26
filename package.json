@@ -17,7 +17,6 @@
     "bootstrap": "yarn || npm i",
     "build": "node build/build.js",
     "dist": "node build/build.dist.js",
-    "dist:c": "node build/build.dist.js",
     "pub": "sh build/release.sh",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run e2e",

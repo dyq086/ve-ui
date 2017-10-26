@@ -39,7 +39,7 @@
       }
     }
     .md {
-      margin-top: 2rem;
+      margin-top: 1rem;
       padding: 0 4rem;
       button {
         margin: .5rem auto;

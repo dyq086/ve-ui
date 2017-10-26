@@ -4,9 +4,9 @@
     <etc-cell-group>
       <etc-cell-item arrow v-for="(item,index) in list" :key="index" type="link" :href="item.link">
         <svg slot="icon" class="icon" aria-hidden="true">
-          <use :xlink:href="item.icon"></use>
-        </svg>
-        <span slot="title">{{item.name}}</span>
+            <use :xlink:href="item.icon"></use>
+          </svg>
+        <span slot="left">{{item.name}}</span>
       </etc-cell-item>
     </etc-cell-group>
   </div>
@@ -72,15 +72,20 @@
             name: 'Picker',
             link: '/picker'
           },
-            {
+          {
             icon: '#icon-xingxi',
             name: 'ActionSheet',
             link: '/actionsheet'
           },
-           {
+          {
             icon: '#icon-xingxi',
             name: 'Vscroll',
             link: '/vscroll'
+          },
+          {
+            icon: '#icon-xingxi',
+            name: 'Swiper',
+            link: '/swiper'
           }
         ]
       }
