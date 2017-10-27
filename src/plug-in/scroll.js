@@ -8,9 +8,8 @@ export default class Scroll {
   constructor(el, params) {
     this.scroller = el;
     this._init(params);
-
   }
-  _init(params){
+  _init(params) {
     this.childNode = this.scroller.children[0];
     this.options = {
       step: true, // 是否开启步长模式
@@ -25,9 +24,7 @@ export default class Scroll {
 
     this.scrollerHeight = this.scroller.clientHeight; //scroller高度
     this.childNodeHeight = this.childNode.clientHeight; //scroller子元素的高度
-    
     this.scrollHeight = this.childNodeHeight - this.scrollerHeight; //滚动高度
-
     let childNodes = this.childNode.children;
     this.stepLen = childNodes.length > 0 ? childNodes[0].clientHeight : 0; // 步长
     // 设置参数
@@ -36,31 +33,38 @@ export default class Scroll {
     }
 
     // 默认列表位置
-    let defaultPlace = this.options.defaultPlace? this.options.defaultPlace: 0;
-    setTimeout(()=>{
+    let defaultPlace = this.options.defaultPlace
+      ? this.options.defaultPlace
+      : 0;
+    setTimeout(() => {
       this.scrollTo(0, defaultPlace);
-    },100)
-   
-    this._start();
-    this._move();
-    this._end();
+    }, 100);
+
+    this.touchStart();
+    this.touchMove();
+    this.touchEnd();
   }
 
-  _start() {
-    this.scroller.addEventListener("touchstart",e=> {
+  touchStart() {
+    this.scroller.addEventListener(
+      "touchstart",
+      e => {
         e.stopPropagation();
         e.preventDefault();
         this.startTime = this.getTime();
         let touches = e.touches ? e.touches[0] : e;
         this.startPageY = touches.pageY; //起始触摸点
+
         this.browserVendor("transition", "none");
       },
       false
     );
   }
 
-  _move() {
-    this.scroller.addEventListener("touchmove",e=> {
+  touchMove() {
+    this.scroller.addEventListener(
+      "touchmove",
+      e => {
         e.stopPropagation();
         e.preventDefault();
         let timestamp = this.getTime();
@@ -87,8 +91,10 @@ export default class Scroll {
     );
   }
 
-  _end() {
-    this.scroller.addEventListener("touchend",e=> {
+  touchEnd() {
+    this.scroller.addEventListener(
+      "touchend",
+      e => {
         e.stopPropagation();
         e.preventDefault();
         this.endTime = this.getTime();
@@ -110,7 +116,10 @@ export default class Scroll {
           this.offsetTop += offsetHeight * speed * 10; // 惯性移动距离
           this.browserVendor("transitionProperty", "all");
           this.browserVendor("transitionDuration", moveTime + "ms");
-          this.browserVendor("transitionTimingFunction","cubic-bezier(0.1, 0.57, 0.1, 1)");
+          this.browserVendor(
+            "transitionTimingFunction",
+            "cubic-bezier(0.1, 0.57, 0.1, 1)"
+          );
         } else {
           this.browserVendor("transition", "all 500ms");
         }
@@ -128,16 +137,19 @@ export default class Scroll {
           let halfHeight = this.stepLen / 2; //step一半的高度
 
           //超过行一半的高度，则滚动一行
-          let moveY =h >= halfHeight ? nowEndY - this.stepLen + h : nowEndY + h;
+          let moveY =
+            h >= halfHeight ? nowEndY - this.stepLen + h : nowEndY + h;
           let index = parseInt(Math.abs(moveY) / this.stepLen);
-          
+
           this.options.callback({
             index: index,
             node: this.childNode.childNodes
           });
           this.offsetTop = moveY;
         }
-        this.browserVendor("transform", "translate(0, " + this.offsetTop + "px)"
+        this.browserVendor(
+          "transform",
+          "translate(0, " + this.offsetTop + "px)"
         );
       },
       false
@@ -149,7 +161,10 @@ export default class Scroll {
     if (time && time > 0) {
       this.browserVendor("transitionProperty", "all");
       this.browserVendor("transitionDuration", time + "ms");
-      this.browserVendor("transitionTimingFunction","cubic-bezier(0.1, 0.57, 0.1, 1)");
+      this.browserVendor(
+        "transitionTimingFunction",
+        "cubic-bezier(0.1, 0.57, 0.1, 1)"
+      );
     } else {
       this.browserVendor("transition", "none");
     }
@@ -174,7 +189,20 @@ export default class Scroll {
 
     this.scrollTo(0, 0, 500);
   }
+  // 刷新时间组件
+  refreshTime() {
+    this.childNode = this.scroller.childNodes[0];
+    this.scrollerHeight = this.scroller.clientHeight; //scroller高度
+    this.childNodeHeight = this.childNode.clientHeight; //scroller子元素的高度
 
+    this.scrollHeight = this.childNodeHeight - this.scrollerHeight; //滚动高度
+    let childNodes = this.childNode.children;
+    this.stepLen = childNodes.length > 0 ? childNodes[0].clientHeight : 0; // 步长
+    let dvalue = this.scrollHeight - Math.abs(this.offsetTop);
+    if (dvalue < this.stepLen * 3 && dvalue < 0) {
+      this.scrollTo(0, this.scrollHeight,500);
+    }
+  }
   // 浏览器兼容
   browserVendor(styleStr, value) {
     const vendors = ["t", "WebkitT", "MozT", "msT", "OT"];

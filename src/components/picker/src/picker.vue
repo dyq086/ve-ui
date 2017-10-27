@@ -24,7 +24,7 @@
         <div class="picker-cover cover-bottom"></div>
       </div>
     </div>
-    <div class="etc-picker-mask" v-show="is_show" @click.stop="closePicker"></div>
+    <div class="etc-picker-mask" v-show="is_show" @click.stop="close"></div>
   </div>
 </template>
 
@@ -143,11 +143,14 @@
         }
         return num
       },
-      closePicker() {
-        this.$emit('input', false);
+      close() {
+        this.is_show = false;
+      },
+      open() {
+        this.is_show = true;
       },
       cancel() {
-        this.closePicker();
+        this.close();
       },
       ok() {
         let callbackValues = "",
@@ -163,11 +166,11 @@
         currentObj.selectNodes = temp;
         currentObj.value = callbackValues;
         this.$emit('callback', currentObj);
-        this.closePicker();
+        this.close();
       }
     },
     watch: {
-      value(currentValue) {
+      is_show(currentValue) {
         if (currentValue) {
           this.initScroll();
           pageScroll.lock();
@@ -196,7 +199,7 @@
       }
     },
     destroyed() {
-      this.closePicker();
+      this.close();
     }
   }
 </script>

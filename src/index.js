@@ -7,6 +7,7 @@ import { Radio, RadioGroup } from "./components/radio";
 import { Grids, GridsGroup } from "./components/grids";
 import { Tab, TabPanel } from "./components/tab";
 import { Picker } from "./components/picker";
+import { DateTimePicker } from "./components/datetime-picker";
 import { ActionSheet } from "./components/actionsheet";
 import { Vscroll } from "./components/vscroll";
 import { Swiper, SwiperItem } from "./components/swiper";
@@ -29,6 +30,7 @@ const install = function(Vue, config = {}) {
   Vue.component(Tab.name, Tab);
   Vue.component(TabPanel.name, TabPanel);
   Vue.component(Picker.name, Picker);
+  Vue.component(DateTimePicker.name, DateTimePicker);
   Vue.component(ActionSheet.name, ActionSheet);
   Vue.component(Vscroll.name, Vscroll);
   Vue.component(Swiper.name, Swiper);

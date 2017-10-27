@@ -18,6 +18,7 @@ import Alert from "../components/Alert";
 import Indicator from "../components/Indicator";
 import Tab from "../components/Tab";
 import Picker from "../components/Picker";
+import DateTimePicker from "../components/DateTimePicker";
 import ActionSheet from "../components/ActionSheet";
 import Vscroll from "../components/Vscroll";
 import Swiper from "../components/Swiper";
@@ -85,6 +86,11 @@ export default new Router({
       component: Picker
     },
     {
+      path: "/datetime-picker",
+      name: "datetime-picker",
+      component: DateTimePicker
+    },
+    {
       path: "/actionsheet",
       name: "actionsheet",
       component: ActionSheet
@@ -98,8 +104,6 @@ export default new Router({
       path: "/swiper",
       name: "swiper",
       component: Swiper
-    },
-    
-    
+    }
   ]
 });

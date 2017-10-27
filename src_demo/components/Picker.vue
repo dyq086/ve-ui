@@ -16,9 +16,9 @@
         </etc-cell-item>
       </etc-cell-group>
     </div>
-    <etc-picker v-model="show" :defaultValue="area" :datas="city_data" :types="3" @callback="getArea" pickerTitle="请选择省市区"></etc-picker>
-    <etc-picker v-model="show1" :defaultValue="plate" :datas="plate_number" :types="2" @callback="getPlate" pickerTitle="请选择车牌号"></etc-picker>
-    <etc-picker v-model="show2" :defaultValue="certificates" :datas="certificate_data" :types="1" @callback="getCertificate" pickerTitle="请选择证件类型"></etc-picker>
+    <etc-picker ref="picker1" :defaultValue="area" :datas="city_data" :types="3" @callback="getArea" pickerTitle="请选择省市区"></etc-picker>
+    <etc-picker ref="picker2" :defaultValue="plate" :datas="plate_number" :types="2" @callback="getPlate" pickerTitle="请选择车牌号"></etc-picker>
+    <etc-picker ref="picker3" :defaultValue="certificates" :datas="certificate_data" :types="1" @callback="getCertificate" pickerTitle="请选择证件类型"></etc-picker>
   </div>
 </template>
 
@@ -43,13 +43,13 @@
     mounted() {},
     methods: {
       openArea() {
-        this.show = !this.show;
+        this.$refs.picker1.open();
       },
       openPlate() {
-        this.show1 = !this.show1;
+        this.$refs.picker2.open();
       },
       openCertificate() {
-        this.show2 = !this.show2;
+        this.$refs.picker3.open();
       },
       getArea(obj) {
         this.area = obj.value

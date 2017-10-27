@@ -1,14 +1,21 @@
 {
   "/lib/button/index": "./src/components/button/index.js",
+
   "/lib/alert/index": "./src/components/alert/index.js",
   "/lib/cell/index": "./src/components/cell/index.js",
+
   "/lib/checkbox/index": "./src/components/checkbox/index.js",
   "/lib/radio/index": "./src/components/radio/index.js",
+
   "/lib/grids/index": "./src/components/grids/index.js",
   "/lib/tab/index": "./src/components/tab/index.js",
+
   "/lib/picker/index": "./src/components/picker/index.js",
+  "/lib/datetime-picker/index": "./src/components/datetime-picker/index.js",
+
   "/lib/actionsheet/index": "./src/components/actionsheet/index.js",
   "/lib/vscroll/index": "./src/components/vscroll/index.js",
-  "/lib/toast/index": "./src/components/toast/index.js"
-  
+
+  "/lib/toast/index": "./src/components/toast/index.js",
+  "/lib/indicator/index": "./src/components/indicator/index.js"
 }
