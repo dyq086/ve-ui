@@ -46,6 +46,6 @@
 </script>
 
 <style lang="scss">
-  @import '../../../style/base.scss';
+  @import '../../../style/necessary.scss';
   @import './toast.scss';
 </style>

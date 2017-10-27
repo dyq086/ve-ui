@@ -11,7 +11,7 @@
   export default { props: { mes: String }}
 </script>
 <style lang="scss">
-@import '../../../style/base.scss';
+@import '../../../style/necessary.scss';
 @import './indicator.scss';
 
 </style>

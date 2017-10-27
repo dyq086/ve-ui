@@ -82,6 +82,6 @@
 </script>
 
 <style lang="scss">
-  @import '../../../style/base.scss';
+  @import '../../../style/necessary.scss';
   @import './radio.scss';
 </style>

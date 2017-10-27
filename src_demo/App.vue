@@ -10,7 +10,8 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+  @import "../src/style/base.scss";
   #app {
     margin: 0 auto;
     width: 100%;

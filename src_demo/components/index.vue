@@ -11,7 +11,6 @@
     </etc-cell-group>
   </div>
 </template>
-
 <script>
   import iconfont from "../assets/icon/iconfont"
   export default {

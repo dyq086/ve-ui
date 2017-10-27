@@ -1,4 +1,5 @@
 import rem from "./plug-in/rem";
+import { Base } from "./components/base";
 import { Button } from "./components/button";
 import { Cell, CellGroup } from "./components/cell";
 import { Switch } from "./components/switch";
@@ -14,9 +15,9 @@ import { Swiper, SwiperItem } from "./components/swiper";
 import Toast from "./components/toast";
 import Alert from "./components/alert";
 import Indicator from "./components/indicator";
-const version = "1.0.9";
 const install = function(Vue, config = {}) {
   if (install.installed) return;
+  Vue.component(Base.name, Base);
   Vue.component(Button.name, Button);
   Vue.component(Cell.name, Cell);
   Vue.component(CellGroup.name, CellGroup);
@@ -38,7 +39,7 @@ const install = function(Vue, config = {}) {
   Vue.prototype.$dialog = {
     toast: Toast,
     indicator: Indicator,
-    alert:Alert
+    alert: Alert
   };
 };
 //移动端ios:active伪类失效的兼容解决：
@@ -50,5 +51,26 @@ if (typeof window !== "undefined" && window.Vue) {
 
 export default {
   install,
-  version
+  Base,
+  Toast,
+  Indicator,
+  Alert,
+  Button,
+  Cell,
+  CellGroup,
+  Switch,
+  Checkbox,
+  CheckboxGroup,
+  Radio,
+  RadioGroup,
+  Grids,
+  GridsGroup,
+  Tab,
+  TabPanel,
+  Picker,
+  DateTimePicker,
+  ActionSheet,
+  Vscroll,
+  Swiper,
+  SwiperItem
 };

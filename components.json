@@ -1,4 +1,5 @@
 {
+  "/lib/base/index": "./src/components/base/index.js",
   "/lib/button/index": "./src/components/button/index.js",
 
   "/lib/alert/index": "./src/components/alert/index.js",

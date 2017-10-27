@@ -234,7 +234,7 @@
 </script>
 
 <style lang="scss">
-  @import '../../../style/base.scss';
-  @import './picker.scss';
+  @import '../../../style/necessary.scss';
+  @import '../../picker/src/picker.scss'
 </style>
 

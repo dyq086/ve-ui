@@ -37,6 +37,6 @@
 </script>
 
 <style lang="scss">
-  @import '../../../style/base.scss';
+  @import '../../../style/necessary.scss';
   @import './grids.scss';
 </style>
