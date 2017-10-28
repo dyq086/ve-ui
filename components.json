@@ -1,22 +1,35 @@
 {
-  "/lib/base/index": "./src/components/base/index.js",
-  "/lib/button/index": "./src/components/button/index.js",
+  "/base/index": "./src/components/base/index.js",
+  "/button/index": "./src/components/button/index.js",
 
-  "/lib/alert/index": "./src/components/alert/index.js",
-  "/lib/cell/index": "./src/components/cell/index.js",
 
-  "/lib/checkbox/index": "./src/components/checkbox/index.js",
-  "/lib/radio/index": "./src/components/radio/index.js",
+  "/cell/index": "./src/components/cell/index.js",
+  "/cell-group/index": "./src/components/cell-group/index.js",
 
-  "/lib/grids/index": "./src/components/grids/index.js",
-  "/lib/tab/index": "./src/components/tab/index.js",
+  "/checkbox/index": "./src/components/checkbox/index.js",
+  "/checkbox-group/index": "./src/components/checkbox-group/index.js",
 
-  "/lib/picker/index": "./src/components/picker/index.js",
-  "/lib/datetime-picker/index": "./src/components/datetime-picker/index.js",
+  "/radio/index": "./src/components/radio/index.js",
+  "/radio-group/index": "./src/components/radio-group/index.js",
 
-  "/lib/actionsheet/index": "./src/components/actionsheet/index.js",
-  "/lib/vscroll/index": "./src/components/vscroll/index.js",
+  "/grids/index": "./src/components/grids/index.js",
+  "/grids-group/index": "./src/components/grids-group/index.js",
 
-  "/lib/toast/index": "./src/components/toast/index.js",
-  "/lib/indicator/index": "./src/components/indicator/index.js"
+  "/tab/index": "./src/components/tab/index.js",
+  "/tab-panel/index": "./src/components/tab-panel/index.js",
+
+  "/picker/index": "./src/components/picker/index.js",
+  "/datetime-picker/index": "./src/components/datetime-picker/index.js",
+
+  "/swiper/index": "./src/components/swiper/index.js",
+  "/swiper-item/index": "./src/components/swiper-item/index.js",
+
+  "/switch/index": "./src/components/switch/index.js",
+
+  "/actionsheet/index": "./src/components/actionsheet/index.js",
+  "/vscroll/index": "./src/components/vscroll/index.js",
+
+  "/alert/index": "./src/components/alert/index.js",
+  "/toast/index": "./src/components/toast/index.js",
+  "/indicator/index": "./src/components/indicator/index.js"
 }

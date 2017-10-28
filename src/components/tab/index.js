@@ -1,4 +1,1 @@
-import Tab from './src/tab.vue';
-import TabPanel from './src/tab-panel.vue';
-
-export {Tab, TabPanel};
+export {default} from './src/tab.vue';

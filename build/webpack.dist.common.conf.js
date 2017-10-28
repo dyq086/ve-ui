@@ -26,9 +26,8 @@ var webpackConfig = merge(baseWebpackConfig, {
     })
   },
   output: {
-    path: path.resolve(__dirname, "../dist"),
-    library: "etcui",
-    libraryTarget: "umd"
+    path: path.resolve(__dirname, "../lib"),
+
   },
   externals: {
     vue: {

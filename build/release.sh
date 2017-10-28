@@ -10,6 +10,7 @@ then
 
   # build
   VERSION=$VERSION npm run dist
+  
 
   # commit
   git add -A

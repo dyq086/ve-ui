@@ -1,17 +1,23 @@
 import rem from "./plug-in/rem";
-import { Base } from "./components/base";
-import { Button } from "./components/button";
-import { Cell, CellGroup } from "./components/cell";
-import { Switch } from "./components/switch";
-import { Checkbox, CheckboxGroup } from "./components/checkbox";
-import { Radio, RadioGroup } from "./components/radio";
-import { Grids, GridsGroup } from "./components/grids";
-import { Tab, TabPanel } from "./components/tab";
-import { Picker } from "./components/picker";
-import { DateTimePicker } from "./components/datetime-picker";
-import { ActionSheet } from "./components/actionsheet";
-import { Vscroll } from "./components/vscroll";
-import { Swiper, SwiperItem } from "./components/swiper";
+import Base from "./components/base";
+import Button from "./components/button";
+import Cell from "./components/cell";
+import CellGroup from "./components/cell-group"; //1
+import Switch from "./components/switch";
+import Checkbox from "./components/checkbox";
+import CheckboxGroup from "./components/checkbox-group"; //2
+import Radio from "./components/radio";
+import RadioGroup from "./components/radio-group"; //3
+import Grids from "./components/grids";
+import GridsGroup from "./components/grids-group"; //4
+import Tab from "./components/tab";
+import TabPanel from "./components/tab-panel"; //5
+import Picker from "./components/picker";
+import DateTimePicker from "./components/datetime-picker";
+import ActionSheet from "./components/actionsheet";
+import Vscroll from "./components/vscroll";
+import Swiper from "./components/swiper";
+import SwiperItem from "./components/swiper-item"; //6
 import Toast from "./components/toast";
 import Alert from "./components/alert";
 import Indicator from "./components/indicator";

@@ -70,8 +70,6 @@
     }
   }
 </script>
-
 <style lang="scss">
-  @import '../../../style/necessary.scss';
-  @import './checkbox.scss';
+
 </style>

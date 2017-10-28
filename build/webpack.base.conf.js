@@ -20,7 +20,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue-etc-ui': path.resolve(__dirname, '../src'),
+      'etc-ui': path.resolve(__dirname, '../src'),
       'vue$': 'vue/dist/vue.esm.js',
       'src': resolve('src'),
     }

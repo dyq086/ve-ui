@@ -14,6 +14,5 @@
 </script>
 
 <style lang="scss">
-  @import '../../../style/necessary.scss';
-  @import './cell.scss';
+
 </style>

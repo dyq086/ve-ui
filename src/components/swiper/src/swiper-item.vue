@@ -9,3 +9,6 @@
 		name: 'etc-swiper-item',
 	}
 </script>
+<style lang="scss">
+
+</style>
