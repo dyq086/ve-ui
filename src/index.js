@@ -13,6 +13,8 @@ import GridsGroup from "./components/grids-group"; //4
 import Tab from "./components/tab";
 import TabPanel from "./components/tab-panel"; //5
 import Picker from "./components/picker";
+import PwdKeyboard from "./components/pwd-keyboard";
+import PwdInput from "./components/pwd-input";
 import DateTimePicker from "./components/datetime-picker";
 import ActionSheet from "./components/actionsheet";
 import Vscroll from "./components/vscroll";
@@ -42,6 +44,8 @@ const install = function(Vue, config = {}) {
   Vue.component(Vscroll.name, Vscroll);
   Vue.component(Swiper.name, Swiper);
   Vue.component(SwiperItem.name, SwiperItem);
+  Vue.component(PwdKeyboard.name, PwdKeyboard);
+  Vue.component(PwdInput.name, PwdInput);
   Vue.prototype.$dialog = {
     toast: Toast,
     indicator: Indicator,
@@ -74,6 +78,8 @@ export default {
   Tab,
   TabPanel,
   Picker,
+  PwdKeyboard,
+  PwdInput,
   DateTimePicker,
   ActionSheet,
   Vscroll,

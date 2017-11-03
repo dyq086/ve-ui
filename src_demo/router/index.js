@@ -19,6 +19,7 @@ import Indicator from "../components/Indicator";
 import Tab from "../components/Tab";
 import Picker from "../components/Picker";
 import DateTimePicker from "../components/DateTimePicker";
+import PwdKeyboard from "../components/PwdKeyboard";
 import ActionSheet from "../components/ActionSheet";
 import Vscroll from "../components/Vscroll";
 import Swiper from "../components/Swiper";
@@ -89,6 +90,11 @@ export default new Router({
       path: "/datetime-picker",
       name: "datetime-picker",
       component: DateTimePicker
+    },
+    {
+      path: "/pwd-keyboard",
+      name: "pwd-keyboard",
+      component: PwdKeyboard
     },
     {
       path: "/actionsheet",

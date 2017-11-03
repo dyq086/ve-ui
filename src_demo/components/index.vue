@@ -4,13 +4,14 @@
     <etc-cell-group>
       <etc-cell-item arrow v-for="(item,index) in list" :key="index" type="link" :href="item.link">
         <svg slot="icon" class="icon" aria-hidden="true">
-              <use :xlink:href="item.icon"></use>
-            </svg>
+                <use :xlink:href="item.icon"></use>
+              </svg>
         <span slot="left">{{item.name}}</span>
       </etc-cell-item>
     </etc-cell-group>
   </div>
 </template>
+
 <script>
   import iconfont from "../assets/icon/iconfont"
   export default {
@@ -75,6 +76,11 @@
             icon: '#icon-xingxi',
             name: 'DateTimePicker',
             link: '/datetime-picker'
+          },
+          {
+            icon: '#icon-xingxi',
+            name: 'PwdKeyboard',
+            link: '/pwd-keyboard'
           },
           {
             icon: '#icon-xingxi',

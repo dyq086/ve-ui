@@ -2,7 +2,6 @@
   "/base/index": "./src/components/base/index.js",
   "/button/index": "./src/components/button/index.js",
 
-
   "/cell/index": "./src/components/cell/index.js",
   "/cell-group/index": "./src/components/cell-group/index.js",
 
@@ -20,6 +19,8 @@
 
   "/picker/index": "./src/components/picker/index.js",
   "/datetime-picker/index": "./src/components/datetime-picker/index.js",
+  "/pwd-keyboard/index": "./src/components/pwd-keyboard/index.js",
+  "/pwd-input/index": "./src/components/pwd-input/index.js",
 
   "/swiper/index": "./src/components/swiper/index.js",
   "/swiper-item/index": "./src/components/swiper-item/index.js",
