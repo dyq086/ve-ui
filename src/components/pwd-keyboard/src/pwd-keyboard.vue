@@ -15,6 +15,7 @@
 </template>
 
 <script type="text/babel">
+  import iconfont from "../../../icon/iconfont"
   export default {
     name: 'etc-pwd-keyboard',
     data() {
@@ -28,7 +29,6 @@
     props: {
       repeat: Boolean
     },
-    mounted() {},
     methods: {
       deleted() {
         let value = this.input_value;
