@@ -1,6 +1,6 @@
 <template>
   <div>
-    <etc-vscroll :on-infinite="infinite" :pageSize="pageSize" toTop ref="vscroll">
+    <etc-vscroll :on-infinite="infinite" :pageSize="pageSize" toTop ref="vscroll" :use-refresh="true">
       <div slot="list">
         <ul class="data-list" @click="refresh">
           <li v-for="pd in products_list">
@@ -21,87 +21,94 @@
     </etc-vscroll>
   </div>
 </template>
-
 <script>
-  export default {
-    data() {
-      return {
-        products_list: [],
-        pageSize: 10
-      }
-    },
-    methods: {
-      infinite(pageNum, pageSize, successCallback, errorCallback) {
-        const url = 'https://api-mall.etcchebao.com/goods/list?cateidOne=2&cateidTwo=0&price=0&sales=2';
-        this.$http.jsonp(url, {
-          params: {
-            page: pageNum,
-            size: pageSize
+export default {
+  data() {
+    return {
+      products_list: [],
+      pageSize: 10
+    }
+  },
+  mounted() {
+    this.$refs.vscroll.init();//初始化
+  },
+  methods: {
+    infinite(pageNum, pageSize, successCallback, errorCallback) {
+      const url = 'https://api-mall.etcchebao.com/goods/list?cateidOne=2&cateidTwo=0&price=0&sales=2';
+      this.$http.jsonp(url, {
+        params: {
+          page: pageNum,
+          size: pageSize
+        }
+      }).then((response) => {
+        let _list = response.body.data.list;
+        setTimeout(() => {
+          //如果是第一页需手动制空列表
+          if (pageNum == 1) {
+            this.products_list = [];
           }
-        }).then((response) => {
-          let _list = response.body.data.list;
-          setTimeout(() => {
-            //如果是第一页需手动制空列表
-            if (pageNum == 1) {
-              this.products_list = [];
-            }
-            //TODO 相当于concat、
-            this.products_list = [...this.products_list, ..._list];
-            // 成功回调
-            successCallback && successCallback(_list);
-          }, 1000)
-        }).catch(() => {
-          //失败回调
-          errorCallback && errorCallback();
-        });
-      },
-      refresh() {
-        //刷新 this.products_list 属性名称
-        this.$refs.vscroll.refresh('products_list');
-      }
+          //TODO 相当于concat、
+          this.products_list = [...this.products_list, ..._list];
+          // 成功回调
+          successCallback && successCallback(_list);
+        }, 1000)
+      }).catch(() => {
+        //失败回调
+        errorCallback && errorCallback();
+      });
+    },
+    refresh() {
+      //刷新名称
+      this.products_list=[];
+      this.$refs.vscroll.refresh();
     }
   }
-</script>
+}
 
+</script>
 <style lang="scss">
-  /*列表*/
-  .mescroll {
-    position: fixed;
-    top: 0px;
-    bottom: 0;
-    height: auto;
-    background: #fff;
+/*列表*/
+
+.mescroll {
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  height: auto;
+  background: #fff;
+}
+
+.data-list {
+  li {
+    position: relative;
+    padding: 0.5rem 0.4rem 0.5rem 6rem;
+    border-bottom: 1px solid #eee;
   }
-  .data-list {
-    li {
-      position: relative;
-      padding: 0.5rem 0.4rem 0.5rem 6rem;
-      border-bottom: 1px solid #eee;
-    }
-    .pd-img {
-      position: absolute;
-      left: 0.9rem;
-      top: 0.9rem;
-      width: 4rem;
-      height: 4rem;
-    }
-    .pd-name {
-      font-size: 0.8rem;
-      line-height: 1rem;
-      height: 2rem;
-      overflow: hidden;
-    }
-    .pd-price {
-      margin-top: 0.4rem;
-      color: red;
-    }
-    .pd-sold {
-      font-size: 0.6rem;
-      margin-top: 0.4rem;
-      color: gray;
-    }
+  .pd-img {
+    position: absolute;
+    left: 0.9rem;
+    top: 0.9rem;
+    width: 4rem;
+    height: 4rem;
   }
-  .btn-empty {
-    margin-top: 1rem;
+  .pd-name {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    height: 2rem;
+    overflow: hidden;
   }
+  .pd-price {
+    margin-top: 0.4rem;
+    color: red;
+  }
+  .pd-sold {
+    font-size: 0.6rem;
+    margin-top: 0.4rem;
+    color: gray;
+  }
+}
+
+.btn-empty {
+  margin-top: 1rem;
+}
+
 </style>

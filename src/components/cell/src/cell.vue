@@ -4,7 +4,7 @@
       <slot name="icon"></slot>
       <slot name="left"></slot>
     </div>
-    <div class="item-right" v-if="is_right">
+    <div class="item-right">
       <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
@@ -14,7 +14,7 @@
       <slot name="icon"></slot>
       <slot name="left"></slot>
     </div>
-    <div class="item-right" v-if="is_right">
+    <div class="item-right">
       <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
@@ -24,7 +24,7 @@
       <slot name="icon"></slot>
       <slot name="left"></slot>
     </div>
-    <div class="item-right" v-if="is_right">
+    <div class="item-right">
       <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
@@ -34,7 +34,7 @@
       <slot name="icon"></slot>
       <slot name="left"></slot>
     </div>
-    <div class="item-right" v-if="is_right">
+    <div class="item-right">
       <slot name="right"></slot>
       <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
     </div>
