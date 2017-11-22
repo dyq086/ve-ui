@@ -4,7 +4,7 @@
       <etc-cell-item>
         <div slot="left">默认({{switchTest}})</div>
         <div slot="right">
-          <etc-switch v-model="switchTest"></etc-switch>
+          <etc-switch v-model="switchTest" @on-change="yu"></etc-switch>
         </div>
       </etc-cell-item>
       <etc-cell-item>
@@ -46,10 +46,20 @@
   export default {
     data() {
       return {
-        switchTest: false,
+        switchTest: true,
         switchTest1: true,
         switchTest2: true,
         switchTest3: true
+      }
+    },
+    methods:{
+    yu(){
+      console.log("aa")
+    }
+    },
+    watch:{
+      switchTest(val){
+         console.log(val)
       }
     }
   }

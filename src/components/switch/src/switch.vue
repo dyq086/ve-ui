@@ -42,6 +42,7 @@
     },
     watch: {
       checked(val) {
+        this.$emit("on-change", val);
         this.$emit("input", val);
       },
       value(val) {
