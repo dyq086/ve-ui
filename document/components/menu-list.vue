@@ -41,7 +41,7 @@ export default {
 .menu-list {
   list-style: none;
   margin: 0;
-  margin: 30px;
+  margin: 20px;
   width: 200px;
   border-right: 1px solid #efefef;
   .menu-title {

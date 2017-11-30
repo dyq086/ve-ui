@@ -1,7 +1,7 @@
 <template>
   <div class="main-view">
-    <menu-list></menu-list>
-    <router-view></router-view>
+    <menu-list  class="overflow"></menu-list>
+    <router-view :style="{'height':scrollHeight+'px'}" class="overflow flex"></router-view>
     <device-frame></device-frame>
   </div>
 </template>
@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-
+      scrollHeight: 0
     }
   },
   components: {
@@ -25,10 +25,9 @@ export default {
 
   },
   mounted() {
-
+    this.scrollHeight = document.body.clientHeight;
   },
   computed: {
-
   }
 }
 
@@ -37,5 +36,10 @@ export default {
 .main-view {
   display: flex;
 }
-
+.overflow{
+  overflow: auto
+}
+.flex{
+  flex:1
+}
 </style>

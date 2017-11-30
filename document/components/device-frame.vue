@@ -40,7 +40,10 @@ export default {
 <style lang="scss">
 @import '../style/devices.min.css';
 .device-box {
-  width: 350px;
+  width: 450px;
+}
+
+.device-iphone-8 {
   margin: 0 auto;
 }
 
