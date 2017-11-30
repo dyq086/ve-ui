@@ -17,7 +17,6 @@ var banner =
   " 粤通卡ETC车宝前端团队\n" +
   " * Released under the MIT License.\n" +
   " */";
-delete baseWebpackConfig.entry;
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -49,7 +48,7 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
-    new webpack.BannerPlugin({ banner: banner, raw: true, entryOnly: true })
+   // new webpack.BannerPlugin({ banner: banner, raw: true, entryOnly: true })
   ]
 });
 

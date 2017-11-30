@@ -6,11 +6,10 @@ var vueLoaderConfig = require('./vue-loader.conf')
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
 }
+const allSource = [resolve('src'), resolve('example'), resolve('test'), resolve('document')]
+
 
 module.exports = {
-  entry: {
-    app: './src_demo/main.js'
-  },
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -33,7 +32,7 @@ module.exports = {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
+        include: allSource,
         options: {
           formatter: require('eslint-friendly-formatter')
         }
@@ -46,11 +45,12 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: allSource
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
+        include: allSource,
         options: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
@@ -59,6 +59,7 @@ module.exports = {
       {
         test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
         loader: 'url-loader',
+        include: allSource,
         options: {
           limit: 10000,
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
@@ -67,9 +68,18 @@ module.exports = {
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
+        include: allSource,
         options: {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+        }
+      },
+      {
+        test: /\.md$/,
+        include: resolve('document'),
+        loader: 'vue-markdown-loader',
+        options: {
+          preventExtract: true,
         }
       }
     ]
