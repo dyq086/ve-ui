@@ -20,6 +20,14 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
   },
+  dev: {
+    env: require('./dev.env'),
+    autoOpenBrowser: true,
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
+    proxyTable: {},
+    cssSourceMap: false
+  },
   exampleBuild: {
     env: require('./prod.env'),
     entry: {
@@ -31,6 +39,9 @@ module.exports = {
   },
   exampleDev: {
     env: require('./dev.env'),
+    entry: {
+      app: './example/main.js'
+    },
     port: 3000,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
@@ -43,7 +54,11 @@ module.exports = {
     entry: {
       document: './document/main.js'
     },
-    port: 3020,
+    template: './document/index.html',
+    port: 3001,
+    proxyTable: {},
+    assetsSubDirectory: 'static',
+    assetsPublicPath: '/',
   },
   docBuild: {
     env: require('./prod.env'),
@@ -54,7 +69,8 @@ module.exports = {
     index: path.resolve(__dirname, '../docs/index.html'),
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: '',
-    productionSourceMap: false
+    productionSourceMap: false,
+    assetsPublicPath: './',
   },
 
 }

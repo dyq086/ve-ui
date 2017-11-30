@@ -2,7 +2,7 @@
   "name": "vue-etc-ui",
   "version": "0.1.2",
   "description": "vue-etc-ui for mobile",
-  "author": "yongqing <490844594@qq.com>",
+  "author": "etcchebaoTeam <490844594@qq.com>",
   "keywords": [
     "component",
     "vue",
@@ -16,7 +16,7 @@
     "bootstrap": "yarn || npm i",
     "dev": "npm run bootstrap && node build/example/dev-server.js",
     "example-build": "node build/example/build.js",
-    "doc-dev": "npm run bootstrap && node build/document/dev-server.js",
+    "doc-dev": "node build/document/dev-server.js",
     "doc-build": "node build/document/build.js",
     "build": "npm run doc-build && npm run example-build",
     "dist": "node build/build.js && gulp",

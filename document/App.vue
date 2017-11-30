@@ -3,24 +3,40 @@
     <router-view></router-view>
   </div>
 </template>
-
 <script>
-  export default {
-    name: 'app'
-  }
-</script>
+export default {
+  name: 'app'
+}
 
+</script>
 <style lang="scss">
-  @import "../src/style/base.scss";
-  #app {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    background: #f5f5f5;
+html,
+body {
+  height: 100%;
+}
+body {
+   font-family:"Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", STHeiti, "WenQuanYi Micro Hei", SimSun, sans-serif;
+  // -webkit-font-smoothing: antialiased;
+  color: #333;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:hover {
+    text-decoration: none;
   }
-  .group-title {
-    padding: .8rem 1rem .5rem 1rem;
-    color: #999;
-    font-size: .7rem;
-  }
+}
+
+a,
+label,
+button,
+input,
+select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
 </style>
