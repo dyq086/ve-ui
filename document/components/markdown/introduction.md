@@ -23,5 +23,8 @@ vue-etc-ui 是基于 Vue.js 实现的精致移动端组件库。
 
 
 ## 体验地址
+<a target="_blank" href="https://etc-ui.github.io/vue-etc-ui/docs/example/#/">示例地址</a>
 
 <img src="../../assets/qr.png" width="300" height="300">
+
+
