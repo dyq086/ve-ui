@@ -15,6 +15,12 @@ Object.keys(entry).forEach(function(name) {
 
 module.exports = merge(baseWebpackConfig, {
   entry: entry,
+  module: {
+    rules: [{
+      test: /\.css$/,
+      loader: "style-loader!css-loader"
+    }]
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.docDev.env

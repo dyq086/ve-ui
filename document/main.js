@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 Vue.config.productionTip = false;
 /* eslint-disable no-new */
+import hljs from './js/highlight'
+import 'highlight.js/styles/github.css'
+hljs.initHighlightingOnLoad();
+import './js/directive.js';
+
 new Vue({
   el: '#app',
   router,

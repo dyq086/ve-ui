@@ -1,7 +1,7 @@
 <template>
   <div class="main-view">
     <menu-list  class="overflow"></menu-list>
-    <router-view :style="{'height':scrollHeight+'px'}" class="overflow flex"></router-view>
+    <router-view :style="{'height':scrollHeight+'px'}" class="overflow flex"  v-highlight></router-view>
     <device-frame></device-frame>
   </div>
 </template>

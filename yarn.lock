@@ -2955,7 +2955,7 @@ he@1.1.x, he@^1.1.0:
   version "1.1.1"
   resolved "https://registry.npmjs.org/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-highlight.js@^9.4.0:
+highlight.js@^9.12.0, highlight.js@^9.4.0:
   version "9.12.0"
   resolved "https://registry.npmjs.org/highlight.js/-/highlight.js-9.12.0.tgz#e6d9dbe57cbefe60751f02af336195870c90c01e"
 
@@ -5940,6 +5940,13 @@ strip-indent@^1.0.1:
 strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
+
+style-loader@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.npmjs.org/style-loader/-/style-loader-0.19.0.tgz#7258e788f0fee6a42d710eaf7d6c2412a4c50759"
+  dependencies:
+    loader-utils "^1.0.2"
+    schema-utils "^0.3.0"
 
 supports-color@3.1.2:
   version "3.1.2"

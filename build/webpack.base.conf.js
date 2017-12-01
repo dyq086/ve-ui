@@ -47,6 +47,7 @@ module.exports = {
         loader: 'babel-loader',
         include: allSource
       },
+
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
