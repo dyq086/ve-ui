@@ -3,7 +3,7 @@ import main from "../components/main";
 const docsChildrenRoute = []
 const routeMap = {
   path: '/',
-  redirect: '/docs/introduction',
+  redirect: '/introduction',
   component: main,
   children: docsChildrenRoute
 }
@@ -13,7 +13,7 @@ Object.keys(menuConfig).forEach((item) => {
   Object.keys(groups).forEach((name) => {
     Object.keys(groups.subList).forEach((key) => {
       docsChildrenRoute.push({
-        path: `docs/${key}`,
+        path: `/${key}`,
         component: () =>
           import (`../components/markdown/${key}.md`)
       })
