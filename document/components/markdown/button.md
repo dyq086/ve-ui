@@ -20,11 +20,15 @@ Vue.component(Button.name, Button);
 按钮大小，默认lg
 
 ```html
-  <etc-button size="lg">default</etc-button>
-  <etc-button size="md">default</etc-button>
-  <etc-button size="sm">default</etc-button>
+  <etc-button size="large">large</etc-button>
+  <etc-button size="medium">medium</etc-button>
+  <etc-button size="small">small</etc-button>
 ```
 
+是否圆角
+```html
+  <etc-button shape="circle" type="primary" >圆角</etc-button>
+```
 
 
 不可点击状态
@@ -50,8 +54,9 @@ Vue.component(Button.name, Button);
 
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | - | - | - | - | - |
-| type | 按钮类型 | String | default、primary、danger | default |
+| type | 按钮类型 | String | default,primary,danger | default |
 | disabled | 禁用状态 | Boolean | true/false | false |
-| size | 按钮大小 | String | lg、md、sm | lg |
+| size | 按钮大小 | String | large,medium,small | large |
+| shape | 是否为圆角 | String | circle | - |
 | bgcolor | 背景颜色 | String | 颜色值 | - |
 | color | 按钮字体颜色 | String | 颜色值 | - |
