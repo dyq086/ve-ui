@@ -29,6 +29,7 @@
             this.$nextTick(() => {
                 this.$parent.init(false);
             });
+            
         }
     }
 </script>
