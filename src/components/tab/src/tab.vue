@@ -1,7 +1,7 @@
 <template>
     <div class="etc-tab">
         <ul class="etc-tab-nav">
-            <li class="etc-tab-nav-item" v-for="(item,index) in navList" :style="item._uid == activeIndex ? 'color:'+activeColor+'' : ''" :class="item._uid == activeIndex ? 'etc-tab-active' : ''" @click="changeHandler(item._uid, item.label, index)">
+            <li class="etc-tab-nav-item" v-for="(item,index) in navList" :style="item._uid == activeIndex ? 'color:'+activeColor+'' : ''" :class="item._uid == activeIndex ? 'etc-tab-active' : ''" @click="changeHandler(item._uid, item.label,item.tabkey, index)">
                 <a href="javascript:;">{{item.label}}</a>
             </li>
         </ul>
@@ -36,42 +36,43 @@
             }
         },
         methods: {
-            init(update) {
+            init(update, status) {
                 const tabPanels = this.$children.filter(item => item.$options.name === 'etc-tab-panel');
+
                 let num = 0;
+
+                if (!update) {
+                    this.navList = [];
+                }
+
                 tabPanels.forEach((panel, index) => {
-                    if (update === 'label') {
+                    if (status === 'label') {
                         return this.navList[index] = panel;
                     }
+
                     if (!update) {
-                        this.navList.push({
-                            label: panel.label,
-                            _uid: panel._uid
-                        });
+                        this.navList.push({_uid: panel._uid, label: panel.label, tabkey: panel.tabkey});
                     }
+
                     if (panel.active) {
                         this.activeIndex = this.tmpIndex = panel._uid;
                     } else {
                         ++num;
                         if (num >= tabPanels.length) {
                             this.activeIndex = this.tmpIndex = tabPanels[0]._uid;
-                            this.emitChange(tabPanels[0].label, 0);
                         }
                     }
                 });
             },
-            emitChange(label, index) {
-                this.$emit("tabclick", label, index)
+            emitChange(label,tabkey='',index) {
+                this.$emit("tabclick", label,tabkey, index)
             },
-            changeHandler(uid, label, index) {
+            changeHandler(uid, label,tabkey, index) {
                 if (this.tmpIndex != uid) {
                     this.activeIndex = this.tmpIndex = uid;
-                    this.emitChange(label, index);
+                    this.emitChange(label,tabkey, index);
                 }
             }
-        },
-        mounted() {
-            this.init(false);
         }
     }
 </script>
