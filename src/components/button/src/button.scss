@@ -2,12 +2,12 @@
 * @Author: yongqing
 * @Date:   2017-09-18 17:18:01
 * @Last Modified by:   yongqing
-* @Last Modified time: 2018-01-18 11:30:53
+* @Last Modified time: 2018-02-01 20:02:28
 */
 
 .etc-button {
     display: block;
-    height: 2.45rem;
+    height: 2.2rem;
     border-radius: 0.2rem;
     text-align: center;
     width: 100%;
@@ -29,22 +29,19 @@
         @include tap-color($btn-danger-bg)
     }
     &.btn-disable {
-        background: $btn-disable-bg;
+        background: $gray-color;
         color: $white-color;
     }
-    &.size-medium {
+    &.size-md {
         border-radius: 0.2rem;
         text-align: center;
-        height: 2rem;
+        height: 1.75rem;
     }
-    &.size-small {
+    &.size-sm {
         height: 1.5rem;
         border-radius: 0.2rem;
         text-align: center;
         width: 3rem;
         font-size: 0.65rem;
-    }
-    &.circle-shape{
-        border-radius:1.225rem;
     }
 }
