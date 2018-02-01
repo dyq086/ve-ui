@@ -7,3 +7,4 @@
 
 > Vue-ETC-UI for mobile 基于VUE 移动端UI框架，由粤通卡ETC车宝前端团队出品打造
 
+功能完善中~
