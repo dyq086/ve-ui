@@ -80,4 +80,5 @@
 <style lang="scss">
     @import '../../../style/necessary.scss';
     @import './tab.scss';
+    
 </style>
