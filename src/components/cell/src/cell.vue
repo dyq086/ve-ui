@@ -6,7 +6,7 @@
     </div>
     <div class="item-right">
       <slot name="right"></slot>
-      <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+      <i class="iconfont icon-arrowsgright" v-if="arrow"></i>
     </div>
   </lable>
   <a class="item" :href="href" v-else-if="type=='a'">
@@ -16,7 +16,7 @@
     </div>
     <div class="item-right">
       <slot name="right"></slot>
-      <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+      <i class="iconfont icon-arrowsgright" v-if="arrow"></i>
     </div>
   </a>
   <router-link class="item" :to="href" v-else-if="type=='link'">
@@ -26,7 +26,7 @@
     </div>
     <div class="item-right">
       <slot name="right"></slot>
-      <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+      <i class="iconfont icon-arrowsgright" v-if="arrow"></i>
     </div>
   </router-link>
   <div class="item" v-else>
@@ -35,43 +35,40 @@
       <slot name="left"></slot>
     </div>
     <div class="item-right">
-      <slot name="right"></slot>
-      <svg class="icon" aria-hidden="true" v-if="arrow"><use xlink:href="#icon-arrow-right"></use></svg>
+      <slot name="right" class="67890"></slot>
+      <i class="iconfont icon-arrowsgright" v-if="arrow"></i>
     </div>
   </div>
 </template>
-
-<script type="text/babel">
-  import iconfont from "../../../icon/iconfont"
-  export default {
-    name: 'etc-cell-item',
-    props: {
-      type: {
-        validator(value) {
-          return ['link', 'a', 'label', 'div', 'checkbox', 'radio'].indexOf(value) > -1;
-        },
-        default: 'div'
+<script>
+export default {
+  name: 'etc-cell-item',
+  props: {
+    type: {
+      validator(value) {
+        return ['link', 'a', 'label', 'div', 'checkbox', 'radio'].indexOf(value) > -1;
       },
-      arrow: {
-        type: Boolean,
-        default: false
-      },
-      href: {
-        type: [String, Object]
-      }
+      default: 'div'
     },
-    mounted(){
+    arrow: {
+      type: Boolean,
+      default: false
     },
-    computed: {
-      is_right() {
-        return !!this.$slots.right;
-      }
+    href: {
+      type: [String, Object]
+    }
+  },
+  mounted() {},
+  computed: {
+    is_right() {
+      return !!this.$slots.right;
     }
   }
-</script>
+}
 
+</script>
 <style lang="scss">
-  @import '../../../style/necessary.scss';
-  @import './cell.scss';
+@import '../../../style/necessary.scss';
+@import './cell.scss';
 
 </style>

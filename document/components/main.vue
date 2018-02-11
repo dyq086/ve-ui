@@ -1,7 +1,7 @@
 <template>
   <div class="main-view">
-    <menu-list  class="overflow"></menu-list>
-    <router-view :style="{'height':scrollHeight+'px'}" class="overflow flex"  v-highlight></router-view>
+    <menu-list class="overflow"></menu-list>
+    <router-view :style="{'height':scrollHeight+'px'}" class="overflow flex" v-highlight></router-view>
     <device-frame></device-frame>
   </div>
 </template>
@@ -27,19 +27,41 @@ export default {
   mounted() {
     this.scrollHeight = document.body.clientHeight;
   },
-  computed: {
-  }
+  computed: {}
 }
 
 </script>
 <style lang="scss">
+body{
+   color: #495060;
+}
 .main-view {
   display: flex;
 }
-.overflow{
+
+.overflow {
   overflow: auto
 }
-.flex{
-  flex:1
+
+.flex {
+  flex: 1
 }
+
+table {
+  font-family: Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #e9e9e9;
+  width: 100%;
+  margin-bottom: 24px;
+  td {
+    border: 1px solid #e9e9e9;
+    padding: 8px 16px;
+    text-align: left;
+  }
+
+}
+
 </style>

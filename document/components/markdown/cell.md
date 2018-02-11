@@ -1,5 +1,19 @@
-<template>
-  <div class="block">
+## Button
+
+列表视图，内容常用的内容结构；
+
+### 示例
+#### 引入
+```js
+import { Cell } from 'etc-ui';
+
+Vue.component(Cell.name, Cell);
+```
+
+#### 基本使用
+
+
+```html
     <etc-cell-group>
         <etc-cell-item>
             <span slot="left">支付方式</span>
@@ -41,19 +55,29 @@
             <span slot="right">可自定义图标</span>
         </etc-cell-item>
     </etc-cell-group>
-  </div>
-</template>
-<script>
-export default {
-  methods: {
-    test() {
-      alert("666")
-    }
-  }
-}
-
-</script>
-<style lang="scss">
+```
 
 
-</style>
+### etc-cell-group 【slot】
+
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| - | - | - | - | - |
+| - | - | - | - | - |
+
+
+
+
+### etc-cell-item 【props】 
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| - | - | - | - | - |
+| type | 跳转类型 | String | link,a, label, div,  | div |
+| href | 跳转地址 类型a,link 有效 | String | url | - |
+| arrow | 箭头 | Boolean | true/false | false |
+
+
+### etc-cell-item 【slot】
+| 参数 | 说明 | 类型 | 可选值 | 默认值 |
+| - | - | - | - | - |
+| left | 右边内容 | String/html | 内容  | - |
+| right | 左边内容 | String/html | 内容  | - |
+| icon | 图标 | String | - | - |

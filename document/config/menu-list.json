@@ -13,7 +13,9 @@
     "name": "组件",
     "subList":
     {
-      "button": "Button"
+      "button": "Button",
+      "cell": "Cell"
     }
+
   }
 }

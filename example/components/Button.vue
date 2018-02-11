@@ -31,7 +31,6 @@
 <style lang="scss">
   .button-group {
     background: #fff;
-    height: 100%;
     .lg {
       padding: .5rem 1.2rem;
       button {

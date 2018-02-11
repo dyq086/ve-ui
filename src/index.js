@@ -4,6 +4,7 @@ import Button from "./components/button";
 import Cell from "./components/cell";
 import CellGroup from "./components/cell-group"; //1
 import Switch from "./components/switch";
+import Icon from "./components/icon";
 import Checkbox from "./components/checkbox";
 import CheckboxGroup from "./components/checkbox-group"; //2
 import Radio from "./components/radio";
@@ -30,6 +31,7 @@ const install = function(Vue, config = {}) {
   Vue.component(Cell.name, Cell);
   Vue.component(CellGroup.name, CellGroup);
   Vue.component(Switch.name, Switch);
+  Vue.component(Icon.name, Icon);
   Vue.component(Checkbox.name, Checkbox);
   Vue.component(CheckboxGroup.name, CheckboxGroup);
   Vue.component(Radio.name, Radio);
@@ -69,6 +71,7 @@ export default {
   Cell,
   CellGroup,
   Switch,
+  Icon,
   Checkbox,
   CheckboxGroup,
   Radio,

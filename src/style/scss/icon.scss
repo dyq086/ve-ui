@@ -1,0 +1,36 @@
+/*
+* @Author: yongqing
+* @Date:   2018-01-29 15:38:33
+* @Last Modified by:   yongqing
+* @Last Modified time: 2018-01-29 15:48:20
+*/
+
+@font-face {
+  font-family: 'iconfont';
+  /* project id 421796 */
+  src: url('//at.alicdn.com/t/font_421796_3xnah8eacnubx1or.eot');
+  src: url('//at.alicdn.com/t/font_421796_3xnah8eacnubx1or.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_421796_3xnah8eacnubx1or.woff') format('woff'),
+  url('//at.alicdn.com/t/font_421796_3xnah8eacnubx1or.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_421796_3xnah8eacnubx1or.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 0.5rem;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrowsgright:before {
+  content: "\e608";
+}
+
+.icon-load:before {
+  content: "\e60a";
+}
+
+.icon-keyboard-delete:before {
+  content: "\e619";
+}

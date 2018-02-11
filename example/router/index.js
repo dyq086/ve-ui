@@ -1,8 +1,8 @@
 /*
  * @Author: yongqing.deng 
  * @Date: 2017-09-20 19:14:17 
- * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-10-26 15:38:02
+ * @Last Modified by:   yongqing
+ * @Last Modified time: 2018-01-29 13:34:50
  */
 import Vue from "vue";
 import Router from "vue-router";
@@ -10,6 +10,7 @@ import Index from "../components/Index";
 import Button from "../components/Button";
 import Cell from "../components/Cell";
 import Switch from "../components/Switch";
+import Icon from "../components/Icon";
 import Checkbox from "../components/Checkbox";
 import Radio from "../components/Radio";
 import Grids from "../components/Grids";
@@ -110,6 +111,11 @@ export default new Router({
       path: "/swiper",
       name: "swiper",
       component: Swiper
+    },
+     {
+      path: "/icon",
+      name: "icon",
+      component: Icon
     }
   ]
 });

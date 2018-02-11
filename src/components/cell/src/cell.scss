@@ -1,8 +1,8 @@
 /*
 * @Author: yongqing
 * @Date:   2017-09-18 17:18:01
- * @Last Modified by: yongqing.deng
- * @Last Modified time: 2017-10-26 18:32:42
+ * @Last Modified by:   yongqing
+ * @Last Modified time: 2018-01-29 15:58:55
 */
 
 .#{$css-prefix} {
@@ -30,7 +30,7 @@
                 .icon {
                     @include icon($cell-icon-color, 1rem, 1rem);
                     vertical-align: -0.25rem;
-                    margin-right: 0.6rem;
+                    margin-right: 0.5rem;
                 }
                 input[type="text"],
                 input[type="number"],
@@ -45,22 +45,19 @@
                 }
             }
             &-right {
-                @include sc(0.75rem, $defult-color);
+                @include sc(0.75rem, $black-color);
                 @include fj(flex-end);
                 align-items: center;
                 flex: 1;
                 text-align: right;
+                font-size: 0.7rem;
                 input[type="text"],
                 input[type="number"],
                 input[type="password"] {
                     border: none;
                     width: 100%;
                     text-align: left;
-                    margin-left: 0.4rem;
                     font-size: .75rem;
-                }
-                span {
-                    font-size: 0.7rem;
                 }
                 .icon {
                     @include icon($cell-icon-color, 0.7rem, 0.7rem);

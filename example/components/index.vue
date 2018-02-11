@@ -18,14 +18,19 @@
     data() {
       return {
         list: [{
-            icon: '#icon-yuhangyuan',
+            icon: '#icon-xingxi',
             name: 'Button',
             link: '/button'
           },
           {
-            icon: '#icon-yueqiu',
+            icon: '#icon-xingxi',
             name: 'Cell',
             link: '/cell'
+          },
+            {
+            icon: '#icon-xingxi',
+            name: 'Icon',
+            link: '/icon'
           },
           {
             icon: '#icon-xingxi',
