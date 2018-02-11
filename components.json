@@ -34,6 +34,6 @@
   "/toast/index": "./src/components/toast/index.js",
   "/indicator/index": "./src/components/indicator/index.js",
 
-  "/icon/index": "./src/components/icon/index.js",
+  "/icon/index": "./src/components/icon/index.js"
 
 }
