@@ -31,10 +31,8 @@ export default {
 </script>
 <style lang="scss">
 .icon-block {
-  height:100%;
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
   background: #fff;
   padding: .5rem;
 }
