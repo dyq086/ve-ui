@@ -25,7 +25,7 @@ $ npm install vue-etc-ui --save-dev
 
 ```js
 import Vue from 'vue'
-import etcui from 'etc-ui'
+import etcui from 'vue-etc-ui'
 import 'vue-etc-ui/lib/etc-ui.css'
 import App from './App.vue'
 

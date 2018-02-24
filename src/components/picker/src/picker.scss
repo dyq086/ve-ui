@@ -1,8 +1,8 @@
 /*
  * @Author: yongqing.deng 
  * @Date: 2017-10-13 10:08:00 
- * @Last Modified by:   yongqing.deng 
- * @Last Modified time: 2017-10-13 10:08:00 
+ * @Last Modified by:   yongqing
+ * @Last Modified time: 2018-02-24 15:01:24
  */
 
 .#{$css-prefix} {
@@ -69,22 +69,22 @@
             left: 0;
             &.cover-top {
                 top: 0;
-                background: linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -ms-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -ms-linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
                 &:after {
                     @include bottom-line($line-color);
                 }
             }
             &.cover-bottom {
                 bottom: 0;
-                background: linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -o-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
-                background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: linear-gradient(to top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -o-linear-gradient(to top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -ms-linear-gradient(to top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -moz-linear-gradient(to top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
+                background: -webkit-linear-gradient(to top, rgba(255, 255, 255, 0.5) 1%, rgba(255, 255, 255, 0.99) 100%);
                 &:after {
                     @include top-line($line-color);
                 }
