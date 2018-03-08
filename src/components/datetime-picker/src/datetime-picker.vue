@@ -61,7 +61,7 @@
       format: {
         type: String,
         validator(value) {
-          return ["yy-mm-dd hh:mm", "yy-mm-dd", "hh:mm"].indexOf(value) > -1;
+          return ["yy-mm-dd hh:mm", "yy-mm-dd", "yy-mm","hh:mm"].indexOf(value) > -1;
         },
         default: "yy-mm-dd"
       },
@@ -89,6 +89,9 @@
           break;
         case "yy-mm-dd":
           this.rows = ["Ykey", "Mkey", "Dkey"];
+          break;
+        case "yy-mm":
+          this.rows = ["Ykey", "Mkey"];
           break;
         case "hh:mm":
           this.rows = ["Hkey", "mkey"];
