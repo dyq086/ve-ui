@@ -19,6 +19,6 @@ gulp.task("copy", function() {
 gulp.task("del", function(cb) {
   del(["lib/temp"], cb);
 });
-gulp.task("default", function(done) {
+gulp.task("default", function(done) { 
   runSequence(["copy"], ["del"], done);
 });
