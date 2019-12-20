@@ -2,42 +2,42 @@
   <div>
     <div class="group-title">【取值为标签值】</div>
     <div class="radio-group-box">
-      <etc-radio-group v-model="checkboxGroupTest0">
-        <etc-radio>香蕉</etc-radio>
-        <etc-radio>苹果</etc-radio>
-        <etc-radio>雪梨</etc-radio>
-        <etc-radio>榴莲</etc-radio>
-      </etc-radio-group>
+      <ve-radio-group v-model="checkboxGroupTest0">
+        <ve-radio>香蕉</ve-radio>
+        <ve-radio>苹果</ve-radio>
+        <ve-radio>雪梨</ve-radio>
+        <ve-radio>榴莲</ve-radio>
+      </ve-radio-group>
       <div class="radio-state">{{checkboxGroupTest0}}</div>
     </div>
     <div class="group-title">【取值为id值,默认id值】</div>
     <div class="radio-group-box">
-      <etc-radio-group v-model="checkboxGroupTest1">
-        <etc-radio id="1">选项一</etc-radio>
-        <etc-radio id="2">选项二</etc-radio>
-        <etc-radio id="3">选项三</etc-radio>
-        <etc-radio id="4">选项四</etc-radio>
-      </etc-radio-group>
+      <ve-radio-group v-model="checkboxGroupTest1">
+        <ve-radio id="1">选项一</ve-radio>
+        <ve-radio id="2">选项二</ve-radio>
+        <ve-radio id="3">选项三</ve-radio>
+        <ve-radio id="4">选项四</ve-radio>
+      </ve-radio-group>
       <div class="radio-state">{{checkboxGroupTest1}}</div>
     </div>
     <div class="group-title">【打勾勾样式】</div>
     <div class="radio-group-box">
-      <etc-radio-group v-model="checkboxGroupTest3" type="checkbox">
-        <etc-radio>选项一</etc-radio>
-        <etc-radio>选项二</etc-radio>
-        <etc-radio>选项三</etc-radio>
-        <etc-radio>选项四</etc-radio>
-      </etc-radio-group>
+      <ve-radio-group v-model="checkboxGroupTest3" type="checkbox">
+        <ve-radio>选项一</ve-radio>
+        <ve-radio>选项二</ve-radio>
+        <ve-radio>选项三</ve-radio>
+        <ve-radio>选项四</ve-radio>
+      </ve-radio-group>
       <div class="radio-state">{{checkboxGroupTest3}}</div>
     </div>
     <div class="group-title">【自定义颜色】</div>
     <div class="radio-group-box">
-      <etc-radio-group v-model="checkboxGroupTest2" color="#26a2ff">
-        <etc-radio>选项一</etc-radio>
-        <etc-radio>选项二</etc-radio>
-        <etc-radio>选项三</etc-radio>
-        <etc-radio>选项四</etc-radio>
-      </etc-radio-group>
+      <ve-radio-group v-model="checkboxGroupTest2" color="#26a2ff">
+        <ve-radio>选项一</ve-radio>
+        <ve-radio>选项二</ve-radio>
+        <ve-radio>选项三</ve-radio>
+        <ve-radio>选项四</ve-radio>
+      </ve-radio-group>
       <div class="radio-state">{{checkboxGroupTest2}}</div>
     </div>
   </div>
@@ -61,7 +61,7 @@
   .radio-group-box {
     background: #ffffff;
     padding: .5rem 0rem;
-    .etc-radio-group {
+    .ve-radio-group {
       display: flex;
       justify-content: space-around;
     }

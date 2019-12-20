@@ -1,7 +1,7 @@
 <template>
   <div class="icon-block">
     <div class="icon-list-item" v-for="item in iconList">
-      <etc-icon :name="item" size="1.5rem" color="#666"></etc-icon>
+      <ve-icon :name="item" size="1.5rem" color="#666"></ve-icon>
       <div class="name-text">{{item}}</div>
     </div>
   </div>

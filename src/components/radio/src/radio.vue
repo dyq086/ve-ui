@@ -1,16 +1,16 @@
 <template>
-  <label class="etc-radio-box">
+  <label class="ve-radio-box">
     <template>
         <input type="radio" 
         v-model="modelValue" 
         :class="classObject" 
-        :value="checkedValue" class="etc-radio" 
+        :value="checkedValue" class="ve-radio" 
         :disabled="disabled" 
         :style="{color: $parent.color}"
         @change="changeHandler" 
         />
 </template>
-    <div class="etc-radio-label">
+    <div class="ve-radio-label">
       <slot>{{$slots.default}}</slot> 
     </div>
     </label>
@@ -21,7 +21,7 @@
     isColor
   } from '../../../plug-in/utils'
   export default {
-    name: 'etc-radio',
+    name: 've-radio',
     data() {
       return {
         checked: this.value,

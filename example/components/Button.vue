@@ -1,31 +1,31 @@
 <template>
   <div class="button-group">
     <div class="lg">
-      <etc-button>default</etc-button>
-      <etc-button type="primary">primary</etc-button>
-      <etc-button type="danger">danger</etc-button>
-      <etc-button disabled>disable</etc-button>
+      <ve-button>default</ve-button>
+      <ve-button type="primary">primary</ve-button>
+      <ve-button type="danger">danger</ve-button>
+      <ve-button disabled>disable</ve-button>
     </div>
      <div class="lg">
-      <etc-button shape="circle">default</etc-button>
-      <etc-button shape="circle" type="primary">primary</etc-button>
-      <etc-button shape="circle" type="danger">danger</etc-button>
-      <etc-button shape="circle" disabled>disable</etc-button>
+      <ve-button shape="circle">default</ve-button>
+      <ve-button shape="circle" type="primary">primary</ve-button>
+      <ve-button shape="circle" type="danger">danger</ve-button>
+      <ve-button shape="circle" disabled>disable</ve-button>
     </div>
     <div class="medium">
-      <etc-button size="medium">default</etc-button>
-      <etc-button type="primary" size="medium">primary</etc-button>
-      <etc-button type="danger" size="medium">danger</etc-button>
-      <etc-button disabled size="medium">disable</etc-button>
+      <ve-button size="medium">default</ve-button>
+      <ve-button type="primary" size="medium">primary</ve-button>
+      <ve-button type="danger" size="medium">danger</ve-button>
+      <ve-button disabled size="medium">disable</ve-button>
     </div>
     <div class="small">
-      <etc-button size="small">default</etc-button>
-      <etc-button type="primary" size="small">primary</etc-button>
-      <etc-button type="danger" size="small">danger</etc-button>
-      <etc-button disabled size="small">disable</etc-button>
+      <ve-button size="small">default</ve-button>
+      <ve-button type="primary" size="small">primary</ve-button>
+      <ve-button type="danger" size="small">danger</ve-button>
+      <ve-button disabled size="small">disable</ve-button>
     </div>
     <div class="lg">
-      <etc-button  bgcolor="#44b549" color="#fff" >自定义颜色</etc-button>
+      <ve-button  bgcolor="#44b549" color="#fff" >自定义颜色</ve-button>
     </div>
   </div>
 </template>

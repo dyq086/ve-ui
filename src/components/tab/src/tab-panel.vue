@@ -1,12 +1,12 @@
 <template>
-    <div class="etc-tab-panel-item" :class="classes">
+    <div class="ve-tab-panel-item" :class="classes">
         <slot></slot>
     </div>
 </template>
 
 <script type="text/babel">
     export default {
-        name: 'etc-tab-panel',
+        name: 've-tab-panel',
         props: {
             label: String,
             active: Boolean,
@@ -14,7 +14,7 @@
         },
         computed: {
             classes() {
-                return this.$parent.activeIndex == this._uid ? 'etc-tab-active' : '';
+                return this.$parent.activeIndex == this._uid ? 've-tab-active' : '';
             }
         },
         watch: {

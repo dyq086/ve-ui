@@ -1,8 +1,8 @@
 <template>
-  <div class="etc-keyboard">
-    <div class="etc-keyboard-panle" :class="[is_show ? 'fade-in':'']">
-      <div class="etc-keyboard-content">
-        <div v-for="n in numsArr" class="etc-keyboard-item" :class="[(n==-1||n==-2)?'board-bg':'']">
+  <div class="ve-keyboard">
+    <div class="ve-keyboard-panle" :class="[is_show ? 'fade-in':'']">
+      <div class="ve-keyboard-content">
+        <div v-for="(n,index) in numsArr" :key="index" class="ve-keyboard-item" :class="[(n==-1||n==-2)?'board-bg':'']">
           <span v-if="n==-1" @click.stop="clean" class="clean">清空</span>
           <span v-else-if="n==-2" @click.stop="deleted">
                       <svg class="icon-del" aria-hidden="true"><use xlink:href="#icon-keyboard-delete"></use></svg></span>
@@ -10,14 +10,14 @@
         </div>
       </div>
     </div>
-    <div class="etc-keyboard-mask" v-show="is_show" @click.stop="close"></div>
+    <div class="ve-keyboard-mask" v-show="is_show" @click.stop="close"></div>
   </div>
 </template>
 
 <script type="text/babel">
   import iconfont from "../../../icon/iconfont"
   export default {
-    name: 'etc-pwd-keyboard',
+    name: 've-pwd-keyboard',
     data() {
       return {
         is_show: false,

@@ -1,11 +1,11 @@
 <template>
-    <div class="etc-tab">
-        <ul class="etc-tab-nav">
-            <li class="etc-tab-nav-item" v-for="(item,index) in navList" :style="item._uid == activeIndex ? 'color:'+activeColor+'' : ''" :class="item._uid == activeIndex ? 'etc-tab-active' : ''" @click="changeHandler(item._uid, item.label,item.tabkey, index)">
+    <div class="ve-tab">
+        <ul class="ve-tab-nav">
+            <li class="ve-tab-nav-item" v-for="(item,index) in navList" :style="item._uid == activeIndex ? 'color:'+activeColor+'' : ''" :class="item._uid == activeIndex ? 've-tab-active' : ''" @click="changeHandler(item._uid, item.label,item.tabkey, index)">
                 <a href="javascript:;">{{item.label}}</a>
             </li>
         </ul>
-        <div class="etc-tab-panel">
+        <div class="ve-tab-panel">
             <slot></slot>
         </div>
     </div>
@@ -16,7 +16,7 @@
         isColor
     } from '../../../plug-in/utils'
     export default {
-        name: 'etc-tab',
+        name: 've-tab',
         data() {
             return {
                 navList: [],
@@ -37,7 +37,7 @@
         },
         methods: {
             init(update, status) {
-                const tabPanels = this.$children.filter(item => item.$options.name === 'etc-tab-panel');
+                const tabPanels = this.$children.filter(item => item.$options.name === 've-tab-panel');
 
                 let num = 0;
 

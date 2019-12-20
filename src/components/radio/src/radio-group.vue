@@ -1,5 +1,5 @@
 <template>
-  <div class="etc-radio-group">
+  <div class="ve-radio-group">
     <slot></slot>
   </div>
 </template>
@@ -9,7 +9,7 @@
     isColor
   } from '../../../plug-in/utils'
   export default {
-    name: 'etc-radio-group',
+    name: 've-radio-group',
     props: {
       disabled: {
         default: false,
@@ -55,7 +55,7 @@
     },
     computed: {
       childrens() {
-        return this.$children.filter(item => item.$options.name === 'etc-radio');
+        return this.$children.filter(item => item.$options.name === 've-radio');
       }
     },
     watch: {

@@ -9,7 +9,7 @@ import {
   isColor
 } from '../../../plug-in/utils'
 export default {
-  name: 'etc-button',
+  name: 've-button',
   props: {
     disabled: Boolean,
     type: {
@@ -48,7 +48,7 @@ export default {
   },
   computed: {
     classObject() {
-      let a = 'etc-button'; //基础
+      let a = 've-button'; //基础
       let b = 'btn-' + this.type;
       let c = this.size ? 'size-' + this.size : ''; //大小
       if (this.disabled) { //是否禁用

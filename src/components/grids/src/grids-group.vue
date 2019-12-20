@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="etc-grid-item-block">
-      <div v-if="this.title!=''" class="etc-grids-group-title">{{this.title}}</div>
-      <div class="etc-grid-box">
+    <div class="ve-grid-item-block">
+      <div v-if="this.title!=''" class="ve-grids-group-title">{{this.title}}</div>
+      <div class="ve-grid-box">
         <slot></slot>
       </div>
     </div>
@@ -11,7 +11,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'etc-grids-group',
+    name: 've-grids-group',
     props: {
       row: {
         validator(value) {

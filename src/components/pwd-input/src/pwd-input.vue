@@ -1,5 +1,5 @@
 <template>
-  <div class="etc-pwd-input">
+  <div class="ve-pwd-input">
     <div class="pwd-box-item" v-for="n in 6">
       <i class="dot" v-show="nums >= n"></i>
     </div>
@@ -7,7 +7,7 @@
 </template>
 <script type="text/babel">
   export default {
-    name: 'etc-pwd-input',
+    name: 've-pwd-input',
     data() {
       return {}
     },

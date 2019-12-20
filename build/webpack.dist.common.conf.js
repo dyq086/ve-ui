@@ -9,12 +9,12 @@ var packageJson = require("../package.json");
 
 var banner =
   "/*!\n" +
-  " * VUE ETC UI v" +
+  " * VUE VE UI v" +
   packageJson.version +
-  " (https://github.com/dyq086/vue-etc-ui)\n" +
+  " (https://github.com/dyq086/vue-ve-ui)\n" +
   " * (c) " +
   new Date().getFullYear() +
-  " 粤通卡ETC车宝前端团队\n" +
+  " YONGQING\n" +
   " * Released under the MIT License.\n" +
   " */";
 var webpackConfig = merge(baseWebpackConfig, {

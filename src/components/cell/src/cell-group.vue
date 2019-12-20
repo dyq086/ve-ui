@@ -1,12 +1,12 @@
 <template>
-  <div class="etc-item-group">
+  <div class="ve-item-group">
     <slot></slot>
   </div>
 </template>
 
 <script type="text/babel">
   export default {
-    name: 'etc-cell-group',
+    name: 've-cell-group',
     props: {},
     computed: {}
   }

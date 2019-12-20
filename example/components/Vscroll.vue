@@ -1,24 +1,24 @@
 <template>
   <div>
-    <etc-vscroll :on-infinite="infinite" :pageSize="pageSize" toTop ref="vscroll" :use-refresh="true">
+    <ve-vscroll :on-infinite="infinite" :pageSize="pageSize" toTop ref="vscroll" :use-refresh="true">
       <div slot="list">
         <ul class="data-list" @click="refresh">
-          <li v-for="pd in products_list">
-            <img :src="pd.icon" class="pd-img">
-            <p class="pd-name">{{pd.title}}</p>
+          <li v-for="(pd,index) in products_list" :key="index">
+            <img :src="pd.image_url" class="pd-img">
+            <p class="pd-name">{{pd.name}}</p>
             <p class="pd-price">{{pd.price}} 元</p>
             <p class="pd-sold">月销量{{pd.month_sales}}元</p>
           </li>
         </ul>
       </div>
       <div slot="empty">
-        <div class="etc-list-empty">
+        <div class="ve-list-empty">
           <img class="empty-icon" src="../assets/icon/icon_empty_data.png" />
           <p class="empty-tip">亲,暂无相关数据哦~</p>
-          <etc-button class="btn-empty">去逛逛</etc-button>
+          <ve-button class="btn-empty">去逛逛</ve-button>
         </div>
       </div>
-    </etc-vscroll>
+    </ve-vscroll>
   </div>
 </template>
 <script>
@@ -34,14 +34,14 @@ export default {
   },
   methods: {
     infinite(pageNum, pageSize, successCallback, errorCallback) {
-      const url = 'https://api-mall.etcchebao.com/goods/list?cateidOne=2&cateidTwo=0&price=0&sales=2';
+      const url = 'http://rap2api.taobao.org/app/mock/240405/v1/api/goods/list';
       this.$http.jsonp(url, {
         params: {
           page: pageNum,
           size: pageSize
         }
       }).then((response) => {
-        let _list = response.body.data.list;
+        let _list = response.body.data.products;
         setTimeout(() => {
           //如果是第一页需手动制空列表
           if (pageNum == 1) {

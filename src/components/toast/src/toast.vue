@@ -1,6 +1,6 @@
 <template>
-  <div class="etc-dialog-box">
-    <div class="etc-toast showAlert">
+  <div class="ve-dialog-box">
+    <div class="ve-toast showAlert">
       <div class="icon success animate" v-if="type=='success'">
         <span class="line tip animateSuccessTip"></span>
         <span class="line long animateSuccessLong"></span>
@@ -12,7 +12,7 @@
       </div>
       <div class="title">{{mes}}</div>
     </div>
-    <div class="etc-toast-mask"></div>
+    <div class="ve-toast-mask"></div>
   </div>
 </template>
 

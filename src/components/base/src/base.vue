@@ -1,7 +1,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'etc-base'
+    name: 've-base'
   }
 </script>
 

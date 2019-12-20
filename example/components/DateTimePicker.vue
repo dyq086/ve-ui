@@ -1,29 +1,29 @@
 <template>
   <div>
     <div class="picker">
-      <etc-cell-group>
-        <etc-cell-item arrow @click.native="openDate1">
+      <ve-cell-group>
+        <ve-cell-item arrow @click.native="openDate1">
           <span slot="left">年月日时分:</span>
           <span slot="right">{{date1}}</span>
-        </etc-cell-item>
-        <etc-cell-item arrow @click.native="openDate2">
+        </ve-cell-item>
+        <ve-cell-item arrow @click.native="openDate2">
           <span slot="left">年月日:</span>
           <span slot="right">{{date2}}</span>
-        </etc-cell-item>
-        <etc-cell-item arrow @click.native="openDate4">
+        </ve-cell-item>
+        <ve-cell-item arrow @click.native="openDate4">
           <span slot="left">年月:</span>
           <span slot="right">{{date4}}</span>
-        </etc-cell-item>
-        <etc-cell-item arrow @click.native="openDate3">
+        </ve-cell-item>
+        <ve-cell-item arrow @click.native="openDate3">
           <span slot="left">时分:</span>
           <span slot="right">{{date3}}</span>
-        </etc-cell-item>
-      </etc-cell-group>
+        </ve-cell-item>
+      </ve-cell-group>
     </div>
-    <etc-datetime-picker :minYears="1900" ref="eldate1" :defaultValue="date1" format="yy-mm-dd hh:mm" @callback="getDate1" pickerTitle="请选择时间"></etc-datetime-picker>
-    <etc-datetime-picker ref="eldate2" :defaultValue="date2" format="yy-mm-dd" @callback="getDate2" pickerTitle="请选择时间"></etc-datetime-picker>
-    <etc-datetime-picker ref="eldate3" :defaultValue="date3" format="hh:mm" @callback="getDate3" pickerTitle="请选择时间"></etc-datetime-picker>
-    <etc-datetime-picker ref="eldate4" :defaultValue="date4" format="yy-mm" @callback="getDate4" pickerTitle="请选择时间"></etc-datetime-picker>
+    <ve-datetime-picker :minYears="1900" ref="eldate1" :defaultValue="date1" format="yy-mm-dd hh:mm" @callback="getDate1" pickerTitle="请选择时间"></ve-datetime-picker>
+    <ve-datetime-picker ref="eldate2" :defaultValue="date2" format="yy-mm-dd" @callback="getDate2" pickerTitle="请选择时间"></ve-datetime-picker>
+    <ve-datetime-picker ref="eldate3" :defaultValue="date3" format="hh:mm" @callback="getDate3" pickerTitle="请选择时间"></ve-datetime-picker>
+    <ve-datetime-picker ref="eldate4" :defaultValue="date4" format="yy-mm" @callback="getDate4" pickerTitle="请选择时间"></ve-datetime-picker>
   </div>
 </template>
 <script>

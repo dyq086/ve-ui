@@ -1,17 +1,17 @@
 
 ## 介绍
 
-vue-etc-ui 是基于 Vue.js 实现的精致移动端组件库。
+vue-ve-ui 是基于 Vue.js 实现的精致移动端组件库。
 
 ### 特性
 
 - **质量可靠**
 
-   由ETC车宝前端团队积累多年项目经验总结，不断追求自我的高标准产物。
+   由团队积累多年项目经验总结，不断追求自我的高标准产物。
 
 - **精美简洁**
 
-   精美的界面及体验交互，由ETC车宝专业UI团队设计打造。
+   精美的界面及体验交互，由专业UI团队设计打造。
 
 - **标准规范**
 
@@ -23,7 +23,7 @@ vue-etc-ui 是基于 Vue.js 实现的精致移动端组件库。
 
 
 ## 体验地址
-<a target="_blank" href="https://etc-ui.github.io/vue-etc-ui/docs/example/#/">示例地址</a>
+<a target="_blank" href="https://ve-ui.github.io/vue-ve-ui/docs/example/#/">示例地址</a>
 
 <img src="../../assets/qr.png" width="300" height="300">
 

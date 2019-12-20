@@ -17,7 +17,7 @@ $ vue init webpack projectname
 #### NPM
 
 ```shell
-$ npm install vue-etc-ui --save-dev
+$ npm install vue-ve-ui --save-dev
 ```
 ### 引入组件（2种方式）
 #### 全局引入
@@ -25,11 +25,11 @@ $ npm install vue-etc-ui --save-dev
 
 ```js
 import Vue from 'vue'
-import etcui from 'vue-etc-ui'
-import 'vue-etc-ui/lib/etc-ui.css'
+import veui from 'vue-ve-ui'
+import 'vue-ve-ui/lib/ve-ui.css'
 import App from './App.vue'
 
-Vue.use(etcui)
+Vue.use(veui)
 
 new Vue({
   el: '#app',
@@ -37,7 +37,7 @@ new Vue({
 })
 ```
 #### 按需引入
-借助 <a href="https://github.com/etc-ui/babel-plugin-component">babel-plugin-component</a>，我们可以只引入需要的组件，以达到减小项目体积的目的。
+借助 <a href="https://github.com/ve-ui/babel-plugin-component">babel-plugin-component</a>，我们可以只引入需要的组件，以达到减小项目体积的目的。
 首先，安装 babel-plugin-component：
 ```shell
  $ npm install babel-plugin-component --save-dev
@@ -50,7 +50,7 @@ new Vue({
       ["component", [
 
           {
-              "libraryName": "vue-etc-ui",
+              "libraryName": "vue-ve-ui",
               "styleLibraryName": "styles"
 
           }
@@ -63,7 +63,7 @@ new Vue({
 ```js
 import Vue from "vue";
 import '../../lib/rem';
-import { Base,Button, } from 'vue-etc-ui';
+import { Base,Button, } from 'vue-ve-ui';
 Vue.component(Button.name, Button);
 new Vue({
     el: "#app",
@@ -73,7 +73,7 @@ new Vue({
 其中Base是基础样式,css 单位为rem 此处默认单位20px=1rem 默认比例尺寸iphone6分辨率
 
 ```js
-  import { Base,Button} from 'vue-etc-ui';
+  import { Base,Button} from 'vue-ve-ui';
 
   //等价于：
   require('components/lib/styles/base.css')
@@ -112,15 +112,15 @@ new Vue({
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
-  <title>vue-etc-ui</title>
-  <link rel="stylesheet" href="https://unpkg.com/vue-etc-ui/lib/etc-ui.css">
+  <title>vue-ve-ui</title>
+  <link rel="stylesheet" href="https://unpkg.com/vue-ve-ui/lib/ve-ui.css">
 </head>
 
 <body>
   <div id="app"></div>
 </body>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="https://unpkg.com/vue-etc-ui/lib/etc-ui.js"></script>
+  <script src="https://unpkg.com/vue-ve-ui/lib/ve-ui.js"></script>
 </html>
 
 ```

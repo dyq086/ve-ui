@@ -1,9 +1,9 @@
 <template>
   <div style="height:100%">
     <div class="actionsheet-box">
-      <etc-button @click.native.stop="open" type="primary">操作列表</etc-button>
+      <ve-button @click.native.stop="open" type="primary">操作列表</ve-button>
     </div>
-    <etc-actionsheet v-model="show" :actions="actionsList" @callback="actionSheetCallback" cancelTxt="取消"></etc-actionsheet>
+    <ve-actionsheet v-model="show" :actions="actionsList" @callback="actionSheetCallback" cancelTxt="取消"></ve-actionsheet>
   </div>
 </template>
 

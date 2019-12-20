@@ -29,7 +29,7 @@ const Alert = (options = {} || "") => {
   instance.title = options.title || "";
   instance.content = options.content || "";
   instance.okTxt = options.okTxt || "确认";
-  instance.cancelTxt = options.cancanlTxt || "取消";
+  instance.cancelTxt = options.cancelTxt || "取消";
   instance.okColor = isColor(options.okColor) && options.okColor;
   instance.cancelColor = isColor(options.cancelColor) && options.cancelColor;
 

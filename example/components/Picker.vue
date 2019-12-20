@@ -1,24 +1,24 @@
 <template>
   <div>
     <div class="picker">
-      <etc-cell-group>
-        <etc-cell-item arrow @click.native="openArea">
+      <ve-cell-group>
+        <ve-cell-item arrow @click.native="openArea">
           <span slot="left">地址:</span>
           <span slot="right">{{area}}</span>
-        </etc-cell-item>
-        <etc-cell-item arrow @click.native="openPlate">
+        </ve-cell-item>
+        <ve-cell-item arrow @click.native="openPlate">
           <span slot="left">车牌号:</span>
           <span slot="right">{{plate}}</span>
-        </etc-cell-item>
-        <etc-cell-item arrow @click.native="openCertificate">
+        </ve-cell-item>
+        <ve-cell-item arrow @click.native="openCertificate">
           <span slot="left">证件类型:</span>
           <span slot="right">{{certificates}}</span>
-        </etc-cell-item>
-      </etc-cell-group>
+        </ve-cell-item>
+      </ve-cell-group>
     </div>
-    <etc-picker ref="picker1" :defaultValue="area" :datas="city_data" :types="3" @callback="getArea" pickerTitle="请选择省市区"></etc-picker>
-    <etc-picker ref="picker2" :defaultValue="plate" :datas="plate_number" :types="2" @callback="getPlate" pickerTitle="请选择车牌号"></etc-picker>
-    <etc-picker ref="picker3" :defaultValue="certificates" :datas="certificate_data" :types="1" @callback="getCertificate" pickerTitle="请选择证件类型"></etc-picker>
+    <ve-picker ref="picker1" :defaultValue="area" :datas="city_data" :types="3" @callback="getArea" pickerTitle="请选择省市区"></ve-picker>
+    <ve-picker ref="picker2" :defaultValue="plate" :datas="plate_number" :types="2" @callback="getPlate" pickerTitle="请选择车牌号"></ve-picker>
+    <ve-picker ref="picker3" :defaultValue="certificates" :datas="certificate_data" :types="1" @callback="getCertificate" pickerTitle="请选择证件类型"></ve-picker>
   </div>
 </template>
 

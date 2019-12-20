@@ -1,7 +1,7 @@
 <template>
   <div class="alert-box">
-    <etc-button type="default" @click.native="showLoading" class="mt">indicator不带文字</etc-button>
-    <etc-button type="default" @click.native="showLoading1" class="mt">indicator带文字</etc-button>
+    <ve-button type="default" @click.native="showLoading" class="mt">indicator不带文字</ve-button>
+    <ve-button type="default" @click.native="showLoading1" class="mt">indicator带文字</ve-button>
   </div>
 </template>
 

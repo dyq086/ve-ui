@@ -1,13 +1,13 @@
 <template>
-  <div class="etc-picker">
-    <div class="etc-picker-panle" :class="[is_show ? 'fade-in':'']">
-      <div class="etc-picker-header">
+  <div class="ve-picker">
+    <div class="ve-picker-panle" :class="[is_show ? 'fade-in':'']">
+      <div class="ve-picker-header">
         <div class="btn-left" @click.stop="cancel()">{{cancelTxt}}</div>
         <header class="title">{{pickerTitle}}</header>
         <div class="btn-right" @click.stop="ok()">{{comfirmTxt}}</div>
       </div>
-      <div class="etc-picker-wrapper">
-        <div class="etc-picker-scroller" v-for="n in types" ref="scroller" :style="{width:liWidth}">
+      <div class="ve-picker-wrapper">
+        <div class="ve-picker-scroller" v-for="n in types" ref="scroller" :style="{width:liWidth}">
           <ul>
             <li></li>
             <li></li>
@@ -24,7 +24,7 @@
         <div class="picker-cover cover-bottom"></div>
       </div>
     </div>
-    <div class="etc-picker-mask" v-show="is_show" @click.stop="close"></div>
+    <div class="ve-picker-mask" v-show="is_show" @click.stop="close"></div>
   </div>
 </template>
 <script>
@@ -33,7 +33,7 @@ import {
 } from "../../../plug-in/utils";
 import Scroll from "../../../plug-in/scroll";
 export default {
-  name: 'etc-picker',
+  name: 've-picker',
   data() {
     return {
       is_show: this.value,

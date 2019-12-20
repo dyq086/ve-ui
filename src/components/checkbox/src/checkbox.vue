@@ -1,10 +1,10 @@
 <template>
-  <label class="etc-checkbox-box">
+  <label class="ve-checkbox-box">
         <template v-if="this.$parent.group">
             <input type="checkbox" 
                   v-model="modelValue" 
                   :class="[groupShapge?'circled':'']" 
-                  :value="checkedValue" class="etc-checkbox" 
+                  :value="checkedValue" class="ve-checkbox" 
                   :shape="groupShapge" 
                   :disabled="disabled" 
                   :style="{color: groupColor}"
@@ -13,7 +13,7 @@
         </template>
         <template v-else>
           <input type="checkbox" 
-                  class="etc-checkbox" 
+                  class="ve-checkbox" 
                   v-model="checked" 
                   :class="[shape?'circled':'']" 
                   :shape="shape" 
@@ -21,7 +21,7 @@
                   :style="{color: color}" 
                   />
         </template>
-             <span class="etc-checkbox-label">{{text}}</span>
+             <span class="ve-checkbox-label">{{text}}</span>
     </label>
 </template>
 
@@ -30,7 +30,7 @@
     isColor
   } from '../../../plug-in/utils'
   export default {
-    name: 'etc-checkbox',
+    name: 've-checkbox',
     data() {
       return {
         checked: this.value,

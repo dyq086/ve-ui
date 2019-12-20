@@ -1,7 +1,7 @@
 <template>
   <div class="alert-box">
-    <etc-button type="default" @click.native="comfirmClick" class="mt">comfirm</etc-button>
-    <etc-button type="default" @click.native="AlertClick" class="mt">alert</etc-button>
+    <ve-button type="default" @click.native="comfirmClick" class="mt">comfirm</ve-button>
+    <ve-button type="default" @click.native="AlertClick" class="mt">alert</ve-button>
   </div>
 </template>
 

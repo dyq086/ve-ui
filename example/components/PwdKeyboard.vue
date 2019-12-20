@@ -3,11 +3,11 @@
     <div class="demo-pwd-box">
       <div class="demo-title">设置6位数字支付密码</div>
       <div class="demo-title-child">输入新密码</div>
-      <etc-pwd-input @click.native="open" :nums="num"></etc-pwd-input>
+      <ve-pwd-input @click.native="open" :nums="num"></ve-pwd-input>
       <div class="demo-title-child">请再输入一次</div>
-      <etc-pwd-input @click.native="open" :nums="num1"></etc-pwd-input>
+      <ve-pwd-input @click.native="open" :nums="num1"></ve-pwd-input>
     </div>
-    <etc-pwd-keyboard ref="keyboard" @done="done" @callback="inputing" @repeatDone="done1" @repeatCallback="inputing1" repeat></etc-pwd-keyboard>
+    <ve-pwd-keyboard ref="keyboard" @done="done" @callback="inputing" @repeatDone="done1" @repeatCallback="inputing1" repeat></ve-pwd-keyboard>
   </div>
 </template>
 

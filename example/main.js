@@ -3,11 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import etcui from 'etc-ui'
+import veui from 've-ui'
 import FastClick from 'fastclick'
 import VueResource from 'vue-resource';
 Vue.config.productionTip = false;
-Vue.use(etcui)
+Vue.use(veui)
 Vue.use(VueResource)
 if ('addEventListener' in document) {
   document.addEventListener('DOMContentLoaded', function() {

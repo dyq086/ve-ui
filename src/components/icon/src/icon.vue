@@ -7,7 +7,7 @@
 import { isColor } from '../../../plug-in/utils'
   import iconfont from "../../../icon/iconfont"
 export default {
-  name: 'etc-icon',
+  name: 've-icon',
   props: {
     name: String,
     color: {

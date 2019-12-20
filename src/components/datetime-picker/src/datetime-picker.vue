@@ -1,13 +1,13 @@
 <template>
-  <div class="etc-picker">
-    <div class="etc-picker-panle" :class="[is_show ? 'fade-in':'']">
-      <div class="etc-picker-header">
+  <div class="ve-picker">
+    <div class="ve-picker-panle" :class="[is_show ? 'fade-in':'']">
+      <div class="ve-picker-header">
         <div class="btn-left" @click.stop="cancel()">{{cancelTxt}}</div>
         <header class="title">{{pickerTitle}}</header>
         <div class="btn-right" @click.stop="ok()">{{comfirmTxt}}</div>
       </div>
-      <div class="etc-picker-wrapper">
-        <div class="etc-picker-scroller" v-for="n in rows" ref="scroller" :style="{width:liWidth}">
+      <div class="ve-picker-wrapper">
+        <div class="ve-picker-scroller" v-for="n in rows" ref="scroller" :style="{width:liWidth}">
           <ul>
             <li></li>
             <li></li>
@@ -26,7 +26,7 @@
         <div class="picker-cover cover-bottom"></div>
       </div>
     </div>
-    <div class="etc-picker-mask" v-show="is_show" @click.stop="close"></div>
+    <div class="ve-picker-mask" v-show="is_show" @click.stop="close"></div>
   </div>
 </template>
 //type="text/babel"
@@ -40,7 +40,7 @@ const MONTHS = 12,
   HOURS = 23,
   MIN = 59;
 export default {
-  name: 'etc-datetime-picker',
+  name: 've-datetime-picker',
   data() {
     return {
       is_show: false,

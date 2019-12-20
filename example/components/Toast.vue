@@ -1,9 +1,9 @@
 <template>
   <div class="toast-box">
-     <etc-button  bgcolor="#44b549" color="#fff" @click.native="success" class="mt">成功</etc-button>
-    <etc-button type="danger" @click.native="error" class="mt">失败</etc-button>
-    <etc-button type="primary" @click.native="info" class="mt">提示</etc-button>
-    <etc-button type="default" @click.native="warning" class="mt">警告</etc-button>
+     <ve-button  bgcolor="#44b549" color="#fff" @click.native="success" class="mt">成功</ve-button>
+    <ve-button type="danger" @click.native="error" class="mt">失败</ve-button>
+    <ve-button type="primary" @click.native="info" class="mt">提示</ve-button>
+    <ve-button type="default" @click.native="warning" class="mt">警告</ve-button>
   </div>
 </template>
 

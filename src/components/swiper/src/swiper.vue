@@ -1,6 +1,6 @@
 <template>
-	<div class="etc-swiper-wrap" @touchstart="touchStart" @touchmove.prevent="touchMove" @touchend="touchEnd">
-		<div class="etc-swiper-content" :class="[direction, {'etc-swiper-page': !mode}]" ref="content" :style="{'transform': 'translate3d('+posX+'px,'+posY+'px,0)', 'transition-duration': transitionDuration}">
+	<div class="ve-swiper-wrap" @touchstart="touchStart" @touchmove.prevent="touchMove" @touchend="touchEnd">
+		<div class="ve-swiper-content" :class="[direction, {'ve-swiper-page': !mode}]" ref="content" :style="{'transform': 'translate3d('+posX+'px,'+posY+'px,0)', 'transition-duration': transitionDuration}">
 			<slot></slot>
 		</div>
 		<div v-if="indicator && mode == 0" :class="indicatorClass">
@@ -10,7 +10,7 @@
 </template>
 <script>
 	export default {
-		name: 'etc-swiper',
+		name: 've-swiper',
 		data() {
 			return {
 				player: null,
@@ -57,12 +57,12 @@
 				return this.direction == 'horizontal' ? 'X' : 'Y';
 			},
 			indicatorClass() {
-				return this.direction == 'horizontal' ? 'etc-swiper-indicator' : 'etc-swiper-indicator-vertical';
+				return this.direction == 'horizontal' ? 've-swiper-indicator' : 've-swiper-indicator-vertical';
 			}
 		},
 		methods: {
 			init() {
-				let target = this.mode == 0 ? '.etc-swiper-item' : '.etc-swiper-item-free';
+				let target = this.mode == 0 ? '.ve-swiper-item' : '.ve-swiper-item-free';
 				const els = this.$refs.content.querySelectorAll(target);
 				let val = 0,
 					dir, marginBefore, marginAfter;
@@ -76,11 +76,11 @@
 					marginAfter = 'marginBottom';
 				}
 				this.iLength = els.length;
-				//计算etc-swiper-item总长度
+				//计算ve-swiper-item总长度
 				for (let i = 0; i < this.iLength; i++) {
 					val -= els[i][dir] + parseInt(window.getComputedStyle(els[i])[marginBefore]) + parseInt(window.getComputedStyle(els[i])[marginAfter]);
 				}
-				//防止etc-swiper-item靠图片撑开大小，图片未加载完的情况
+				//防止ve-swiper-item靠图片撑开大小，图片未加载完的情况
 				if (!val) {
 					//setTimeout(this.init, 200);
 				} else {

@@ -9,14 +9,14 @@ var webpackConfig = merge(commonWebpackConfig, {
     app: './src/index.js'
   },
   output: {
-    filename: 'etc-ui.js',
-    library: "etcui",
+    filename: 've-ui.js',
+    library: "veui",
     libraryTarget: "umd"
   },
   plugins: [
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: 'etc-ui.css'
+      filename: 've-ui.css'
     }),
   ]
 })

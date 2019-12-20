@@ -13,7 +13,7 @@
   </div>
 </template>
 <script>
-const baseUrl = process.env.NODE_ENV === 'production' ? 'https://etc-ui.github.io/vue-etc-ui/docs/example/' : `http://${window.location.hostname}:3000/#/`
+const baseUrl = process.env.NODE_ENV === 'production' ? 'https://ve-ui.github.io/vue-ve-ui/docs/example/' : `http://${window.location.hostname}:3000/#/`
 
 export default {
   name: 'device-frame',

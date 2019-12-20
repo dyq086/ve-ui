@@ -9,7 +9,7 @@
 <script>
 import MeScroll from '../../../plug-in/mescroll'
 export default {
-  name: 'etc-vscroll',
+  name: 've-vscroll',
   data() {
     return {
       mescroll: null,

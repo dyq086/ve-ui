@@ -1,9 +1,9 @@
 <template>
   <div class="" :class="classObject">
-    <div class="etc-grid-icon">
+    <div class="ve-grid-icon">
       <slot name="icon"></slot>
     </div>
-    <div class="etc-grid-text">
+    <div class="ve-grid-text">
       <slot name="text"></slot>
     </div>
   </div>
@@ -11,7 +11,7 @@
 
 <script type="text/babel">
   export default {
-    name: 'etc-grids-item',
+    name: 've-grids-item',
     data() {
       return {}
     },
@@ -23,10 +23,10 @@
     },
     computed: {
       classObject(){
-        let a='etc-grid-'+this.$parent.row;
+        let a='ve-grid-'+this.$parent.row;
         let b;
         if(this.$parent.border){
-          b='etc-grid-border-'+this.$parent.row;
+          b='ve-grid-border-'+this.$parent.row;
         }
         return a+" "+b
       }

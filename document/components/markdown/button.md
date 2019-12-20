@@ -5,46 +5,46 @@
 ### 示例
 #### 引入
 ```js
-import { Button } from 'etc-ui';
+import { Button } from 've-ui';
 
 Vue.component(Button.name, Button);
 ```
 按钮类型
 ```html
-  <etc-button>default</etc-button>
-  <etc-button type="primary">primary</etc-button>
-  <etc-button type="danger">danger</etc-button>
+  <ve-button>default</ve-button>
+  <ve-button type="primary">primary</ve-button>
+  <ve-button type="danger">danger</ve-button>
 
 ```
 
 按钮大小，默认lg
 
 ```html
-  <etc-button size="large">large</etc-button>
-  <etc-button size="medium">medium</etc-button>
-  <etc-button size="small">small</etc-button>
+  <ve-button size="large">large</ve-button>
+  <ve-button size="medium">medium</ve-button>
+  <ve-button size="small">small</ve-button>
 ```
 
 是否圆角
 ```html
-  <etc-button shape="circle" type="primary" >圆角</etc-button>
+  <ve-button shape="circle" type="primary" >圆角</ve-button>
 ```
 
 
 不可点击状态
 ```html
-  <etc-button disabled>disable</etc-button>
+  <ve-button disabled>disable</ve-button>
 ```
 
 
 自定义颜色
 ```html
-  <etc-button  bgcolor="#44b549" color="#fff" >自定义颜色</etc-button>
+  <ve-button  bgcolor="#44b549" color="#fff" >自定义颜色</ve-button>
 ```
 
 绑定 click 事件
 ```html
-  <etc-button  @click.native="handleClick">点击我</etc-button>
+  <ve-button  @click.native="handleClick">点击我</ve-button>
 
 ```
 

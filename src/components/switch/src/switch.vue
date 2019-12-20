@@ -1,6 +1,6 @@
 <template>
-  <div class="etc-switch-box">
-    <input type="checkbox" :class="classObject" class="etc-switch" :size="size" :disabled="disabled" v-model="checked" :style="{color: color}" />
+  <div class="ve-switch-box">
+    <input type="checkbox" :class="classObject" class="ve-switch" :size="size" :disabled="disabled" v-model="checked" :style="{color: color}" />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
     isColor
   } from '../../../plug-in/utils'
   export default {
-    name: 'etc-switch',
+    name: 've-switch',
     data() {
       return {
         checked: this.value
@@ -37,7 +37,7 @@
     },
     computed: {
       classObject() {
-        return "etc-switch-size-" + this.size;
+        return "ve-switch-size-" + this.size;
       }
     },
     watch: {

@@ -1,58 +1,58 @@
 <template>
   <div>
-    <etc-cell-group>
-      <etc-cell-item>
+    <ve-cell-group>
+      <ve-cell-item>
         <div slot="left">
-          <etc-checkbox v-model="checkboxTest" text="样式一"></etc-checkbox>
+          <ve-checkbox v-model="checkboxTest" text="样式一"></ve-checkbox>
         </div>
         <div slot="inner">{{checkboxTest}}</div>
-      </etc-cell-item>
-      <etc-cell-item>
+      </ve-cell-item>
+      <ve-cell-item>
         <div slot="left">
-          <etc-checkbox v-model="checkboxTest1" text="样式二" shape="circled"></etc-checkbox>
+          <ve-checkbox v-model="checkboxTest1" text="样式二" shape="circled"></ve-checkbox>
         </div>
         <div slot="inner">{{checkboxTest1}}</div>
-      </etc-cell-item>
-    </etc-cell-group>
-    <etc-cell-group>
-      <etc-cell-item>
+      </ve-cell-item>
+    </ve-cell-group>
+    <ve-cell-group>
+      <ve-cell-item>
         <div slot="left">
-          <etc-checkbox v-model="checkboxTest2" color="#26a2ff" text="自定义颜色"></etc-checkbox>
+          <ve-checkbox v-model="checkboxTest2" color="#26a2ff" text="自定义颜色"></ve-checkbox>
         </div>
         <div slot="inner"></div>
-      </etc-cell-item>
-      <etc-cell-item>
+      </ve-cell-item>
+      <ve-cell-item>
         <div slot="left">
-          <etc-checkbox v-model="checkboxTest3" disabled text="不可点击状态"></etc-checkbox>
+          <ve-checkbox v-model="checkboxTest3" disabled text="不可点击状态"></ve-checkbox>
         </div>
         <div slot="inner">{{checkboxTest3}}</div>
-      </etc-cell-item>
-    </etc-cell-group>
+      </ve-cell-item>
+    </ve-cell-group>
     <div class="group-title">【取值为id值】</div>
     <div class="checkbox-group-box">
-      <etc-checkbox-group v-model="checkboxGroupTest">
-        <etc-checkbox id="1" text="选项一"></etc-checkbox>
-        <etc-checkbox id="2" text="选项二"></etc-checkbox>
-        <etc-checkbox id="3" text="选项三"></etc-checkbox>
-      </etc-checkbox-group>
+      <ve-checkbox-group v-model="checkboxGroupTest">
+        <ve-checkbox id="1" text="选项一"></ve-checkbox>
+        <ve-checkbox id="2" text="选项二"></ve-checkbox>
+        <ve-checkbox id="3" text="选项三"></ve-checkbox>
+      </ve-checkbox-group>
       <div class="checkbox-state">{{checkboxGroupTest}}</div>
     </div>
     <div class="group-title">【取值为标签值】</div>
     <div class="checkbox-group-box">
-      <etc-checkbox-group v-model="checkboxGroupTestCel">
-        <etc-checkbox text="选项一"></etc-checkbox>
-        <etc-checkbox text="选项二"></etc-checkbox>
-        <etc-checkbox text="选项三"></etc-checkbox>
-      </etc-checkbox-group>
+      <ve-checkbox-group v-model="checkboxGroupTestCel">
+        <ve-checkbox text="选项一"></ve-checkbox>
+        <ve-checkbox text="选项二"></ve-checkbox>
+        <ve-checkbox text="选项三"></ve-checkbox>
+      </ve-checkbox-group>
       <div class="checkbox-state">{{checkboxGroupTestCel}}</div>
     </div>
     <div class="group-title">【设置默认值】</div>
     <div class="checkbox-group-box">
-      <etc-checkbox-group v-model="checkboxGroupTestCel1">
-        <etc-checkbox text="选项一"></etc-checkbox>
-        <etc-checkbox text="选项二"></etc-checkbox>
-        <etc-checkbox text="选项三"></etc-checkbox>
-      </etc-checkbox-group>
+      <ve-checkbox-group v-model="checkboxGroupTestCel1">
+        <ve-checkbox text="选项一"></ve-checkbox>
+        <ve-checkbox text="选项二"></ve-checkbox>
+        <ve-checkbox text="选项三"></ve-checkbox>
+      </ve-checkbox-group>
       <div class="checkbox-state">{{checkboxGroupTestCel1}}</div>
     </div>
   </div>
@@ -78,7 +78,7 @@
   .checkbox-group-box {
     background: #ffffff;
     padding: .5rem 0rem;
-    .etc-checkbox-group {
+    .ve-checkbox-group {
       display: flex;
       justify-content: space-around;
     }

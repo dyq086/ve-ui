@@ -42,7 +42,7 @@
 </template>
 <script>
 export default {
-  name: 'etc-cell-item',
+  name: 've-cell-item',
   props: {
     type: {
       validator(value) {

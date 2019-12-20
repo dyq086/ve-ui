@@ -1,10 +1,10 @@
 <template>
-  <etc-tab @tabclick="handlerClick">
-    <etc-tab-panel label="选项一"></etc-tab-panel>
-    <etc-tab-panel label="选项二"></etc-tab-panel>
-    <etc-tab-panel label="选项三"></etc-tab-panel>
-    <etc-tab-panel label="选项四"></etc-tab-panel>
-  </etc-tab>
+  <ve-tab @tabclick="handlerClick">
+    <ve-tab-panel label="选项一"></ve-tab-panel>
+    <ve-tab-panel label="选项二"></ve-tab-panel>
+    <ve-tab-panel label="选项三"></ve-tab-panel>
+    <ve-tab-panel label="选项四"></ve-tab-panel>
+  </ve-tab>
 </template>
 
 <script>

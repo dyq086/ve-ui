@@ -1,5 +1,5 @@
 <template>
-  <div class="etc-checkbox-group">
+  <div class="ve-checkbox-group">
     <slot></slot>
   </div>
 </template>
@@ -9,7 +9,7 @@
     isColor
   } from '../../../plug-in/utils'
   export default {
-    name: 'etc-checkbox-group',
+    name: 've-checkbox-group',
     data() {
       return {
         group: true
@@ -60,7 +60,7 @@
     },
     computed: {
       childrens() {
-        return this.$children.filter(item => item.$options.name === 'etc-checkbox');
+        return this.$children.filter(item => item.$options.name === 've-checkbox');
       }
     },
     watch: {

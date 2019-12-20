@@ -1,13 +1,13 @@
 {
-  "name": "vue-etc-ui",
+  "name": "vue-ve-ui",
   "version": "2.0.5",
-  "description": "vue-etc-ui for mobile",
-  "author": "etcchebaoTeam <490844594@qq.com>",
+  "description": "vue-ve-ui for mobile",
+  "author": "yongqing <490844594@qq.com>",
   "keywords": [
     "component",
     "vue",
     "mobile",
-    "etc ui",
+    "ve ui",
     "vue2",
     "ui vue",
     "vue ui框架"
@@ -61,6 +61,7 @@
     "http-proxy-middleware": "^0.17.3",
     "json-loader": "^0.5.7",
     "json-templater": "^1.1.0",
+    "minipass": "^3.1.1",
     "nightwatch": "^0.9.12",
     "node-sass": "^4.5.3",
     "opn": "^5.1.0",
@@ -96,12 +97,12 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "main": "lib/etc-ui.js",
-  "style": "lib/etc-ui.css",
+  "main": "lib/ve-ui.js",
+  "style": "lib/ve-ui.css",
   "files": [
     "lib",
     "src"
   ],
-  "repository": "https://github.com/etc-ui/vue-etc-ui.git",
+  "repository": "https://github.com/dyq086/ve-ui.git",
   "license": "MIT"
 }

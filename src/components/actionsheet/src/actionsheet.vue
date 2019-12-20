@@ -1,12 +1,12 @@
 <template>
-  <div class="etc-actionsheet">
-    <div class="etc-actionsheet-panle" :class="[is_show ? 'fade-in':'']">
-      <div class="etc-actionsheet-list">
-        <div class="etc-actionsheet-item" v-for="(item,index) in actions" :data-index="index" @click.stop="selectItem">{{item.name}}</div>
-        <div class="etc-actionsheet-item item-bottom" v-if="cancelTxt!==''" @click.stop="close">{{cancelTxt}}</div>
+  <div class="ve-actionsheet">
+    <div class="ve-actionsheet-panle" :class="[is_show ? 'fade-in':'']">
+      <div class="ve-actionsheet-list">
+        <div class="ve-actionsheet-item" v-for="(item,index) in actions" :data-index="index" @click.stop="selectItem">{{item.name}}</div>
+        <div class="ve-actionsheet-item item-bottom" v-if="cancelTxt!==''" @click.stop="close">{{cancelTxt}}</div>
       </div>
     </div>
-    <div class="etc-actionsheet-mask" v-show="is_show" @click.stop="close"></div>
+    <div class="ve-actionsheet-mask" v-show="is_show" @click.stop="close"></div>
   </div>
 </template>
 
@@ -15,7 +15,7 @@
     pageScroll
   } from "../../../plug-in/utils";
   export default {
-    name: 'etc-actionsheet',
+    name: 've-actionsheet',
     data() {
       return {
         is_show: this.value,

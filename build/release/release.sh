@@ -1,5 +1,5 @@
 set -e
-echo "[VUE-ETC-UI for Vue 2.0]Enter release version: "
+echo "[VE-UI for Vue 2.0]Enter release version: "
 read VERSION
 
 read -p "Releasing $VERSION - are you sure? (y/n)" -n 1 -r
