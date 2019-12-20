@@ -23,6 +23,6 @@ ve-ui 是基于 Vue.js 实现的精致移动端组件库。
 
 
 ## 体验地址
-<a target="_blank" href="https://ve-ui.github.io/ve-ui/docs/example/#/">示例地址</a>
+<a target="_blank" href="https://dyq086.github.io/ve-ui/docs/example/#/">示例地址</a>
 
 
