@@ -11,7 +11,7 @@ var banner =
   "/*!\n" +
   " * VUE VE UI v" +
   packageJson.version +
-  " (https://github.com/dyq086/vue-ve-ui)\n" +
+  " (https://github.com/dyq086/ve-ui)\n" +
   " * (c) " +
   new Date().getFullYear() +
   " YONGQING\n" +

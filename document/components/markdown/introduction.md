@@ -1,7 +1,7 @@
 
 ## 介绍
 
-vue-ve-ui 是基于 Vue.js 实现的精致移动端组件库。
+ve-ui 是基于 Vue.js 实现的精致移动端组件库。
 
 ### 特性
 
@@ -23,8 +23,7 @@ vue-ve-ui 是基于 Vue.js 实现的精致移动端组件库。
 
 
 ## 体验地址
-<a target="_blank" href="https://ve-ui.github.io/vue-ve-ui/docs/example/#/">示例地址</a>
+<a target="_blank" href="https://ve-ui.github.io/ve-ui/docs/example/#/">示例地址</a>
 
-<img src="../../assets/qr.png" width="300" height="300">
 
 
