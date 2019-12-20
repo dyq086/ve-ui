@@ -22,6 +22,9 @@ ve-ui 是基于 Vue.js 实现的精致移动端组件库。
   支持按需引入，轻量灵活；扩展性强，可以方便地基于现有组件实现二次开发。
 
 
+## 文档（待完善）
+<a target="_blank" href="https://dyq086.github.io/ve-ui/docs/#/introduction">文档地址</a>
+
 ## 体验地址
 <a target="_blank" href="https://dyq086.github.io/ve-ui/docs/example/#/">示例地址</a>
 
